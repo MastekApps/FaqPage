@@ -1,0 +1,7 @@
+**/bin
+**/obj
+**/pkg
+**/pkgobj
+*.suo
+*.user
+/packages
