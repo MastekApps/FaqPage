@@ -1,0 +1,20 @@
+﻿<div class="form-horizontal col-lg-6" data-block="viewDeferred">
+    <div class="form-group" ng-show="folders.length > 0">
+        <label class="col-lg-4 control-label" for="folders">
+            {{Resources.SelectFaqToConnect}}
+        </label>
+        <div class="col-lg-6">
+            <select class="form-control" name="folders" ng-model="folder" ng-options="folder as folder.title for folder in folders"></select>
+        </div>
+    </div>
+    <div ng-show="folders.length == 0">
+        {{Resources.CreateNewFaqSet}}
+    </div>
+    <div class="form-group col-lg-10">
+        <div class="pull-right">
+            <button ng-class="{disabled: folders.length == 0}" type="button" class="btn btn-success" title="{{Resources.Done}}" ng-click="connectAppPart(folder)">
+                {{Resources.Done}}
+            </button>
+        </div>
+    </div>
+</div>

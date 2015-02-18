@@ -1,0 +1,170 @@
+﻿/* fadeInLeftSmall custom animation */
+
+@-webkit-keyframes fadeInLeftSmall {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInLeftSmall {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+/* Navigation animation */
+
+.slide-animate.ng-enter {
+    animation: fadeInLeftSmall 0.5s;
+    -webkit-animation: fadeInLeftSmall 0.5s;
+}
+
+/* FAQ answers animations */
+
+.faq-answer.faq-bounce, .faq-answer.faq-bounce-add-active {
+    animation: bounce 1s;
+    -webkit-animation: bounce 1s;
+    opacity: 1 !important;
+}
+
+.faq-answer.faq-pulse, .faq-answer.faq-pulse-add-active {
+    animation: pulse 1s;
+    -webkit-animation: pulse 1s;
+    opacity: 1 !important;
+}
+.faq-answer.faq-swing, .faq-answer.faq-swing-add-active {
+    animation: swing 1s;
+    -webkit-animation: swing 1s;
+    opacity: 1 !important;
+}
+.faq-answer.faq-tada, .faq-answer.faq-tada-add-active {
+    animation: tada 1s;
+    -webkit-animation: tada 1s;
+    opacity: 1 !important;
+}
+.faq-answer.faq-bounceIn, .faq-answer.faq-bounceIn-add-active {
+    animation: bounceIn 1s;
+    -webkit-animation: bounceIn 1s;
+    opacity: 1 !important;
+}
+.faq-answer.faq-bounceDown, .faq-answer.faq-bounceDown-add-active {
+    animation: bounceDown 1s;
+    -webkit-animation: bounceDown 1s;
+    opacity: 1 !important;
+}
+.faq-answer.faq-bounceUp, .faq-answer.faq-bounceUp-add-active {
+    animation: bounceUp 1s;
+    -webkit-animation: bounceUp 1s;
+    opacity: 1 !important;
+}
+.faq-answer.faq-bounceLeft, .faq-answer.faq-bounceLeft-add-active {
+    animation: bounceLeft 1s;
+    -webkit-animation: bounceLeft 1s;
+    opacity: 1 !important;
+}
+.faq-answer.faq-bounceRigth, .faq-answer.faq-bounceRigth-add-active {
+    animation: bounceRigth 1s;
+    -webkit-animation: bounceRigth 1s;
+    opacity: 1 !important;
+}
+.faq-answer.faq-fadeIn, .faq-answer.faq-fadeIn-add-active {
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+    opacity: 1 !important;
+}
+.faq-answer.faq-fadeInDown, .faq-answer.faq-fadeInDown-add-active {
+    animation: fadeInDown 1s;
+    -webkit-animation: fadeInDown 1s;
+    opacity: 1 !important;
+}
+.faq-answer.faq-fadeInLeft, .faq-answer.faq-fadeInLeft-add-active {
+    animation: fadeInLeft 1s;
+    -webkit-animation: fadeInLeft 1s;
+    opacity: 1 !important;
+}
+.faq-answer.faq-fadeInRight, .faq-answer.faq-fadeInRight-add-active {
+    animation: fadeInRight 1s;
+    -webkit-animation: fadeInRight 1s;
+    opacity: 1 !important;
+}
+.faq-answer.faq-fadeInUp, .faq-answer.faq-fadeInUp-add-active {
+    animation: fadeInUp 1s;
+    -webkit-animation: fadeInUp 1s;
+    opacity: 1 !important;
+}
+.faq-answer.faq-flip, .faq-answer.faq-flip-add-active {
+    animation: flip 1s;
+    -webkit-animation: flip 1s;
+    opacity: 1 !important;
+}
+.faq-answer.faq-flipInX, .faq-answer.faq-flipInX-add-active {
+    animation: flipInX 1s;
+    -webkit-animation: flipInX 1s;
+    opacity: 1 !important;
+}
+.faq-answer.faq-flipInY, .faq-answer.faq-flipInY-add-active {
+    animation: flipInY 1s;
+    -webkit-animation: flipInY 1s;
+    opacity: 1 !important;
+}
+.faq-answer.faq-lightSpeedIn, .faq-answer.faq-lightSpeedIn-add-active {
+    animation: lightSpeedIn 1s;
+    -webkit-animation: lightSpeedIn 1s;
+    opacity: 1 !important;
+}
+.faq-answer.faq-rotateIn, .faq-answer.faq-rotateIn-add-active {
+    animation: rotateIn 1s;
+    -webkit-animation: rotateIn 1s;
+    opacity: 1 !important;
+}
+.faq-answer.faq-rotateInDownRight, .faq-answer.faq-rotateInDownRight-add-active {
+    animation: rotateInDownRight 1s;
+    -webkit-animation: rotateInDownRight 1s;
+    opacity: 1 !important;
+}
+.faq-answer.faq-rotateInDownLeft, .faq-answer.faq-rotateInDownLeft-add-active {
+    animation: rotateInDownLeft 1s;
+    -webkit-animation: rotateInDownLeft 1s;
+    opacity: 1 !important;
+}
+.faq-answer.faq-rotateInUpLeft, .faq-answer.faq-rotateInUpLeft-add-active {
+    animation: rotateInDownLeft 1s;
+    -webkit-animation: rotateInDownLeft 1s;
+    opacity: 1 !important;
+}
+.faq-answer.faq-rotateInUpRight, .faq-answer.faq-rotateInUpRight-add-active {
+    animation: rotateInUpRight 1s;
+    -webkit-animation: rotateInUpRight 1s;
+    opacity: 1 !important;
+}
+.faq-answer.faq-hinge, .faq-answer.faq-hinge-add-active {
+    animation: hinge 1s;
+    -webkit-animation: hinge 1s;
+    opacity: 1 !important;
+}
+.faq-answer.faq-rollIn, .faq-answer.faq-rollIn-add-active {
+    animation: rollIn 1s;
+    -webkit-animation: rollIn 1s;
+    opacity: 1 !important;
+}
+.faq-answer.faq-zoomIn, .faq-answer.faq-zoomIn-add-active {
+    animation: zoomIn 1s;
+    -webkit-animation: zoomIn 1s;
+    opacity: 1 !important;
+}

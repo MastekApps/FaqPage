@@ -1,0 +1,20 @@
+﻿<div class="faq-start-title center-block">
+	<h1>{{Resources.EditFaqStartPageMsg}}</h1>
+</div>
+<div class="btn-actions center-block">
+	<div class="btn-action">
+		<button type="button" popover-placement="right" popover="{{Resources.NewFaqSetDescription}}" popover-trigger="mouseenter" class="btn btn-primary btn-lg btn-block" ng-click="go('/NewFaqSet')">
+			{{Resources.NewFaqButtonText}}
+		</button>
+	</div>
+	<div class="btn-action">
+		<button type="button" popover-placement="right" popover="{{Resources.EditFaqSetDescription}}" popover-trigger="mouseenter" class="btn btn-primary btn-lg btn-block" ng-click="go('/SelectForEdit')">
+			{{Resources.EditFaqButtonText}}
+		</button>
+	</div>
+	<div class="btn-action">
+		<button type="button" popover-placement="right" popover="{{Resources.ContactDevPopover}}" popove popover-trigger="mouseenter" class="btn btn-primary btn-lg btn-block" ng-click="go('/ContactDev')">
+			<div>{{Resources.ContactDev}}</div>
+		</button>
+	</div>
+</div>

@@ -1,0 +1,55 @@
+﻿<div class="form-horizontal col-lg-8" data-block="viewDeferred">
+	<!--Question-->
+	<div class="form-group">
+		<label class="col-lg-2 control-label">
+			{{Resources.Question}}&nbsp;<span class="error">*</span>
+		</label>
+		<div ng-class="{'ng-invalid': faqForm.faqQuestionInput.$invalid}" sp-editable contenteditable ng-model="faqItem.question" class="col-lg-8">
+			{{faqItem.question}}
+		</div>
+	</div>
+	<div>
+		<input class="ng-hide" ng-required="true" type="text" name="faqQuestionInput" ng-model="question" />
+		<div ng-show="submitted && faqForm.faqQuestionInput.$invalid" class="error content-edit-error col-lg-offset-2">{{Resources.RequiredField}}</div>
+	</div>
+
+	<!--Answer-->
+	<div class="form-group">
+		<label class="col-lg-2 control-label">
+			{{Resources.Answer}}&nbsp;<span class="error">*</span>
+		</label>
+		<div ng-class="{'ng-invalid': faqForm.faqAnswerInput.$invalid}" sp-editable contenteditable ng-model="faqItem.answer" class="col-lg-8">
+			{{faqItem.answer}}
+		</div>
+	</div>
+	<div>
+		<input class="ng-hide" ng-required="true" type="text" name="faqAnswerInput" ng-model="answer" />
+		<div ng-show="submitted && faqForm.faqAnswerInput.$invalid" class="error content-edit-error col-lg-offset-2">{{Resources.RequiredField}}</div>
+	</div>
+
+	<!--Common settings-->
+	<div class="form-group">
+		<label class="col-lg-2 control-label">{{Resources.CommonFaqSettings}}</label>
+		<div class="col-lg-10">
+			<div class="checkbox">
+				<label>
+					<input ng-model="faqItem.expanded" type="checkbox" value="{{Resources.ShouldBeExpanded}}" title="{{Resources.ShouldBeExpanded}}"/>
+					<span ng-bind-html="trustedHtml(Resources.ShouldBeExpanded)"></span>
+				</label>
+			</div>
+		</div>
+	</div>
+	<!--Buttons-->
+	<div class="form-group col-lg-10">
+		<div class="buttons-group">
+			<div class="pull-right">
+				<button type="button" class="btn btn-default" title="{{Resources.Cancel}}" ng-click="back()">
+					{{Resources.Cancel}}
+				</button>
+				<button type="button" class="btn btn-success" title="{{Resources.Done}}" ng-click="saveFaq()">
+					{{Resources.Done}}
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

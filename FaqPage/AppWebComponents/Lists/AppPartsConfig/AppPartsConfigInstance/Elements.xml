@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ListInstance Title="$Resources:AppPartsConfigListName;"
+				  OnQuickLaunch="FALSE"
+				  TemplateType="11002"
+				  Url="Lists/AppPartsConfig"
+				  Description="$Resources:AppPartsConfigDescription;">
+		<Data>
+			<Rows>
+				<Row>
+					<Field Name="ID">1</Field>
+					<Field Name="ContentTypeId">0x01007E2E2E75D5534ADDB01E14F22CBE7C4F</Field>
+					<Field Name="FSObjType">0</Field>
+					<Field Name="WebPartId">g_3b47020b_6587_48fe_889e_75de44157210</Field>
+					<Field Name="WebPartConfig">{"showPlus":false,"folderId":2}</Field>
+				</Row>
+			</Rows>
+		</Data>
+	</ListInstance>
+</Elements>

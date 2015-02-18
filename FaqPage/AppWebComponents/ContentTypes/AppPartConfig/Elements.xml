@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x01007E2E2E75D5534ADDB01E14F22CBE7C4F"
+               Name="AppPartConfig"
+               Group="FAQ"
+               Description=""
+               Inherits="FALSE"
+               Version="0">
+    <FieldRefs>
+      <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" Hidden="TRUE" Required="FALSE" />
+      <FieldRef Name="WebPartId"/>
+      <FieldRef Name="WebPartConfig"/>
+    </FieldRefs>
+  </ContentType>
+
+  <Field ID="{91abc600-27e8-4ca0-958b-d35f22c188e2}" Type="Text" Name="WebPartId" Required="TRUE" StaticName="WebPartId" DisplayName="$Resources:WebPartIdFieldName;" />
+  <Field ID="{123fdcb5-7a53-42ce-a625-0372fd7c6001}" Type="Note" Mult="TRUE" Name="WebPartConfig" Required="TRUE" StaticName="WebPartConfig" DisplayName="$Resources:WebPartConfigFieldName;" />
+</Elements>

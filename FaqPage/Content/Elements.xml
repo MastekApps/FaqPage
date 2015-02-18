@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Module Name="Content">
+		<File Path="Content\img\minus.png" Url="Content/img/minus.png" ReplaceContent="TRUE" />
+		<File Path="Content\img\plus.png" Url="Content/img/plus.png" ReplaceContent="TRUE" />
+		<File Path="Content\img\ajax-loader.gif" Url="Content/img/ajax-loader.gif" ReplaceContent="TRUE" />
+		<File Path="Content\css\external\fonts\glyphicons-halflings-regular.eot" Url="Content/css/fonts/glyphicons-halflings-regular.eot" ReplaceContent="TRUE" />
+		<File Path="Content\css\external\fonts\glyphicons-halflings-regular.svg" Url="Content/css/fonts/glyphicons-halflings-regular.svg" ReplaceContent="TRUE" />
+		<File Path="Content\css\external\fonts\glyphicons-halflings-regular.ttf" Url="Content/css/fonts/glyphicons-halflings-regular.ttf" ReplaceContent="TRUE" />
+		<File Path="Content\css\external\fonts\glyphicons-halflings-regular.woff" Url="Content/css/fonts/glyphicons-halflings-regular.woff" ReplaceContent="TRUE" />
+		<File Path="Content\css\external\fonts\fontawesome-webfont.eot" Url="Content/css/fonts/fontawesome-webfont.eot" ReplaceContent="TRUE" />
+		<File Path="Content\css\external\fonts\fontawesome-webfont.svg" Url="Content/css/fonts/fontawesome-webfont.svg" ReplaceContent="TRUE" />
+		<File Path="Content\css\external\fonts\fontawesome-webfont.ttf" Url="Content/css/fonts/fontawesome-webfont.ttf" ReplaceContent="TRUE" />
+		<File Path="Content\css\external\fonts\fontawesome-webfont.woff" Url="Content/css/fonts/fontawesome-webfont.woff" ReplaceContent="TRUE" />
+		<File Path="Content\css\external\fonts\FontAwesome.otf" Url="Content/css/fonts/FontAwesome.otf" ReplaceContent="TRUE" />
+		<File Path="Content\css\css_bundle.css" Url="Content/css/css_bundle.css" ReplaceContent="TRUE" />
+    <File Path="Content\rsa_public_key.txt" Url="Content/rsa_public_key.txt" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

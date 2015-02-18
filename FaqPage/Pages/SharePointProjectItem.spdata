@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="Pages\" Type="ElementManifest" />
+    <ProjectItemFile Source="Partials\FaqList.html" Target="Pages\Partials\" Type="ElementFile" />
+    <ProjectItemFile Source="FaqViewer.aspx" Target="Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="EditFaqs.aspx" Target="Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="Partials\EditMode\FaqEditStartScreen.html" Target="Pages\Partials\EditMode\" Type="ElementFile" />
+    <ProjectItemFile Source="Partials\EditMode\NewFaqSet.html" Target="Pages\Partials\EditMode\" Type="ElementFile" />
+    <ProjectItemFile Source="Partials\EditMode\ManageFaqSet.html" Target="Pages\Partials\EditMode\" Type="ElementFile" />
+    <ProjectItemFile Source="Partials\EditMode\CreateEditFaq.html" Target="Pages\Partials\EditMode\" Type="ElementFile" />
+    <ProjectItemFile Source="Partials\EditMode\SelectFaqSetForEdit.html" Target="Pages\Partials\EditMode\" Type="ElementFile" />
+    <ProjectItemFile Source="Partials\EditMode\ConnectFaqSet.html" Target="Pages\Partials\EditMode\" Type="ElementFile" />
+    <ProjectItemFile Source="Partials\EditMode\LicenseRequest.html" Target="Pages\Partials\EditMode\" Type="ElementFile" />
+    <ProjectItemFile Source="Partials\EditMode\ContactDeveloper.html" Target="Pages\Partials\EditMode\" Type="ElementFile" />
+    <ProjectItemFile Source="FaqAppPartEditMode.aspx" Target="Pages\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ListInstance Title="$Resources:FAQListName;"
+				  OnQuickLaunch="FALSE"
+				  TemplateType="11001"
+				  Url="Lists/Faq"
+				  Description="$Resources:FAQListDesc;">
+		<Data>
+			<Rows>
+				<Row>
+					<Field Name="ID">2</Field>
+					<Field Name="ContentTypeId">0x0120</Field>
+					<Field Name="Title">Sample FAQ set</Field>
+					<Field Name="FSObjType">1</Field>
+					<Field Name="FileLeafRef">Sample FAQ set</Field>
+					<Field Name="FAQFolderSettings">{"useAnimation":true,"showPlusSymbol":true,"animation":"fadeInLeft"}</Field>
+				</Row>
+				<Row>
+					<Field Name="ID">3</Field>
+					<Field Name="ContentTypeId">0x01006E6B261E34044037800F4A073174CB8D</Field>
+					<Field Name="FileDirRef">Sample FAQ set</Field>
+					<Field Name="FSObjType">0</Field>
+					<Field Name="FAQQuestion">
+						<![CDATA[
+						<p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit?  </b></p>
+					]]>
+					</Field>
+					<Field Name="FAQAnswer">
+						<![CDATA[
+						<p>Sed at congue ante. Nulla iaculis, nisl in tincidunt ultricies, leo quam euismod nunc, at molestie ex mauris vel nisi. Nunc non diam at velit condimentum vehicula. Suspendisse sagittis nibh eu mi viverra vulputate. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer tincidunt diam at imperdiet hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse id lorem eu purus consectetur mollis ut blandit tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed id imperdiet orci, et convallis dolor. Pellentesque eget nisi mattis lacus rutrum volutpat eu sit amet libero. Aenean a lacus ut tellus convallis tincidunt id in quam. Morbi ultrices risus est, nec euismod ligula molestie ac. Nunc ut massa ac massa ultricies dignissim ac sed ipsum. Praesent iaculis nibh ut mi facilisis, sed lobortis mi efficitur. Nam sed urna eleifend sem ullamcorper scelerisque. </p>
+					]]>
+					</Field>
+					<Field Name="FAQOrder">5</Field>
+					<Field Name="FAQExpanded">1</Field>
+				</Row>
+				<Row>
+					<Field Name="ID">4</Field>
+					<Field Name="ContentTypeId">0x01006E6B261E34044037800F4A073174CB8D</Field>
+					<Field Name="FileDirRef">Sample FAQ set</Field>
+					<Field Name="FSObjType">0</Field>
+					<Field Name="FAQQuestion">
+						<![CDATA[
+						<p><b>Duis vel ex eget turpis consequat consequat ut non elit. Donec aliquam libero sem, vel egestas metus tristique et. Maecenas ornare neque nec enim maximus pretium. Cras in pellentesque lacus?  </b></p>
+					  ]]>
+					</Field>
+					<Field Name="FAQAnswer">
+						<![CDATA[
+						<p> Vestibulum sapien quam, scelerisque sed nibh a, aliquam malesuada enim. Ut vitae dictum erat. Cras tempus turpis elit, finibus vulputate quam dictum in. Ut mattis velit id ipsum commodo, non aliquam turpis egestas. Maecenas fringilla tellus risus, ut sagittis nunc bibendum id. Proin id felis tincidunt velit rhoncus pharetra. In a ante ac nisi aliquet lacinia ac et velit. Phasellus vitae pretium sem. Proin auctor arcu sed mauris lobortis congue. Donec convallis nisi iaculis odio sagittis semper. Fusce dapibus placerat blandit. Quisque sodales libero sed tortor dapibus, a viverra orci blandit. Quisque vitae mauris ante. Mauris at ex eget magna pellentesque vestibulum a ut mauris. Nam metus ex, pulvinar nec ligula sed, feugiat egestas metus. Curabitur lobortis tortor in nisi iaculis, sed accumsan nulla condimentum.
+
+Duis vel ex eget turpis consequat consequat ut non elit. Donec aliquam libero sem, vel egestas metus tristique et. Maecenas ornare neque nec enim maximus pretium. Cras in pellentesque lacus. Aliquam porta id massa ut semper. Suspendisse potenti. Aliquam erat volutpat. Integer maximus urna nisi, nec blandit ipsum posuere ac. Nam pulvinar dolor vitae nunc lacinia vulputate. Vestibulum nibh tellus, maximus quis nisl vitae, volutpat consequat nunc. </p>
+					  ]]>
+					</Field>
+					<Field Name="FAQOrder">5</Field>
+					<Field Name="FAQExpanded">1</Field>
+				</Row>
+				<Row>
+					<Field Name="ID">5</Field>
+					<Field Name="ContentTypeId">0x01006E6B261E34044037800F4A073174CB8D</Field>
+					<Field Name="FileDirRef">Sample FAQ set</Field>
+					<Field Name="FSObjType">0</Field>
+					<Field Name="FAQQuestion">
+						<![CDATA[
+						<p><b>Vivamus a placerat nunc?  </b></p>
+					  ]]>
+					</Field>
+					<Field Name="FAQAnswer">
+						<![CDATA[
+						<p> Vivamus auctor, augue eget hendrerit blandit, turpis turpis faucibus urna, ornare sodales lacus quam vel tellus. Vestibulum elementum malesuada tortor eu porta. Vivamus at enim ac sapien fermentum ullamcorper. Pellentesque nec neque porta, iaculis dui et, faucibus purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce at viverra ante. Nulla ac cursus turpis. Nulla facilisi. Nunc sagittis nisl quis metus porta ultrices. Cras facilisis metus vel erat tempus, in porta libero tristique. Nulla nibh mauris, varius commodo tortor ut, tempus eleifend augue. Morbi cursus in enim eu accumsan. Proin varius lorem augue, ac blandit lorem interdum vel. Ut id nibh tristique, consequat nisl blandit, aliquet lectus. Cras sed venenatis nisl. Morbi nulla tellus, interdum in sodales eget, posuere ut nisi.
+
+Vivamus a placerat nunc. Pellentesque pretium ex at pellentesque tincidunt. Pellentesque a mi felis. Proin feugiat odio at ante ultricies scelerisque. Donec quis justo sit amet ex ultricies hendrerit. Suspendisse potenti. Sed faucibus lorem eget dapibus tincidunt. In viverra at velit at blandit. Quisque vel urna sem. Ut purus odio, fermentum nec malesuada vitae, condimentum sed eros. </p>
+					]]>
+					</Field>
+					<Field Name="FAQOrder">5</Field>
+					<Field Name="FAQExpanded">0</Field>
+				</Row>
+				<Row>
+					<Field Name="ID">6</Field>
+					<Field Name="ContentTypeId">0x01006E6B261E34044037800F4A073174CB8D</Field>
+					<Field Name="FileDirRef">Sample FAQ set</Field>
+					<Field Name="FSObjType">0</Field>
+					<Field Name="FAQQuestion">
+						<![CDATA[
+							<p><b>Nullam tempor nisi id interdum dictum. Proin vitae ipsum purus?  </b></p>
+					]]>
+					</Field>
+					<Field Name="FAQAnswer">
+						<![CDATA[
+							<p> Nullam tempor nisi id interdum dictum. Proin vitae ipsum purus. Aliquam at augue pellentesque, efficitur augue ut, tincidunt urna. Cras vestibulum, neque vel semper posuere, lorem leo laoreet diam, et mollis lacus diam vel metus. In blandit convallis sem, quis ultrices felis accumsan vitae. Ut pretium lectus sit amet ipsum accumsan euismod. Donec a nisl ipsum. Aliquam id metus nec massa feugiat condimentum sed id dolor. Aliquam quis mauris nec elit tempor viverra. Etiam elit urna, dignissim vitae felis sed, porta rhoncus purus. Nunc convallis posuere enim non malesuada. Nullam eget risus sed purus cursus imperdiet. Vivamus sit amet lectus sollicitudin, pharetra nisl ut, pharetra justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie eget urna nec rutrum.
+
+Fusce ornare neque sit amet purus pharetra, et ultrices dolor efficitur. Maecenas pretium ultricies ullamcorper. Duis posuere ac neque ac posuere. Etiam consequat nisl vel finibus laoreet. Morbi enim mi, sodales vel placerat vel, vestibulum lacinia odio. Etiam rutrum tristique ex in ultrices. Curabitur hendrerit ante euismod consequat volutpat. </p>
+					]]>
+					</Field>
+					<Field Name="FAQOrder">5</Field>
+					<Field Name="FAQExpanded">1</Field>
+				</Row>
+				<Row>
+					<Field Name="ID">7</Field>
+					<Field Name="ContentTypeId">0x01006E6B261E34044037800F4A073174CB8D</Field>
+					<Field Name="FileDirRef">Sample FAQ set</Field>
+					<Field Name="FSObjType">0</Field>
+					<Field Name="FAQQuestion">
+						<![CDATA[
+							<p><b>Sed vehicula mattis tortor ut elementum. Praesent risus nulla?  </b></p>
+					]]>
+					</Field>
+					<Field Name="FAQAnswer">
+						<![CDATA[
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec.</p>
+					]]>
+					</Field>
+					<Field Name="FAQOrder">5</Field>
+					<Field Name="FAQExpanded">1</Field>
+				</Row>
+			</Rows>
+		</Data>
+	</ListInstance>
+</Elements>

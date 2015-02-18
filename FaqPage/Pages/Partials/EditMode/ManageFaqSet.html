@@ -1,0 +1,174 @@
+﻿<div>
+	<h1>{{Resources.ManageFaqSet}}&nbsp;'{{faqSetModel.faqSetName}}'</h1>
+
+	<ul class="nav nav-tabs">
+		<li class="data-tab" role="presentation" data-ng-class="{active: activeTab === 'tab1'}"><a data-ng-click="activeTab = 'tab1'" href>{{Resources.Questions}}</a></li>
+		<li class="data-tab" role="presentation" data-ng-class="{active: activeTab === 'tab2'}"><a data-ng-click="activeTab = 'tab2'" href>{{Resources.CommonFAQSetSettings}}</a></li>
+	</ul>
+
+	<div class="panel panel-default no-top-border" data-ng-show="activeTab === 'tab1'" data-block="viewDeferred">
+		<div class="panel-body">
+			<div>
+				<div ui-sortable="sortableOptions" ng-model="faqItems">
+					<div class="question-prev ui-sortable" ng-repeat="faqItem in faqItems">
+						<div class="clearfix edit-faq">
+							<div class="pull-left faq-actions">
+								<button type="button" class="btn btn-default img-btn" title="{{Resources.EditFaq}}" ng-click="editFaq(faqItem)">
+									<span class="glyphicon glyphicon-edit"></span>
+								</button>
+								<button type="button" class="btn btn-danger img-btn" title="{{Resources.DeleteFaq}}" ng-click="deleteFaq(faqItem)">
+									<span class="glyphicon glyphicon-remove"></span>
+								</button>
+							</div>
+							<div class="faq-question" ng-bind-html="trustedHtml(faqItem.question)"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div ng-show="faqItems && faqItems.length === 0">
+			{{Resources.NoFaqsToShow}}
+		</div>
+	</div>
+
+	<div class="panel panel-default no-top-border" data-ng-controller="CommonFaqSetSettingsCtrl" data-ng-show="activeTab === 'tab2'">
+		<div class="panel-body" data-block="viewDeferred">
+			<div class="col-lg-10">
+				
+				<!-- Plus\Minus -->
+				<div class="panel panel-default">
+					<div class="checkbox panel-body">
+						<label>
+							<input ng-model="faqSettings.showPlusSymbol" type="checkbox" name="faqShowPlus" data-ng-value="false" title="{{Resources.ShowHidePlusSign}}"/>
+							<span>{{Resources.ShowHidePlusSign}}</span>
+						</label>
+					</div>
+				</div>
+
+				<!-- Search -->
+				<div class="panel panel-default">
+					<div class="checkbox panel-body">
+						<label>
+							<input ng-model="faqSettings.searchEnabled" type="checkbox" name="faqSearchEnable" data-ng-value="false" title="{{Resources.EnableSearchBox}}"/>
+							<span>{{Resources.EnableSearchBox}}</span>
+						</label>
+					</div>
+				</div>
+
+				<!-- Animation -->
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="checkbox">
+							<label>
+								<input ng-model="faqSettings.useAnimation" type="radio" name="faqAnimate" data-ng-value="false" title="{{Resources.DontUseAnimationForFaqSet}}"/>
+								<span>{{Resources.DontUseAnimationForFaqSet}}</span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input ng-model="faqSettings.useAnimation" type="radio" name="faqAnimate" data-ng-value="true" title="{{Resources.UseAnimationForFaqSet}}"/>
+								<span>{{Resources.UseAnimationForFaqSet}}</span>
+							</label>
+						</div>
+						<div class="panel panel-default" data-ng-show="faqSettings.useAnimation">
+							<div class="panel-body">
+								<div class="col-lg-2">
+									<div>
+										<span>{{Resources.SelectDesiredAnimation}}</span>
+									</div>
+									<div class="dropdown">
+										<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+											{{selectedAnimation}}
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu faq-animations" role="menu" aria-labelledby="dropdownMenu1">
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('cshow')" href>{{Resources.SimpleAnimation}}</a></li>
+											<li role="presentation" class="divider"></li>
+											<li role="presentation" class="dropdown-header faq-h"> - {{Resources.Fade}} - </li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('fadeIn')" href>{{Resources.FadeIn}}</a></li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('fadeInDown')" href>{{Resources.FadeInDown}}</a></li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('fadeInUp')" href>{{Resources.FadeInUp}}</a></li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('fadeInLeft')" href>{{Resources.FadeInLeft}}</a></li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('fadeInRight')" href>{{Resources.FadeInRight}}</a></li>
+											<li role="presentation" class="divider"></li>
+											<li role="presentation" class="dropdown-header faq-h"> - {{Resources.Flip}} - </li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('flip')" href>{{Resources.Flip}}</a></li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('flipInX')" href>{{Resources.FlipInX}}</a></li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('flipInY')" href>{{Resources.FlipInY}}</a></li>
+											<li role="presentation" class="divider"></li>
+											<li role="presentation" class="dropdown-header faq-h"> - {{Resources.Rotate}} - </li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('rotateIn')" href>{{Resources.RotateIn}}</a></li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('rotateInDownLeft')" href>{{Resources.RotateInDownLeft}}</a></li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('rotateInDownRight')" href>{{Resources.RotateInDownRight}}</a></li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('rotateInUpLeft')" href>{{Resources.RotateInUpLeft}}</a></li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('rotateInUpRight')" href>{{Resources.RotateInUpRight}}</a></li>
+											<li role="presentation" class="divider"></li>
+											<li role="presentation" class="dropdown-header faq-h"> - {{Resources.Bounce}} - </li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('bounceIn')" href>{{Resources.BounceIn}}</a></li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('bounceInDown')" href>{{Resources.BounceInDown}}</a></li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('bounceInUp')" href>{{Resources.BounceInUp}}</a></li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('bounceInLeft')" href>{{Resources.BounceInLeft}}</a></li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('bounceInRight')" href>{{Resources.BounceInRight}}</a></li>
+											<li role="presentation" class="divider"></li>
+											<li role="presentation" class="dropdown-header faq-h"> - {{Resources.Zoom}} - </li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('zoomIn')" href>{{Resources.ZoomIn}}</a></li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('zoomInDown')" href>{{Resources.ZoomInDown}}</a></li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('zoomInUp')" href>{{Resources.ZoomInUp}}</a></li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('zoomInLeft')" href>{{Resources.ZoomInLeft}}</a></li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('zoomInRight')" href>{{Resources.ZoomInRight}}</a></li>
+											<li role="presentation" class="divider"></li>
+											<li role="presentation" class="dropdown-header faq-h"> - {{Resources.EventMoreCrazy}} - </li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('pulse')" href>{{Resources.Pulse}}</a></li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('swing')" href>{{Resources.Swing}}</a></li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('tada')" href>{{Resources.Tada}}</a></li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('lightSpeedIn')" href>{{Resources.LightSpeedIn}}</a></li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('rollIn')" href>{{Resources.RollIn}}</a></li>
+											<li role="presentation"><a role="menuitem" tabindex="-1" data-ng-click="setSelectedAnimation('wobble')" href>{{Resources.Wobble}}</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-1"><input type="button" class="btn btn-default" data-ng-click="testAnimation($event)" data-ng-value="Resources.TestIt"/>
+								</div>
+								<div class="col-lg-6">
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h3 class="panel-title">{{Resources.TestZone}}</h3>
+										</div>
+										<div class="panel-body">
+											<div faq-animate animatation-name="playingAnimation" class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis purus sagittis ex ultrices, at accumsan quam viverra. Praesent ut ante purus. Fusce ornare augue rutrum vulputate hendrerit. Mauris tempor dui et purus mollis facilisis. Integer luctus metus ante, ac accumsan leo viverra at. Quisque felis turpis, mollis commodo interdum a, viverra vel quam.</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-10 pull-right">
+					<button ng-class="{disabled: folders.length == 0}" type="button" class="btn btn-success pull-right" title="{{Resources.Apply}}" data-ng-click="saveSettings()">
+						{{Resources.Apply}}
+					</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="buttons-group">
+		<button type="button" class="btn btn-default" title="{{Resources.BackToMainScreen}}" ng-click="go('/')">
+			{{Resources.BackToMainScreen}}
+		</button>
+		<button type="button" class="btn btn-primary" title="{{Resources.NewQuestion}}" ng-click="newFaq()">
+			{{Resources.NewQuestion}}
+		</button>
+	</div>
+
+	<script type="text/ng-template" id="deleteFaqModal.html">
+		<div class="modal-body">
+			{{Resources.ConfirmFaqDeletion}}
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-danger" ng-click="ok()">{{Resources.Delete}}</button>
+			<button class="btn btn-default" ng-click="cancel()">{{Resources.Cancel}}</button>
+		</div>
+	</script>
+</div>

@@ -1,0 +1,27 @@
+﻿<div class="form-horizontal col-lg-8" data-block="createFolderDeferred">
+	<div class="form-group">
+		<label class="col-lg-2 control-label" for="FaqSetName">
+			{{Resources.FaqSetNameText}}&nbsp;<span class="error">*</span>
+		</label>
+		<div class="col-lg-6">
+			<input maxlength="64" ng-required="true" class="form-control" type="text" name="FaqSetName" ng-model="faqSetModel.faqSetName" />
+			<div ng-show="submitted && faqForm.FaqSetName.$error.required" class="error">{{Resources.RequiredField}}</div>
+			<div ng-show="submitted && folderExists" class="error">{{Resources.FolderAlreadyExists}}</div>
+			<div ng-show="submitted && illegalCharacter" class="error">{{Resources.IllegalCharacter}}</div>
+		</div>
+	</div>
+	<div class="form-group col-lg-8">
+		<div class="pull-right">
+			<button type="button" class="btn btn-default" title="{{Resources.Back}}" ng-click="go('/')">
+				{{Resources.Back}}
+			</button>
+			<button ng-class="{disabled: faqForm.$invalid}" type="button" class="btn btn-primary" title="{{Resources.Next}}" ng-click="newFaqSet()">
+				{{Resources.Next}}
+			</button>
+		</div>
+	</div>
+	<div class="error" ng-show="commonError">
+		<div>{{Resources.CommonError}}</div>
+		<div>{{Resources.Message}}: {{errorMessage}}</div>
+	</div>
+</div>

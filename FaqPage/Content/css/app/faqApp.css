@@ -1,0 +1,360 @@
+﻿/* FIX for bootstrup UI */
+html * {
+  box-sizing: content-box; }
+
+#ng-app-FaqApp * {
+  box-sizing: border-box; }
+
+/* End of FIX */
+/* FIX for IE close icon for search input*/
+.faq-srch-input::-ms-clear {
+  display: none; }
+
+/* End of FIX*/
+/* fadeInLeftSmall custom animation */
+@-webkit-keyframes fadeInLeftSmall {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+@keyframes fadeInLeftSmall {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+/* Navigation animation */
+.slide-animate.ng-enter {
+  animation: fadeInLeftSmall 0.5s;
+  -webkit-animation: fadeInLeftSmall 0.5s; }
+
+/* FAQ answers animations */
+.faq-answer.faq-bounce, .faq-answer.faq-bounce-add-active {
+  animation: bounce 1s;
+  -webkit-animation: bounce 1s;
+  opacity: 1 !important; }
+
+.faq-answer.faq-pulse, .faq-answer.faq-pulse-add-active {
+  animation: pulse 1s;
+  -webkit-animation: pulse 1s;
+  opacity: 1 !important; }
+
+.faq-answer.faq-swing, .faq-answer.faq-swing-add-active {
+  animation: swing 1s;
+  -webkit-animation: swing 1s;
+  opacity: 1 !important; }
+
+.faq-answer.faq-tada, .faq-answer.faq-tada-add-active {
+  animation: tada 1s;
+  -webkit-animation: tada 1s;
+  opacity: 1 !important; }
+
+.faq-answer.faq-bounceIn, .faq-answer.faq-bounceIn-add-active {
+  animation: bounceIn 1s;
+  -webkit-animation: bounceIn 1s;
+  opacity: 1 !important; }
+
+.faq-answer.faq-bounceDown, .faq-answer.faq-bounceDown-add-active {
+  animation: bounceDown 1s;
+  -webkit-animation: bounceDown 1s;
+  opacity: 1 !important; }
+
+.faq-answer.faq-bounceUp, .faq-answer.faq-bounceUp-add-active {
+  animation: bounceUp 1s;
+  -webkit-animation: bounceUp 1s;
+  opacity: 1 !important; }
+
+.faq-answer.faq-bounceLeft, .faq-answer.faq-bounceLeft-add-active {
+  animation: bounceLeft 1s;
+  -webkit-animation: bounceLeft 1s;
+  opacity: 1 !important; }
+
+.faq-answer.faq-bounceRigth, .faq-answer.faq-bounceRigth-add-active {
+  animation: bounceRigth 1s;
+  -webkit-animation: bounceRigth 1s;
+  opacity: 1 !important; }
+
+.faq-answer.faq-fadeIn, .faq-answer.faq-fadeIn-add-active {
+  animation: fadeIn 1s;
+  -webkit-animation: fadeIn 1s;
+  opacity: 1 !important; }
+
+.faq-answer.faq-fadeInDown, .faq-answer.faq-fadeInDown-add-active {
+  animation: fadeInDown 1s;
+  -webkit-animation: fadeInDown 1s;
+  opacity: 1 !important; }
+
+.faq-answer.faq-fadeInLeft, .faq-answer.faq-fadeInLeft-add-active {
+  animation: fadeInLeft 1s;
+  -webkit-animation: fadeInLeft 1s;
+  opacity: 1 !important; }
+
+.faq-answer.faq-fadeInRight, .faq-answer.faq-fadeInRight-add-active {
+  animation: fadeInRight 1s;
+  -webkit-animation: fadeInRight 1s;
+  opacity: 1 !important; }
+
+.faq-answer.faq-fadeInUp, .faq-answer.faq-fadeInUp-add-active {
+  animation: fadeInUp 1s;
+  -webkit-animation: fadeInUp 1s;
+  opacity: 1 !important; }
+
+.faq-answer.faq-flip, .faq-answer.faq-flip-add-active {
+  animation: flip 1s;
+  -webkit-animation: flip 1s;
+  opacity: 1 !important; }
+
+.faq-answer.faq-flipInX, .faq-answer.faq-flipInX-add-active {
+  animation: flipInX 1s;
+  -webkit-animation: flipInX 1s;
+  opacity: 1 !important; }
+
+.faq-answer.faq-flipInY, .faq-answer.faq-flipInY-add-active {
+  animation: flipInY 1s;
+  -webkit-animation: flipInY 1s;
+  opacity: 1 !important; }
+
+.faq-answer.faq-lightSpeedIn, .faq-answer.faq-lightSpeedIn-add-active {
+  animation: lightSpeedIn 1s;
+  -webkit-animation: lightSpeedIn 1s;
+  opacity: 1 !important; }
+
+.faq-answer.faq-rotateIn, .faq-answer.faq-rotateIn-add-active {
+  animation: rotateIn 1s;
+  -webkit-animation: rotateIn 1s;
+  opacity: 1 !important; }
+
+.faq-answer.faq-rotateInDownRight, .faq-answer.faq-rotateInDownRight-add-active {
+  animation: rotateInDownRight 1s;
+  -webkit-animation: rotateInDownRight 1s;
+  opacity: 1 !important; }
+
+.faq-answer.faq-rotateInDownLeft, .faq-answer.faq-rotateInDownLeft-add-active {
+  animation: rotateInDownLeft 1s;
+  -webkit-animation: rotateInDownLeft 1s;
+  opacity: 1 !important; }
+
+.faq-answer.faq-rotateInUpLeft, .faq-answer.faq-rotateInUpLeft-add-active {
+  animation: rotateInDownLeft 1s;
+  -webkit-animation: rotateInDownLeft 1s;
+  opacity: 1 !important; }
+
+.faq-answer.faq-rotateInUpRight, .faq-answer.faq-rotateInUpRight-add-active {
+  animation: rotateInUpRight 1s;
+  -webkit-animation: rotateInUpRight 1s;
+  opacity: 1 !important; }
+
+.faq-answer.faq-hinge, .faq-answer.faq-hinge-add-active {
+  animation: hinge 1s;
+  -webkit-animation: hinge 1s;
+  opacity: 1 !important; }
+
+.faq-answer.faq-rollIn, .faq-answer.faq-rollIn-add-active {
+  animation: rollIn 1s;
+  -webkit-animation: rollIn 1s;
+  opacity: 1 !important; }
+
+.faq-answer.faq-zoomIn, .faq-answer.faq-zoomIn-add-active {
+  animation: zoomIn 1s;
+  -webkit-animation: zoomIn 1s;
+  opacity: 1 !important; }
+
+input[type="radio"], input[type="checkbox"] {
+  display: none; }
+
+input[type="radio"] + span:before, input[type="checkbox"] + span:before {
+  font-family: 'FontAwesome';
+  padding-right: 3px;
+  font-size: 20px; }
+
+input[type="radio"] + span:before {
+  content: "\f10c";
+  /* circle-blank */ }
+
+input[type="radio"]:checked + span:before {
+  content: "\f192";
+  /* circle */ }
+
+input[type="checkbox"] + span:before {
+  content: "\f096";
+  /* check-empty */ }
+
+input[type="checkbox"]:checked + span:before {
+  content: "\f046";
+  /* check */ }
+
+#s4-bodyContainer #s4-titlerow {
+  margin-bottom: 30px; }
+
+#s4-workspace #contentRow, #s4-workspace #contentBox {
+  padding: 0 !important;
+  margin: 0 !important; }
+
+#ng-app-FaqApp {
+  margin: 15px; }
+
+.faq-answer {
+  margin-left: 25px; }
+
+.faq-question {
+  padding-left: 25px;
+  margin-top: 2px; }
+
+.faq-question:hover {
+  cursor: pointer; }
+
+.faq-question.plus {
+  background-image: url(../../img/plus.png);
+  background-repeat: no-repeat;
+  background-position: 0 2px; }
+
+.faq-question.minus {
+  background-image: url("../../img/minus.png");
+  background-repeat: no-repeat;
+  background-position: 0 6px; }
+
+.error {
+  color: red; }
+
+.question-prev {
+  margin: 10px 0 10px 0;
+  border: 1px dashed transparent; }
+
+.question-prev:hover {
+  border: 1px dashed #63A1F7;
+  cursor: pointer; }
+
+.btn-actions {
+  width: 40%; }
+
+.btn-action {
+  padding: 7px; }
+
+.btn-action button.btn-block {
+  white-space: inherit; }
+
+.faq-start-title {
+  width: 32%; }
+
+.form-horizontal .form-group {
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
+
+.buttons-group {
+  margin-top: 10px; }
+
+button[type='button'].img-btn {
+  min-width: 0;
+  padding: 3px 8px; }
+
+.edit-faq {
+  margin: 5px; }
+
+.ui-sortable-helper {
+  background-color: white; }
+
+.sortable-placeholder {
+  border: 1px dashed #989799;
+  height: 30px; }
+
+.content-edit-error {
+  margin-top: -15px; }
+
+.green {
+  color: green; }
+
+.inline-edit {
+  font-size: 1.9em;
+  cursor: pointer; }
+
+div.manage-faq-set-btns {
+  padding-top: 2px;
+  padding-right: 0; }
+
+.faq-actions {
+  margin: 0 10px; }
+
+.faq-anim {
+  min-width: 200px; }
+
+.dropdown-header.faq-h {
+  font-weight: bold;
+  font-size: larger; }
+
+.dropdown-menu.faq-animations {
+  max-height: 250px;
+  overflow-y: scroll; }
+
+.panel.no-top-border {
+  border-top: none; }
+
+.save-success {
+  font-size: 28px; }
+
+div.faq-question.no-plus-symbol {
+  background-image: none;
+  padding-left: 5px; }
+
+div.faq-question.no-hover:hover {
+  cursor: default; }
+
+.license-info {
+  margin: 5px 5px 15px 5px;
+  padding: 10px; }
+
+.license-line {
+  padding: 5px;
+  font-weight: 600; }
+
+.activation-info {
+  margin: 5px;
+  padding: 10px;
+  font-weight: 600; }
+
+.hostId {
+  font-weight: 800; }
+
+.data-tab {
+  cursor: pointer; }
+
+.data-tab.active {
+  cursor: default; }
+
+.highlighted {
+  background-color: #ffd800; }
+
+.faq-search {
+  position: relative;
+  margin: 15px 0; }
+
+.faq-search .faq-srch-input {
+  padding-left: 25px; }
+
+a.faq-clear-search, a.faq-clear-search:visited {
+  color: #CC0033; }
+
+a.faq-clear-search:hover {
+  cursor: pointer; }
+
+.faq-search .fa.fa-search {
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  font-size: larger; }
+
+.faq-search .faq-clear-search {
+  position: absolute;
+  right: 5px;
+  top: 6px;
+  font-size: larger; }

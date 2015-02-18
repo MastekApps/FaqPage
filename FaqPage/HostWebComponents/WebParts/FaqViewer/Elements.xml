@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ClientWebPart Name="FaqViewer" Title="$Resources:FaqViewerWebPartTitle;" Description="$Resources:FaqViewerWebPartDescription;" DefaultWidth="800" DefaultHeight="400">
+		<Content Type="html" Src="~appWebUrl/FaqViewer.aspx?{StandardTokens}&amp;wpId=_WPID_&amp;editmode=_editMode_&amp;IsDlg=1" />
+		<Properties>
+		</Properties>
+	</ClientWebPart>
+</Elements>

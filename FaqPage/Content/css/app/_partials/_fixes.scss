@@ -1,0 +1,15 @@
+﻿/* FIX for bootstrup UI */
+html * {
+	box-sizing: content-box;
+}
+
+#ng-app-FaqApp * {
+	box-sizing: border-box;
+}
+/* End of FIX */
+
+/* FIX for IE close icon for search input*/
+.faq-srch-input::-ms-clear {
+    display: none;
+}
+/* End of FIX*/

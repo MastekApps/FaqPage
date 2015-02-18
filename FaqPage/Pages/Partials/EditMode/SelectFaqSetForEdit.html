@@ -1,0 +1,47 @@
+﻿<div class="form-horizontal col-lg-6" data-block="viewDeferred">
+    <div ng-repeat="folder in folders" ng-form="faqSetForm">
+        <div class="form-group">
+            <div class="col-lg-2 manage-faq-set-btns">
+                <div class="pull-right">
+                    <button type="button" class="btn btn-default img-btn" title="{{Resources.EditFaqSet}}" ng-click="editFaqSet(folder)">
+                        <span class="glyphicon glyphicon-edit"></span>
+                    </button>
+                    <button type="button" class="btn btn-danger img-btn" title="{{Resources.DeleteFaqSet}}" ng-click="deleteFaqSet(folder)">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <input ng-enter="changeFolderName(this, folder)" ng-change="changed = true" maxlength="64" ng-required="true" class="form-control" type="text" ng-model="folder.title"
+                       ng-init="initScope(this, folder)" name="folderName" />
+                <div ng-show="submitted && faqSetForm.folderName.$error.required" class="error">{{Resources.RequiredField}}</div>
+                <div ng-show="submitted && folderExists" class="error">{{Resources.FolderAlreadyExists}}</div>
+                <div ng-show="submitted && illegalCharacter" class="error">{{Resources.IllegalCharacter}}</div>
+            </div>
+            <div ng-show="changed">
+                <span ng-click="changeFolderName(this, folder)" title="{{Resources.Apply}}" class="glyphicon glyphicon-ok green inline-edit"></span>
+                <span ng-click="revertFolderName(this, folder)" title="{{Resources.Revert}}" class="glyphicon glyphicon-remove inline-edit"></span>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-7 form-group" ng-show="folders.length == 0">
+        {{Resources.CreateNewFaqSet}}
+    </div>
+    <div class="form-group col-lg-7">
+        <div class="pull-right">
+            <button type="button" class="btn btn-default" title="{{Resources.BackToMainScreen}}" ng-click="go('/')">
+                {{Resources.BackToMainScreen}}
+            </button>
+        </div>
+    </div>
+</div>
+
+<script type="text/ng-template" id="deleteFaqModal.html">
+	<div class="modal-body">
+		{{Resources.ConfirmFaqDeletion}}
+	</div>
+	<div class="modal-footer">
+		<button class="btn btn-danger" ng-click="ok()">{{Resources.Delete}}</button>
+		<button class="btn btn-default" ng-click="cancel()">{{Resources.Cancel}}</button>
+	</div>
+</script>

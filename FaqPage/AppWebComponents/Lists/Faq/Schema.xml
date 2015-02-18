@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" DisableAttachments="TRUE" EnableContentTypes="TRUE" Title="Faq" FolderCreation="TRUE" Direction="$Resources:Direction;" Url="Lists/Faq" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+	<MetaData>
+		<ContentTypes>
+			<ContentTypeRef ID="0x01006E6B261E34044037800F4A073174CB8D" />
+			<ContentTypeRef ID="0x0120" />
+		</ContentTypes>
+		<Fields>
+			<Field ID="{8B3F832D-6AC7-403E-B222-81470B077BA7}" Type="Note" Mult="TRUE" Hidden="TRUE" Name="FAQFolderSettings" Required="FALSE" StaticName="FAQFolderSettings" DisplayName="FAQFolderSettings" />
+			<Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="$Resources:core,Title;" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" />
+			<Field ID="{701cb268-da8a-404a-873d-c62913cc687b}" Type="Note" Mult="TRUE" RichText="TRUE" RichTextMode="FullHtml" Name="FAQQuestion" Required="FALSE" StaticName="FAQQuestion" DisplayName="$Resources:FAQQuestionFieldName;" />
+			<Field ID="{8e8d3ff2-e760-4b0d-a751-f8ebf354d070}" Type="Note" Mult="TRUE" RichText="TRUE" RichTextMode="FullHtml" Name="FAQAnswer" Required="FALSE" StaticName="FAQAnswer" DisplayName="$Resources:FAQAnswerFIeldName;" />
+			<Field ID="{1b35a4be-0a83-4c99-9ece-2086f79087fe}" Type="Integer" Min="0" Name="FAQOrder" Required="FALSE" StaticName="FAQOrder" DisplayName="$Resources:FAQOrderFieldName;" />
+			<Field ID="{25700a05-0923-4885-a550-fc1d0f7c22e2}" Type="Boolean" Name="FAQExpanded" Required="FALSE" StaticName="FAQExpanded" DisplayName="$Resources:FAQExpandedFieldName;">
+				<Default>1</Default>
+			</Field>
+		</Fields>
+		<Views>
+			<View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+				<Toolbar Type="Standard" />
+				<XslLink Default="TRUE">main.xsl</XslLink>
+				<RowLimit Paged="TRUE">30</RowLimit>
+				<ViewFields>
+					<FieldRef Name="LinkTitleNoMenu"></FieldRef>
+				</ViewFields>
+				<Query>
+					<OrderBy>
+						<FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+					</OrderBy>
+				</Query>
+				<ParameterBindings>
+					<ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+					<ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+					<ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+				</ParameterBindings>
+			</View>
+			<View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+				<Toolbar Type="Standard" />
+				<XslLink Default="TRUE">main.xsl</XslLink>
+				<JSLink>clienttemplates.js</JSLink>
+				<RowLimit Paged="TRUE">30</RowLimit>
+				<ViewFields>
+					<FieldRef Name="DocIcon"></FieldRef>
+					<FieldRef Name="LinkTitle"></FieldRef>
+					<FieldRef Name="FAQQuestion"></FieldRef>
+					<FieldRef Name="FAQAnswer"></FieldRef>
+					<FieldRef Name="FAQOrder"></FieldRef>
+					<FieldRef Name="FAQExpanded"></FieldRef>
+				</ViewFields>
+				<Query>
+					<OrderBy>
+						<FieldRef Name="FAQOrder"></FieldRef>
+					</OrderBy>
+				</Query>
+				<ParameterBindings>
+					<ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+					<ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+				</ParameterBindings>
+			</View>
+		</Views>
+		<Forms>
+			<Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+			<Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+			<Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+		</Forms>
+	</MetaData>
+</List>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<!-- Parent ContentType: Item (0x01) -->
+	<ContentType ID="0x01006E6B261E34044037800F4A073174CB8D"
+				Name="FAQ"
+				Group="FAQ"
+				Description=""
+				Inherits="FALSE"
+				Version="0">
+		<FieldRefs>
+			<FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" Hidden="TRUE" Required="FALSE" />
+			<FieldRef Name="FAQQuestion"/>
+			<FieldRef Name="FAQAnswer"/>
+			<FieldRef Name="FAQOrder"/>
+			<FieldRef Name="FAQExpanded"/>
+			<FieldRef Name="FAQFolderSettings"/>
+		</FieldRefs>
+	</ContentType>
+
+	<Field ID="{8B3F832D-6AC7-403E-B222-81470B077BA7}" Type="Note" Mult="TRUE" Hidden="TRUE" Name="FAQFolderSettings" Required="FALSE" StaticName="FAQFolderSettings" DisplayName="FAQFolderSettings" />
+	<Field ID="{701cb268-da8a-404a-873d-c62913cc687b}" Type="Note" Mult="TRUE" RichText="TRUE" RichTextMode="FullHtml" Name="FAQQuestion" Required="FALSE" StaticName="FAQQuestion" DisplayName="$Resources:FAQQuestionFieldName;" />
+	<Field ID="{8e8d3ff2-e760-4b0d-a751-f8ebf354d070}" Type="Note" Mult="TRUE" RichText="TRUE" RichTextMode="FullHtml" Name="FAQAnswer" Required="FALSE" StaticName="FAQAnswer" DisplayName="$Resources:FAQAnswerFIeldName;" />
+	<Field ID="{1b35a4be-0a83-4c99-9ece-2086f79087fe}" Type="Integer" Min="0" Name="FAQOrder" Required="FALSE" StaticName="FAQOrder" DisplayName="$Resources:FAQOrderFieldName;" />
+	<Field ID="{25700a05-0923-4885-a550-fc1d0f7c22e2}" Type="Boolean" Name="FAQExpanded" Required="FALSE" StaticName="FAQExpanded" DisplayName="$Resources:FAQExpandedFieldName;">
+		<Default>1</Default>
+	</Field>
+
+</Elements>

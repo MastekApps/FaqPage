@@ -1,0 +1,14 @@
+﻿<div data-block="viewDeferred">
+	<div class="faq-search" data-ng-show="showSearch">
+		<span class="fa fa-search">&nbsp;</span>
+		<input class="form-control faq-srch-input" data-ng-keydown="resize()" type="text" placeholder="{{Resources.Search}}" ng-model="searchText">
+		<a data-ng-show="!!searchText" class="faq-clear-search" href data-ng-click="clearSearch()"><span class="fa fa-times">&nbsp;</span></a>
+	</div>
+	<div ng-repeat="faqItem in faqItems | filter:filterByQuestionAnswer | orderBy:'order'">
+		<div class="faq-question" ng-class="{plus: !faqItem.isShown, minus: faqItem.isShown || $parent.forceExpand, 'no-plus-symbol': !showPlusSymbol, 'no-hover': $parent.forceExpand}" ng-click="changeVisibility(faqItem, this)" ng-bind-html="faqItem.question | highlight:searchText"></div>
+		<div class="faq-answer" faq-show="faqItem.isShown" animatation-name="playingAnimation" ng-show="faqItem.expanded || $parent.forceExpand" ng-bind-html="faqItem.answer | highlight:searchText"></div>
+	</div>
+</div>
+<div data-ng-show="faqItems.length == 0">{{Resources.AddFAQItems}}</div>
+<div ng-show="!appPartInitialized" class="not-initilized" ng-bind-html="trustedHtml(Resources.AppPartIsNotConfigured)">
+</div>

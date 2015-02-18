@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9693B0FF-1B2E-44A6-8959-717B351FBA0F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FaqPage</RootNamespace>
+    <AssemblyName>FaqPage</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <ProjectMode>SharePointApp</ProjectMode>
+    <AppFeaturePartId>{632a6da3-4a46-457d-8236-773a32c5b0e6}</AppFeaturePartId>
+    <WspPartId>{98350b4a-8383-4b60-80bd-1a5fefa64ea5}</WspPartId>
+    <WorkflowPartId>{51c8ccd4-de5f-4d7a-b090-8ce8fc172e8f}</WorkflowPartId>
+    <CspkgPartId>{7cf69a7b-21c9-47cb-8555-a080a3cab9fd}</CspkgPartId>
+    <SqlPackagePartId>{39c0ec3f-6ba9-4fb1-a4b2-952e23eaa32c}</SqlPackagePartId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="AppWebComponents\ContentTypes\AppPartConfig\Elements.xml" />
+    <Content Include="AppWebComponents\Lists\AppPartsConfig\AppPartsConfigInstance\Elements.xml" />
+    <Content Include="AppWebComponents\Lists\AppPartsConfig\Elements.xml" />
+    <Content Include="AppWebComponents\Lists\AppPartsConfig\Schema.xml" />
+    <None Include="Content\css\app\_app.scss" />
+    <None Include="Content\css\app\_partials\_animations.scss" />
+    <Content Include="Content\css\external\animate.css" />
+    <Content Include="Content\css\external\bootstrap.min.css" />
+    <Content Include="Content\css\css_bundle.css">
+      <DependentUpon>css_bundle.css.bundle</DependentUpon>
+    </Content>
+    <Content Include="Content\css\css_bundle.min.css">
+      <DependentUpon>css_bundle.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\app\faqApp.css">
+      <DependentUpon>faqApp.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\css\app\faqApp.min.css">
+      <DependentUpon>faqApp.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\external\font-awesome.min.css" />
+    <Content Include="Content\css\external\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\css\external\jquery-ui-1.10.4.custom.min.css" />
+    <Content Include="Content\css\external\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\css\external\ngToast.min.css" />
+    <Content Include="Content\img\ajax-loader.gif" />
+    <Content Include="Content\img\minus.png" />
+    <Content Include="Content\img\plus.png" />
+    <Content Include="Content\rsa_public_key.txt" />
+    <Content Include="Images\AppIcon.png">
+      <OpcRelationship>manifest-icon</OpcRelationship>
+    </Content>
+    <Content Include="Pages\FaqAppPartEditMode.aspx" />
+    <Content Include="Pages\EditFaqs.aspx" />
+    <Content Include="Pages\FaqViewer.aspx" />
+    <Content Include="HostWebComponents\WebParts\FaqViewer\Elements.xml">
+      <OpcRelationship>feature-elementmanifest</OpcRelationship>
+    </Content>
+    <None Include="AppWebComponents\ContentTypes\Faq\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{58248629-8c74-4ed6-a217-c6b214f23dcb}</SharePointProjectItemId>
+    </None>
+    <None Include="AppWebComponents\ContentTypes\AppPartConfig\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{152ac5ba-b9e5-4b2a-abd3-4bf2f4fe2a22}</SharePointProjectItemId>
+    </None>
+    <None Include="AppWebComponents\Lists\AppPartsConfig\AppPartsConfigInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ee3d1497-57a0-488f-878c-eb9cfe526d79}</SharePointProjectItemId>
+    </None>
+    <None Include="AppWebComponents\Lists\AppPartsConfig\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c971d95f-b7a6-4d04-90ca-36b4a0415928}</SharePointProjectItemId>
+    </None>
+    <None Include="AppWebComponents\Lists\Documents\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b6f3a6d2-855c-44af-b07b-c4b0097c3573}</SharePointProjectItemId>
+    </None>
+    <None Include="AppWebComponents\Lists\Faq\FaqInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{32cc6c8e-c685-4e8a-b228-913cedfa6e1d}</SharePointProjectItemId>
+    </None>
+    <None Include="AppWebComponents\Lists\Faq\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e8d89b3b-e416-40ca-9723-7ab74494a1a9}</SharePointProjectItemId>
+    </None>
+    <None Include="AppWebComponents\Lists\MediaContent\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5c648b4f-fd47-474b-91d7-d4ab739e10f9}</SharePointProjectItemId>
+    </None>
+    <None Include="Content\css\app\_partials\_fixes.scss" />
+    <None Include="Content\css\app\_partials\_inputCustomization.scss" />
+    <None Include="Content\css\css_bundle.css.bundle" />
+    <None Include="Content\css\app\faqApp.scss" />
+    <None Include="Content\css\external\fonts\fontawesome-webfont.eot" />
+    <None Include="Content\css\external\fonts\fontawesome-webfont.ttf" />
+    <None Include="Content\css\external\fonts\fontawesome-webfont.woff" />
+    <None Include="Content\css\external\fonts\FontAwesome.otf" />
+    <None Include="Content\css\external\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Content\css\external\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Content\css\external\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="packages.config" />
+    <None Include="Pages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{863b4392-e4a4-460e-ae8d-14c29b14f149}</SharePointProjectItemId>
+    </None>
+    <Content Include="AppWebComponents\ContentTypes\Faq\Elements.xml" />
+    <Content Include="AppWebComponents\Lists\Documents\Elements.xml" />
+    <Content Include="AppWebComponents\Lists\Faq\Elements.xml" />
+    <Content Include="AppWebComponents\Lists\Faq\FaqInstance\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="AppWebComponents\Lists\Faq\Schema.xml" />
+    <Content Include="AppWebComponents\Lists\MediaContent\Elements.xml" />
+    <Content Include="Pages\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="HostWebComponents\WebParts\FaqViewer\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e1f5dcd4-21df-4736-bbee-2f64dcf122e7}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\App\app_bundle.js.bundle" />
+    <None Include="Scripts\App\app_bundle.min.js.map">
+      <DependentUpon>app_bundle.min.js</DependentUpon>
+    </None>
+    <None Include="Scripts\Core\core_bundle.js.bundle">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Scripts\Core\core_bundle.min.js.map">
+      <DependentUpon>core_bundle.min.js</DependentUpon>
+    </None>
+    <None Include="Scripts\External\external_bundle.js.bundle">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Scripts\External\external_bundle.min.js.map">
+      <DependentUpon>external_bundle.min.js</DependentUpon>
+    </None>
+    <None Include="Scripts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{39c0ec3f-6ba9-4fb1-a4b2-952e23eaa32c}</SharePointProjectItemId>
+    </None>
+    <Content Include="Pages\Partials\EditMode\ConnectFaqSet.html" />
+    <Content Include="Pages\Partials\EditMode\ContactDeveloper.html" />
+    <Content Include="Pages\Partials\EditMode\FaqEditStartScreen.html" />
+    <Content Include="Pages\Partials\EditMode\SelectFaqSetForEdit.html" />
+    <Content Include="Pages\Partials\FaqList.html" />
+    <Content Include="Pages\Partials\EditMode\CreateEditFaq.html" />
+    <Content Include="Pages\Partials\EditMode\ManageFaqSet.html" />
+    <Content Include="Pages\Partials\EditMode\NewFaqSet.html" />
+    <Content Include="Pages\Partials\EditMode\LicenseRequest.html" />
+    <Content Include="Scripts\App\app.js" />
+    <Content Include="Scripts\App\app_bundle.js">
+      <DependentUpon>app_bundle.js.bundle</DependentUpon>
+    </Content>
+    <Content Include="Scripts\App\app_bundle.min.js">
+      <DependentUpon>app_bundle.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\App\Controllers\CommonFaqSetSettingsCtrl.js" />
+    <Content Include="Scripts\App\Controllers\ConnectFaqSetCtrl.js" />
+    <Content Include="Scripts\App\Controllers\ContactDeveloperCtrl.js" />
+    <Content Include="Scripts\App\Controllers\CreateEditFaqCtrl.js" />
+    <Content Include="Scripts\App\Controllers\FaqEditCtrl.js" />
+    <Content Include="Scripts\App\Controllers\FaqViewCtrl.js" />
+    <Content Include="Scripts\App\Controllers\LicensingCtrl.js" />
+    <Content Include="Scripts\App\Controllers\ManageFaqSetCtrl.js" />
+    <Content Include="Scripts\App\Controllers\ModalInstanceCtrl.js" />
+    <Content Include="Scripts\App\Controllers\RegisterAppCtrl.js" />
+    <Content Include="Scripts\App\Controllers\SelectFaqForEditCtrl.js" />
+    <Content Include="Scripts\App\Directives\block.js" />
+    <Content Include="Scripts\App\Directives\contenteditable.js" />
+    <Content Include="Scripts\App\Directives\faqAnimate.js" />
+    <Content Include="Scripts\App\Directives\faqShow.js" />
+    <Content Include="Scripts\App\Directives\ngEnter.js" />
+    <Content Include="Scripts\App\Directives\spEditable.js" />
+    <Content Include="Scripts\App\Filters\highlight.js" />
+    <Content Include="Scripts\App\Services\animationList.js" />
+    <Content Include="Scripts\App\Services\context.js" />
+    <Content Include="Scripts\App\Services\faqService.js" />
+    <Content Include="Scripts\App\Services\faqSetModel.js" />
+    <Content Include="Scripts\App\Services\jq.js" />
+    <Content Include="Scripts\App\Services\licensing.js" />
+    <Content Include="Scripts\App\Services\processing.js" />
+    <Content Include="Scripts\build\build_config.js" />
+    <Content Include="Scripts\Core\Common\SPWebService.js" />
+    <Content Include="Scripts\Core\core_bundle.js">
+      <DependentUpon>core_bundle.js.bundle</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Core\core_bundle.min.js">
+      <DependentUpon>core_bundle.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Core\Repositories\AppPartsConfigRepository.js" />
+    <Content Include="Scripts\Core\Repositories\Base\BaseListItem.js" />
+    <Content Include="Scripts\Core\Repositories\Base\ListRepository.js" />
+    <Content Include="Scripts\Core\Constants.js" />
+    <Content Include="Scripts\Core\ListService.js" />
+    <Content Include="Scripts\Core\Repositories\Entities\AppPartConfigListItem.js" />
+    <Content Include="Scripts\Core\Repositories\Entities\FaqListItem.js" />
+    <Content Include="Scripts\Core\Repositories\FaqRepository.js" />
+    <Content Include="Scripts\Core\RequestError.js" />
+    <Content Include="Scripts\External\angular-animate.js" />
+    <Content Include="Scripts\External\angular-route.js" />
+    <Content Include="Scripts\External\angular-sanitize.js" />
+    <Content Include="Scripts\External\angular.js" />
+    <Content Include="Scripts\External\camljs.js" />
+    <Content Include="Scripts\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\External\external_bundle.js">
+      <DependentUpon>external_bundle.js.bundle</DependentUpon>
+    </Content>
+    <Content Include="Scripts\External\external_bundle.min.js">
+      <DependentUpon>external_bundle.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\External\jquery-2.1.1.js" />
+    <Content Include="Scripts\External\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="Scripts\External\jquery.blockUI.js" />
+    <Content Include="Scripts\External\angular-sortable.js" />
+    <Content Include="Scripts\External\jsencrypt.min.js" />
+    <Content Include="Scripts\External\moment.min.js" />
+    <Content Include="Scripts\External\ngToast.min.js" />
+    <Content Include="Scripts\External\ui-bootstrap-tpls-0.11.2.js" />
+    <Content Include="Scripts\init.js" />
+    <Content Include="Scripts\Resources\Resources.ru-ru.js" />
+    <Content Include="Scripts\Resources\Resources.en-us.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{aa85b965-0efb-432f-9615-ca9a4d540cbc}</SharePointProjectItemId>
+    </None>
+    <Content Include="Content\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Elements.xml" />
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{52f64256-6fd3-482c-b7f3-0a2d3a9fc5f4}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Package\Package.package">
+      <PackageId>{bf57b3a3-9292-43ae-bb9d-2d6031886521}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Features\FAQ Page\FAQ Page.feature">
+      <FeatureId>{b0697c44-2e61-47d4-b514-b620320ae6c6}</FeatureId>
+    </None>
+    <None Include="Features\FAQ Page\FAQ Page.Template.xml">
+      <DependentUpon>FAQ Page.feature</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AppManifestFile Include="AppManifest.xml">
+      <SubType>Designer</SubType>
+    </AppManifestFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\FAQ Page\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\FAQ Page\Resources.ru-RU.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources %28Host Web%29\Resources.resx">
+      <OpcRelationship>content-defaultresource</OpcRelationship>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources %28Host Web%29\Resources.en-US.resx">
+      <OpcRelationship>content-resource</OpcRelationship>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources %28Host Web%29\Resources.ru-RU.resx">
+      <OpcRelationship>content-resource</OpcRelationship>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <PropertyGroup>
+    <PreBuildEvent>if $(ConfigurationName) == Release (
+  Powershell -FIle $(SolutionDir)build\init.ps1 $(ProjectDir) 0
+) ELSE (
+   Powershell -FIle $(SolutionDir)build\init.ps1 $(ProjectDir) 1
+)
+</PreBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Module Name="Pages">
+		<File Path="Pages\Partials\faqlist.html" Url="Partials/faqlist.html" ReplaceContent="TRUE" />
+		<File Path="Pages\FaqViewer.aspx" Url="FaqViewer.aspx" ReplaceContent="TRUE" />
+		<File Path="Pages\EditFaqs.aspx" Url="EditFaqs.aspx" ReplaceContent="TRUE" />
+		<File Path="Pages\Partials\EditMode\FaqEditStartScreen.html" Url="Partials/EditMode/FaqEditStartScreen.html" ReplaceContent="TRUE" />
+		<File Path="Pages\Partials\EditMode\NewFaqSet.html" Url="Partials/EditMode/NewFaqSet.html" ReplaceContent="TRUE" />
+		<File Path="Pages\Partials\EditMode\ManageFaqSet.html" Url="Partials/EditMode/ManageFaqSet.html" ReplaceContent="TRUE" />
+		<File Path="Pages\Partials\EditMode\CreateEditFaq.html" Url="Partials/EditMode/CreateEditFaq.html" ReplaceContent="TRUE" />
+		<File Path="Pages\Partials\EditMode\SelectFaqSetForEdit.html" Url="Partials/EditMode/SelectFaqSetForEdit.html" ReplaceContent="TRUE" />
+		<File Path="Pages\Partials\EditMode\ConnectFaqSet.html" Url="Partials/EditMode/ConnectFaqSet.html" ReplaceContent="TRUE" />
+    <File Path="Pages\Partials\EditMode\LicenseRequest.html" Url="Partials/EditMode/LicenseRequest.html" ReplaceContent="TRUE" />
+    <File Path="Pages\Partials\EditMode\ContactDeveloper.html" Url="Partials/EditMode/ContactDeveloper.html" ReplaceContent="TRUE" />
+    <File Path="Pages\FaqAppPartEditMode.aspx" Url="FaqAppPartEditMode.aspx" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

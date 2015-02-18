@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Module Name="Scripts">
+		<File Path="Scripts\Resources\Resources.en-US.js" Url="Scripts/Resources/Resources.en-US.js" ReplaceContent="TRUE" />
+		<File Path="Scripts\Resources\Resources.ru-RU.js" Url="Scripts/Resources/Resources.ru-RU.js" ReplaceContent="TRUE" />
+		<File Path="Scripts\init.js" Url="Scripts/init.js" ReplaceContent="TRUE" />
+		<File Path="Scripts\External\external_bundle.js.bundle" Url="Scripts/External/external_bundle.js.bundle" ReplaceContent="TRUE" />
+		<File Path="Scripts\External\external_bundle.js" Url="Scripts/External/external_bundle.js" ReplaceContent="TRUE" />
+		<File Path="Scripts\External\external_bundle.min.js" Url="Scripts/External/external_bundle.min.js" ReplaceContent="TRUE" />
+		<File Path="Scripts\External\external_bundle.min.js.map" Url="Scripts/External/external_bundle.min.js.map" ReplaceContent="TRUE" />
+		<File Path="Scripts\App\app_bundle.js.bundle" Url="Scripts/App/app_bundle.js.bundle" ReplaceContent="TRUE" />
+		<File Path="Scripts\App\app_bundle.js" Url="Scripts/App/app_bundle.js" ReplaceContent="TRUE" />
+		<File Path="Scripts\App\app_bundle.min.js" Url="Scripts/App/app_bundle.min.js" ReplaceContent="TRUE" />
+		<File Path="Scripts\App\app_bundle.min.js.map" Url="Scripts/App/app_bundle.min.js.map" ReplaceContent="TRUE" />
+		<File Path="Scripts\Core\core_bundle.js.bundle" Url="Scripts/Core/core_bundle.js.bundle" ReplaceContent="TRUE" />
+		<File Path="Scripts\Core\core_bundle.js" Url="Scripts/Core/core_bundle.js" ReplaceContent="TRUE" />
+		<File Path="Scripts\Core\core_bundle.min.js" Url="Scripts/Core/core_bundle.min.js" ReplaceContent="TRUE" />
+		<File Path="Scripts\Core\core_bundle.min.js.map" Url="Scripts/Core/core_bundle.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\build\build_config.js" Url="Scripts/build/build_config.js" ReplaceContent="TRUE" />
+  </Module>
+</Elements>
