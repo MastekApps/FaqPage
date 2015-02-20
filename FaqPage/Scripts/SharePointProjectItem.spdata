@@ -6,18 +6,7 @@
     <ProjectItemFile Source="Resources\Resources.ru-ru.js" Target="Scripts\Resources\" Type="ElementFile" />
     <ProjectItemFile Source="init.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="External\camljs.js" Target="Scripts\External\" Type="ElementFile" />
-    <ProjectItemFile Source="External\jquery.blockUI.js" Target="Scripts\External\" Type="ElementFile" />
-    <ProjectItemFile Source="External\angular-sortable.js" Target="Scripts\External\" Type="ElementFile" />
-    <ProjectItemFile Source="External\angular-animate.js" Target="Scripts\External\" Type="ElementFile" />
-    <ProjectItemFile Source="External\angular-route.js" Target="Scripts\External\" Type="ElementFile" />
-    <ProjectItemFile Source="External\angular-sanitize.js" Target="Scripts\External\" Type="ElementFile" />
-    <ProjectItemFile Source="External\angular.js" Target="Scripts\External\" Type="ElementFile" />
-    <ProjectItemFile Source="External\ui-bootstrap-tpls-0.11.2.js" Target="Scripts\External\" Type="ElementFile" />
-    <ProjectItemFile Source="External\ngToast.min.js" Target="Scripts\External\" Type="ElementFile" />
-    <ProjectItemFile Source="External\jsencrypt.min.js" Target="Scripts\External\" Type="ElementFile" />
     <ProjectItemFile Source="build\build_config.js" Target="Scripts\build\" Type="ElementFile" />
-    <ProjectItemFile Source="External\moment.min.js" Target="Scripts\External\" Type="ElementFile" />
-    <ProjectItemFile Source="External\jquery-ui-1.10.4.custom.min.js" Target="Scripts\External\" Type="ElementFile" />
     <ProjectItemFile Source="External\faq.app.external.min.js" Target="Scripts\External\" Type="ElementFile" />
     <ProjectItemFile Source="External\faq.app.external.min.js.map" Target="Scripts\External\" Type="ElementFile" />
     <ProjectItemFile Source="AppExternal\angular\angular.js" Target="Scripts\AppExternal\angular\" Type="ElementFile" />
