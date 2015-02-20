@@ -45,6 +45,7 @@
     <Content Include="AppWebComponents\Lists\AppPartsConfig\AppPartsConfigInstance\Elements.xml" />
     <Content Include="AppWebComponents\Lists\AppPartsConfig\Elements.xml" />
     <Content Include="AppWebComponents\Lists\AppPartsConfig\Schema.xml" />
+    <None Include="bower.json" />
     <None Include="Content\css\app\_app.scss" />
     <None Include="Content\css\app\_partials\_animations.scss" />
     <Content Include="Content\css\external\animate.css" />
@@ -70,6 +71,7 @@
     <Content Include="Content\img\minus.png" />
     <Content Include="Content\img\plus.png" />
     <Content Include="Content\rsa_public_key.txt" />
+    <Content Include="gruntfile.js" />
     <Content Include="Images\AppIcon.png">
       <OpcRelationship>manifest-icon</OpcRelationship>
     </Content>
@@ -114,7 +116,7 @@
     <None Include="Content\css\external\fonts\glyphicons-halflings-regular.eot" />
     <None Include="Content\css\external\fonts\glyphicons-halflings-regular.ttf" />
     <None Include="Content\css\external\fonts\glyphicons-halflings-regular.woff" />
-    <None Include="packages.config" />
+    <None Include="package.json" />
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{863b4392-e4a4-460e-ae8d-14c29b14f149}</SharePointProjectItemId>
     </None>
@@ -132,6 +134,10 @@
     <None Include="HostWebComponents\WebParts\FaqViewer\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{e1f5dcd4-21df-4736-bbee-2f64dcf122e7}</SharePointProjectItemId>
     </None>
+    <None Include="Scripts\AppExternal\bootstrap\glyphicons-halflings-regular.eot" />
+    <None Include="Scripts\AppExternal\bootstrap\glyphicons-halflings-regular.ttf" />
+    <None Include="Scripts\AppExternal\bootstrap\glyphicons-halflings-regular.woff" />
+    <None Include="Scripts\External\faq.app.external.min.js.map" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\App\app_bundle.js.bundle" />
@@ -162,6 +168,23 @@
     <Content Include="Pages\Partials\EditMode\ManageFaqSet.html" />
     <Content Include="Pages\Partials\EditMode\NewFaqSet.html" />
     <Content Include="Pages\Partials\EditMode\LicenseRequest.html" />
+    <Content Include="Scripts\AppExternal\angular-animate\angular-animate.js" />
+    <Content Include="Scripts\AppExternal\angular-bootstrap\ui-bootstrap-tpls.js" />
+    <Content Include="Scripts\AppExternal\angular-route\angular-route.js" />
+    <Content Include="Scripts\AppExternal\angular-sanitize\angular-sanitize.js" />
+    <Content Include="Scripts\AppExternal\angular-ui-sortable\sortable.js" />
+    <Content Include="Scripts\AppExternal\angular\angular.js" />
+    <Content Include="Scripts\AppExternal\blockui\jquery.blockUI.js" />
+    <Content Include="Scripts\AppExternal\bootstrap\bootstrap.css" />
+    <Content Include="Scripts\AppExternal\bootstrap\bootstrap.js" />
+    <Content Include="Scripts\AppExternal\bootstrap\glyphicons-halflings-regular.svg" />
+    <Content Include="Scripts\AppExternal\camljs\index.js" />
+    <Content Include="Scripts\AppExternal\jquery-ui\jquery-ui.js" />
+    <Content Include="Scripts\AppExternal\jquery\jquery.js" />
+    <Content Include="Scripts\AppExternal\jsencrypt\jsencrypt.min.js" />
+    <Content Include="Scripts\AppExternal\moment\moment.js" />
+    <Content Include="Scripts\AppExternal\ngtoast\ngToast.css" />
+    <Content Include="Scripts\AppExternal\ngtoast\ngToast.js" />
     <Content Include="Scripts\App\app.js" />
     <Content Include="Scripts\App\app_bundle.js">
       <DependentUpon>app_bundle.js.bundle</DependentUpon>
@@ -225,6 +248,7 @@
     <Content Include="Scripts\External\external_bundle.min.js">
       <DependentUpon>external_bundle.js</DependentUpon>
     </Content>
+    <Content Include="Scripts\External\faq.app.external.min.js" />
     <Content Include="Scripts\External\jquery-2.1.1.js" />
     <Content Include="Scripts\External\jquery-ui-1.10.4.custom.min.js" />
     <Content Include="Scripts\External\jquery.blockUI.js" />

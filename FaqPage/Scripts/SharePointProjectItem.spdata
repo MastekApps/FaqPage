@@ -66,5 +66,27 @@
     <ProjectItemFile Source="External\jquery-ui-1.10.4.custom.min.js" Target="Scripts\External\" Type="ElementFile" />
     <ProjectItemFile Source="App\Controllers\ContactDeveloperCtrl.js" Target="Scripts\App\Controllers\" Type="ElementFile" />
     <ProjectItemFile Source="App\Filters\highlight.js" Target="Scripts\App\Filters\" Type="ElementFile" />
+    <ProjectItemFile Source="External\faq.app.external.min.js" Target="Scripts\External\" Type="ElementFile" />
+    <ProjectItemFile Source="External\faq.app.external.min.js.map" Target="Scripts\External\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\angular\angular.js" Target="Scripts\AppExternal\angular\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\angular-animate\angular-animate.js" Target="Scripts\AppExternal\angular-animate\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\angular-bootstrap\ui-bootstrap-tpls.js" Target="Scripts\AppExternal\angular-bootstrap\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\angular-sanitize\angular-sanitize.js" Target="Scripts\AppExternal\angular-sanitize\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\angular-ui-sortable\sortable.js" Target="Scripts\AppExternal\angular-ui-sortable\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\blockui\jquery.blockUI.js" Target="Scripts\AppExternal\blockui\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\bootstrap\bootstrap.css" Target="Scripts\AppExternal\bootstrap\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\bootstrap\bootstrap.js" Target="Scripts\AppExternal\bootstrap\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\bootstrap\glyphicons-halflings-regular.eot" Target="Scripts\AppExternal\bootstrap\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\bootstrap\glyphicons-halflings-regular.svg" Target="Scripts\AppExternal\bootstrap\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\bootstrap\glyphicons-halflings-regular.ttf" Target="Scripts\AppExternal\bootstrap\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\bootstrap\glyphicons-halflings-regular.woff" Target="Scripts\AppExternal\bootstrap\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\camljs\index.js" Target="Scripts\AppExternal\camljs\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\jquery\jquery.js" Target="Scripts\AppExternal\jquery\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\jquery-ui\jquery-ui.js" Target="Scripts\AppExternal\jquery-ui\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\ngtoast\ngToast.css" Target="Scripts\AppExternal\ngtoast\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\ngtoast\ngToast.js" Target="Scripts\AppExternal\ngtoast\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\angular-route\angular-route.js" Target="Scripts\AppExternal\angular-route\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\jsencrypt\jsencrypt.min.js" Target="Scripts\AppExternal\jsencrypt\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\moment\moment.js" Target="Scripts\AppExternal\moment\" Type="ElementFile" />
   </Files>
 </ProjectItem>

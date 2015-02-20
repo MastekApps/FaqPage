@@ -17,5 +17,27 @@
 		<File Path="Scripts\Core\core_bundle.min.js" Url="Scripts/Core/core_bundle.min.js" ReplaceContent="TRUE" />
 		<File Path="Scripts\Core\core_bundle.min.js.map" Url="Scripts/Core/core_bundle.min.js.map" ReplaceContent="TRUE" />
     <File Path="Scripts\build\build_config.js" Url="Scripts/build/build_config.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\External\faq.app.external.min.js" Url="Scripts/External/faq.app.external.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\External\faq.app.external.min.js.map" Url="Scripts/External/faq.app.external.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\AppExternal\angular\angular.js" Url="Scripts/AppExternal/angular/angular.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\AppExternal\angular-animate\angular-animate.js" Url="Scripts/AppExternal/angular-animate/angular-animate.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\AppExternal\angular-bootstrap\ui-bootstrap-tpls.js" Url="Scripts/AppExternal/angular-bootstrap/ui-bootstrap-tpls.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\AppExternal\angular-sanitize\angular-sanitize.js" Url="Scripts/AppExternal/angular-sanitize/angular-sanitize.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\AppExternal\angular-ui-sortable\sortable.js" Url="Scripts/AppExternal/angular-ui-sortable/sortable.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\AppExternal\blockui\jquery.blockUI.js" Url="Scripts/AppExternal/blockui/jquery.blockUI.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\AppExternal\bootstrap\bootstrap.css" Url="Scripts/AppExternal/bootstrap/bootstrap.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\AppExternal\bootstrap\bootstrap.js" Url="Scripts/AppExternal/bootstrap/bootstrap.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\AppExternal\bootstrap\glyphicons-halflings-regular.eot" Url="Scripts/AppExternal/bootstrap/glyphicons-halflings-regular.eot" ReplaceContent="TRUE" />
+    <File Path="Scripts\AppExternal\bootstrap\glyphicons-halflings-regular.svg" Url="Scripts/AppExternal/bootstrap/glyphicons-halflings-regular.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\AppExternal\bootstrap\glyphicons-halflings-regular.ttf" Url="Scripts/AppExternal/bootstrap/glyphicons-halflings-regular.ttf" ReplaceContent="TRUE" />
+    <File Path="Scripts\AppExternal\bootstrap\glyphicons-halflings-regular.woff" Url="Scripts/AppExternal/bootstrap/glyphicons-halflings-regular.woff" ReplaceContent="TRUE" />
+    <File Path="Scripts\AppExternal\camljs\index.js" Url="Scripts/AppExternal/camljs/index.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\AppExternal\jquery\jquery.js" Url="Scripts/AppExternal/jquery/jquery.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\AppExternal\jquery-ui\jquery-ui.js" Url="Scripts/AppExternal/jquery-ui/jquery-ui.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\AppExternal\ngtoast\ngToast.css" Url="Scripts/AppExternal/ngtoast/ngToast.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\AppExternal\ngtoast\ngToast.js" Url="Scripts/AppExternal/ngtoast/ngToast.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\AppExternal\angular-route\angular-route.js" Url="Scripts/AppExternal/angular-route/angular-route.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\AppExternal\jsencrypt\jsencrypt.min.js" Url="Scripts/AppExternal/jsencrypt/jsencrypt.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\AppExternal\moment\moment.js" Url="Scripts/AppExternal/moment/moment.js" ReplaceContent="TRUE" />
   </Module>
 </Elements>

@@ -5,3 +5,4 @@
 *.suo
 *.user
 /packages
+**/node_modules

@@ -9,7 +9,7 @@
 	<SharePoint:ScriptLink Name="sp.runtime.js" runat="server" OnDemand="false" LoadAfterUI="true" Localizable="false" />
 	<SharePoint:ScriptLink Name="SP.RequestExecutor.js" runat="server" OnDemand="false" LoadAfterUI="true" Localizable="false" />
 
-	<script type="text/javascript" src="Scripts/External/external_bundle.js"></script>
+	<script type="text/javascript" src="Scripts/External/faq.app.external.min.js"></script>
 	<script type="text/javascript" src="Scripts/build/build_config.js"></script>
 	<script type="text/javascript" src="Scripts/init.js?v=2"></script>
 
