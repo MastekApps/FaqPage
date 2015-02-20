@@ -9,11 +9,11 @@
 		"angular-animate": "1.2.x",
 		"angular-sanitize": "1.2.x",
 		"angular-ui-sortable": "0.12.x",
+		"angular-bootstrap": "0.12.0",
 		"camljs": "./Scripts/External/camljs.js",
 		"jquery-ui": "~1.11.3",
 		"blockui": "2.70",
 		"ngtoast": "~1.4.0",
-		"angular-bootstrap": "0.12.0",
 		"moment": "2.9.0",
 		"jsencrypt": "2.1.0"
 	}

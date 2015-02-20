@@ -137,13 +137,11 @@
     <None Include="Scripts\AppExternal\bootstrap\glyphicons-halflings-regular.eot" />
     <None Include="Scripts\AppExternal\bootstrap\glyphicons-halflings-regular.ttf" />
     <None Include="Scripts\AppExternal\bootstrap\glyphicons-halflings-regular.woff" />
+    <None Include="Scripts\App\faq.app.min.js.map" />
+    <None Include="Scripts\Core\faq.app.core.min.js.map" />
     <None Include="Scripts\External\faq.app.external.min.js.map" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Scripts\App\app_bundle.js.bundle" />
-    <None Include="Scripts\App\app_bundle.min.js.map">
-      <DependentUpon>app_bundle.min.js</DependentUpon>
-    </None>
     <None Include="Scripts\Core\core_bundle.js.bundle">
       <SubType>Designer</SubType>
     </None>
@@ -186,12 +184,6 @@
     <Content Include="Scripts\AppExternal\ngtoast\ngToast.css" />
     <Content Include="Scripts\AppExternal\ngtoast\ngToast.js" />
     <Content Include="Scripts\App\app.js" />
-    <Content Include="Scripts\App\app_bundle.js">
-      <DependentUpon>app_bundle.js.bundle</DependentUpon>
-    </Content>
-    <Content Include="Scripts\App\app_bundle.min.js">
-      <DependentUpon>app_bundle.js</DependentUpon>
-    </Content>
     <Content Include="Scripts\App\Controllers\CommonFaqSetSettingsCtrl.js" />
     <Content Include="Scripts\App\Controllers\ConnectFaqSetCtrl.js" />
     <Content Include="Scripts\App\Controllers\ContactDeveloperCtrl.js" />
@@ -209,6 +201,7 @@
     <Content Include="Scripts\App\Directives\faqShow.js" />
     <Content Include="Scripts\App\Directives\ngEnter.js" />
     <Content Include="Scripts\App\Directives\spEditable.js" />
+    <Content Include="Scripts\App\faq.app.min.js" />
     <Content Include="Scripts\App\Filters\highlight.js" />
     <Content Include="Scripts\App\Services\animationList.js" />
     <Content Include="Scripts\App\Services\context.js" />
@@ -219,17 +212,18 @@
     <Content Include="Scripts\App\Services\processing.js" />
     <Content Include="Scripts\build\build_config.js" />
     <Content Include="Scripts\Core\Common\SPWebService.js" />
+    <Content Include="Scripts\Core\Constants.js" />
     <Content Include="Scripts\Core\core_bundle.js">
       <DependentUpon>core_bundle.js.bundle</DependentUpon>
     </Content>
     <Content Include="Scripts\Core\core_bundle.min.js">
       <DependentUpon>core_bundle.js</DependentUpon>
     </Content>
+    <Content Include="Scripts\Core\faq.app.core.min.js" />
+    <Content Include="Scripts\Core\ListService.js" />
     <Content Include="Scripts\Core\Repositories\AppPartsConfigRepository.js" />
     <Content Include="Scripts\Core\Repositories\Base\BaseListItem.js" />
     <Content Include="Scripts\Core\Repositories\Base\ListRepository.js" />
-    <Content Include="Scripts\Core\Constants.js" />
-    <Content Include="Scripts\Core\ListService.js" />
     <Content Include="Scripts\Core\Repositories\Entities\AppPartConfigListItem.js" />
     <Content Include="Scripts\Core\Repositories\Entities\FaqListItem.js" />
     <Content Include="Scripts\Core\Repositories\FaqRepository.js" />

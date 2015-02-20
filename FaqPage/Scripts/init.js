@@ -71,7 +71,6 @@
 	var registeredResources = ["en-us", "ru-ru"];
 
 	function load() {
-		var debug = window.faq_is_debug ? "" : ".min";
 		var hash = window.faq_version;
 		var webRelUrl = _spPageContextInfo.webServerRelativeUrl;
 
@@ -84,9 +83,9 @@
 			currentUICulture = "en-us";
 		}
 
-		var coreScriptSrc = String.format("{0}Scripts/Core/core_bundle{1}.js?v={2}", webRelUrl, debug, hash);
+		var coreScriptSrc = String.format("{0}Scripts/Core/faq.app.core.min.js?v={1}", webRelUrl, hash);
 		var resourcesScriptSrc = String.format("{0}Scripts/Resources/Resources.{1}.js?v={2}", webRelUrl, currentUICulture.toLowerCase(), hash);
-		var angularAppSrc = String.format("{0}Scripts/App/app_bundle{1}.js?v={2}", webRelUrl, debug, hash);
+		var angularAppSrc = String.format("{0}Scripts/App/faq.app.min.js?v={1}", webRelUrl, hash);
 
 		var resourcesScript = new AsyncScript("faq.resources", resourcesScriptSrc);
 		var coreScript = new AsyncScript("faq.core", coreScriptSrc, function () { $("#head").replaceWith(FAQRS.PageTitle); });
