@@ -48,25 +48,11 @@
     <None Include="bower.json" />
     <None Include="Content\css\app\_app.scss" />
     <None Include="Content\css\app\_partials\_animations.scss" />
-    <Content Include="Content\css\external\animate.css" />
-    <Content Include="Content\css\external\bootstrap.min.css" />
-    <Content Include="Content\css\css_bundle.css">
-      <DependentUpon>css_bundle.css.bundle</DependentUpon>
-    </Content>
-    <Content Include="Content\css\css_bundle.min.css">
-      <DependentUpon>css_bundle.css</DependentUpon>
-    </Content>
-    <Content Include="Content\css\app\faqApp.css">
-      <DependentUpon>faqApp.scss</DependentUpon>
-    </Content>
-    <Content Include="Content\css\app\faqApp.min.css">
-      <DependentUpon>faqApp.css</DependentUpon>
-    </Content>
-    <Content Include="Content\css\external\font-awesome.min.css" />
-    <Content Include="Content\css\external\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\css\app\faqApp.css" />
     <Content Include="Content\css\external\jquery-ui-1.10.4.custom.min.css" />
-    <Content Include="Content\css\external\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Content\css\external\ngToast.min.css" />
+    <Content Include="Content\css\faq.app.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\img\ajax-loader.gif" />
     <Content Include="Content\img\minus.png" />
     <Content Include="Content\img\plus.png" />
@@ -107,15 +93,16 @@
     </None>
     <None Include="Content\css\app\_partials\_fixes.scss" />
     <None Include="Content\css\app\_partials\_inputCustomization.scss" />
-    <None Include="Content\css\css_bundle.css.bundle" />
     <None Include="Content\css\app\faqApp.scss" />
-    <None Include="Content\css\external\fonts\fontawesome-webfont.eot" />
-    <None Include="Content\css\external\fonts\fontawesome-webfont.ttf" />
-    <None Include="Content\css\external\fonts\fontawesome-webfont.woff" />
-    <None Include="Content\css\external\fonts\FontAwesome.otf" />
-    <None Include="Content\css\external\fonts\glyphicons-halflings-regular.eot" />
-    <None Include="Content\css\external\fonts\glyphicons-halflings-regular.ttf" />
-    <None Include="Content\css\external\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Content\css\faq.app.css.map" />
+    <None Include="Content\fonts\fontawesome-webfont.eot" />
+    <None Include="Content\fonts\fontawesome-webfont.ttf" />
+    <None Include="Content\fonts\fontawesome-webfont.woff" />
+    <None Include="Content\fonts\fontawesome-webfont.woff2" />
+    <None Include="Content\fonts\FontAwesome.otf" />
+    <None Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <None Include="package.json" />
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{863b4392-e4a4-460e-ae8d-14c29b14f149}</SharePointProjectItemId>
@@ -134,26 +121,21 @@
     <None Include="HostWebComponents\WebParts\FaqViewer\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{e1f5dcd4-21df-4736-bbee-2f64dcf122e7}</SharePointProjectItemId>
     </None>
-    <None Include="Scripts\AppExternal\bootstrap\glyphicons-halflings-regular.eot" />
-    <None Include="Scripts\AppExternal\bootstrap\glyphicons-halflings-regular.ttf" />
-    <None Include="Scripts\AppExternal\bootstrap\glyphicons-halflings-regular.woff" />
+    <None Include="Scripts\AppExternal\bootstrap\css\bootstrap-theme.css.map" />
+    <None Include="Scripts\AppExternal\bootstrap\css\bootstrap.css.map" />
+    <None Include="Scripts\AppExternal\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Scripts\AppExternal\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Scripts\AppExternal\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Scripts\AppExternal\font-awesome\fontawesome-webfont.eot" />
+    <None Include="Scripts\AppExternal\font-awesome\fontawesome-webfont.ttf" />
+    <None Include="Scripts\AppExternal\font-awesome\fontawesome-webfont.woff" />
+    <None Include="Scripts\AppExternal\font-awesome\fontawesome-webfont.woff2" />
+    <None Include="Scripts\AppExternal\font-awesome\FontAwesome.otf" />
     <None Include="Scripts\App\faq.app.min.js.map" />
     <None Include="Scripts\Core\faq.app.core.min.js.map" />
     <None Include="Scripts\External\faq.app.external.min.js.map" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Scripts\Core\core_bundle.js.bundle">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Scripts\Core\core_bundle.min.js.map">
-      <DependentUpon>core_bundle.min.js</DependentUpon>
-    </None>
-    <None Include="Scripts\External\external_bundle.js.bundle">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Scripts\External\external_bundle.min.js.map">
-      <DependentUpon>external_bundle.min.js</DependentUpon>
-    </None>
     <None Include="Scripts\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{39c0ec3f-6ba9-4fb1-a4b2-952e23eaa32c}</SharePointProjectItemId>
     </None>
@@ -172,11 +154,18 @@
     <Content Include="Scripts\AppExternal\angular-sanitize\angular-sanitize.js" />
     <Content Include="Scripts\AppExternal\angular-ui-sortable\sortable.js" />
     <Content Include="Scripts\AppExternal\angular\angular.js" />
+    <Content Include="Scripts\AppExternal\animate.css\animate.css" />
     <Content Include="Scripts\AppExternal\blockui\jquery.blockUI.js" />
-    <Content Include="Scripts\AppExternal\bootstrap\bootstrap.css" />
-    <Content Include="Scripts\AppExternal\bootstrap\bootstrap.js" />
-    <Content Include="Scripts\AppExternal\bootstrap\glyphicons-halflings-regular.svg" />
+    <Content Include="Scripts\AppExternal\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Scripts\AppExternal\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Scripts\AppExternal\bootstrap\css\bootstrap.css" />
+    <Content Include="Scripts\AppExternal\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Scripts\AppExternal\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Scripts\AppExternal\bootstrap\js\bootstrap.js" />
+    <Content Include="Scripts\AppExternal\bootstrap\js\bootstrap.min.js" />
     <Content Include="Scripts\AppExternal\camljs\index.js" />
+    <Content Include="Scripts\AppExternal\font-awesome\font-awesome.css" />
+    <Content Include="Scripts\AppExternal\font-awesome\fontawesome-webfont.svg" />
     <Content Include="Scripts\AppExternal\jquery-ui\jquery-ui.js" />
     <Content Include="Scripts\AppExternal\jquery\jquery.js" />
     <Content Include="Scripts\AppExternal\jsencrypt\jsencrypt.min.js" />
@@ -213,12 +202,6 @@
     <Content Include="Scripts\build\build_config.js" />
     <Content Include="Scripts\Core\Common\SPWebService.js" />
     <Content Include="Scripts\Core\Constants.js" />
-    <Content Include="Scripts\Core\core_bundle.js">
-      <DependentUpon>core_bundle.js.bundle</DependentUpon>
-    </Content>
-    <Content Include="Scripts\Core\core_bundle.min.js">
-      <DependentUpon>core_bundle.js</DependentUpon>
-    </Content>
     <Content Include="Scripts\Core\faq.app.core.min.js" />
     <Content Include="Scripts\Core\ListService.js" />
     <Content Include="Scripts\Core\Repositories\AppPartsConfigRepository.js" />
@@ -228,29 +211,11 @@
     <Content Include="Scripts\Core\Repositories\Entities\FaqListItem.js" />
     <Content Include="Scripts\Core\Repositories\FaqRepository.js" />
     <Content Include="Scripts\Core\RequestError.js" />
-    <Content Include="Scripts\External\angular-animate.js" />
-    <Content Include="Scripts\External\angular-route.js" />
-    <Content Include="Scripts\External\angular-sanitize.js" />
-    <Content Include="Scripts\External\angular.js" />
     <Content Include="Scripts\External\camljs.js" />
     <Content Include="Scripts\Elements.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Scripts\External\external_bundle.js">
-      <DependentUpon>external_bundle.js.bundle</DependentUpon>
-    </Content>
-    <Content Include="Scripts\External\external_bundle.min.js">
-      <DependentUpon>external_bundle.js</DependentUpon>
-    </Content>
     <Content Include="Scripts\External\faq.app.external.min.js" />
-    <Content Include="Scripts\External\jquery-2.1.1.js" />
-    <Content Include="Scripts\External\jquery-ui-1.10.4.custom.min.js" />
-    <Content Include="Scripts\External\jquery.blockUI.js" />
-    <Content Include="Scripts\External\angular-sortable.js" />
-    <Content Include="Scripts\External\jsencrypt.min.js" />
-    <Content Include="Scripts\External\moment.min.js" />
-    <Content Include="Scripts\External\ngToast.min.js" />
-    <Content Include="Scripts\External\ui-bootstrap-tpls-0.11.2.js" />
     <Content Include="Scripts\init.js" />
     <Content Include="Scripts\Resources\Resources.ru-ru.js" />
     <Content Include="Scripts\Resources\Resources.en-us.js" />

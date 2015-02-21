@@ -9,18 +9,11 @@
     <ProjectItemFile Source="build\build_config.js" Target="Scripts\build\" Type="ElementFile" />
     <ProjectItemFile Source="External\faq.app.external.min.js" Target="Scripts\External\" Type="ElementFile" />
     <ProjectItemFile Source="External\faq.app.external.min.js.map" Target="Scripts\External\" Type="ElementFile" />
-    <ProjectItemFile Source="AppExternal\angular\angular.js" Target="Scripts\AppExternal\angular\" Type="ElementFile" />
     <ProjectItemFile Source="AppExternal\angular-animate\angular-animate.js" Target="Scripts\AppExternal\angular-animate\" Type="ElementFile" />
     <ProjectItemFile Source="AppExternal\angular-bootstrap\ui-bootstrap-tpls.js" Target="Scripts\AppExternal\angular-bootstrap\" Type="ElementFile" />
     <ProjectItemFile Source="AppExternal\angular-sanitize\angular-sanitize.js" Target="Scripts\AppExternal\angular-sanitize\" Type="ElementFile" />
     <ProjectItemFile Source="AppExternal\angular-ui-sortable\sortable.js" Target="Scripts\AppExternal\angular-ui-sortable\" Type="ElementFile" />
     <ProjectItemFile Source="AppExternal\blockui\jquery.blockUI.js" Target="Scripts\AppExternal\blockui\" Type="ElementFile" />
-    <ProjectItemFile Source="AppExternal\bootstrap\bootstrap.css" Target="Scripts\AppExternal\bootstrap\" Type="ElementFile" />
-    <ProjectItemFile Source="AppExternal\bootstrap\bootstrap.js" Target="Scripts\AppExternal\bootstrap\" Type="ElementFile" />
-    <ProjectItemFile Source="AppExternal\bootstrap\glyphicons-halflings-regular.eot" Target="Scripts\AppExternal\bootstrap\" Type="ElementFile" />
-    <ProjectItemFile Source="AppExternal\bootstrap\glyphicons-halflings-regular.svg" Target="Scripts\AppExternal\bootstrap\" Type="ElementFile" />
-    <ProjectItemFile Source="AppExternal\bootstrap\glyphicons-halflings-regular.ttf" Target="Scripts\AppExternal\bootstrap\" Type="ElementFile" />
-    <ProjectItemFile Source="AppExternal\bootstrap\glyphicons-halflings-regular.woff" Target="Scripts\AppExternal\bootstrap\" Type="ElementFile" />
     <ProjectItemFile Source="AppExternal\camljs\index.js" Target="Scripts\AppExternal\camljs\" Type="ElementFile" />
     <ProjectItemFile Source="AppExternal\jquery\jquery.js" Target="Scripts\AppExternal\jquery\" Type="ElementFile" />
     <ProjectItemFile Source="AppExternal\jquery-ui\jquery-ui.js" Target="Scripts\AppExternal\jquery-ui\" Type="ElementFile" />
@@ -69,5 +62,26 @@
     <ProjectItemFile Source="App\app.js" Target="Scripts\App\" Type="ElementFile" />
     <ProjectItemFile Source="App\faq.app.min.js" Target="Scripts\App\" Type="ElementFile" />
     <ProjectItemFile Source="App\faq.app.min.js.map" Target="Scripts\App\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\animate.css\animate.css" Target="Scripts\AppExternal\animate.css\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\font-awesome\font-awesome.css" Target="Scripts\AppExternal\font-awesome\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\font-awesome\fontawesome-webfont.eot" Target="Scripts\AppExternal\font-awesome\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\font-awesome\fontawesome-webfont.svg" Target="Scripts\AppExternal\font-awesome\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\font-awesome\fontawesome-webfont.ttf" Target="Scripts\AppExternal\font-awesome\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\font-awesome\fontawesome-webfont.woff" Target="Scripts\AppExternal\font-awesome\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\font-awesome\fontawesome-webfont.woff2" Target="Scripts\AppExternal\font-awesome\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\font-awesome\FontAwesome.otf" Target="Scripts\AppExternal\font-awesome\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\angular\angular.js" Target="Scripts\AppExternal\angular\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\bootstrap\css\bootstrap-theme.css" Target="Scripts\AppExternal\bootstrap\css\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\bootstrap\css\bootstrap-theme.min.css" Target="Scripts\AppExternal\bootstrap\css\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\bootstrap\css\bootstrap.css" Target="Scripts\AppExternal\bootstrap\css\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\bootstrap\css\bootstrap.min.css" Target="Scripts\AppExternal\bootstrap\css\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\bootstrap\fonts\glyphicons-halflings-regular.eot" Target="Scripts\AppExternal\bootstrap\fonts\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\bootstrap\fonts\glyphicons-halflings-regular.svg" Target="Scripts\AppExternal\bootstrap\fonts\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\bootstrap\fonts\glyphicons-halflings-regular.ttf" Target="Scripts\AppExternal\bootstrap\fonts\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\bootstrap\fonts\glyphicons-halflings-regular.woff" Target="Scripts\AppExternal\bootstrap\fonts\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\bootstrap\js\bootstrap.js" Target="Scripts\AppExternal\bootstrap\js\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\bootstrap\js\bootstrap.min.js" Target="Scripts\AppExternal\bootstrap\js\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\bootstrap\css\bootstrap-theme.css.map" Target="Scripts\AppExternal\bootstrap\css\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\bootstrap\css\bootstrap.css.map" Target="Scripts\AppExternal\bootstrap\css\" Type="ElementFile" />
   </Files>
 </ProjectItem>

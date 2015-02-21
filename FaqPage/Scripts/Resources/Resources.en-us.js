@@ -70,7 +70,7 @@ FAQRS.Please = "Please";
 FAQRS.ActivateApp = "Activate the app";
 FAQRS.TrialExpired = "Trial expired";
 FAQRS.LicenseNotValid = "Your license is not valid";
-FAQRS.YourHostWebIdIs = "Your host actual host web Id is";
+FAQRS.YourHostWebIdIs = "Your actual host web Id is";
 FAQRS.YourAppIsLicensed = "Your app is licensed. Your license key is";
 FAQRS.RegisterInstructions = "In order to activate the app you need to send activation request to developer - <a href=\"mailto:sergeev.srg@gmail.com\">sergeev.srg@gmail.com</a>" +
 	"<br>" +

@@ -19,7 +19,7 @@ module.exports = function (grunt) {
 		baseExternalPath + "/angular-animate/*.js",
 		baseExternalPath + "/angular-sanitize/*.js",
 		baseExternalPath + "/angular-ui-sortable/*.js",
-		baseExternalPath + "/bootstrap/*.js",
+		baseExternalPath + "/bootstrap/js/bootstrap.js",
 		baseExternalPath + "/angular-bootstrap/*.js",
 		baseExternalPath + "/ngtoast/*.js",
 		baseExternalPath + "/jsencrypt/*.js",
@@ -45,6 +45,7 @@ module.exports = function (grunt) {
 	];
 
 	grunt.initConfig({
+
 		bower: {
 			install: {
 				options: {
@@ -54,6 +55,7 @@ module.exports = function (grunt) {
 				}
 			}
 		},
+
 		uglify: {
 			debug: {
 				options: {
@@ -87,14 +89,60 @@ module.exports = function (grunt) {
 					"Scripts/App/faq.app.min.js": appFiles
 				}
 			}
+		},
+
+		sass: {
+			options: {
+			},
+			dist: {
+				files: [{
+						expand: true, // Recursive
+						cwd: "Content/Css", // The startup directory
+						src: ["**/*.scss"], // Source files
+						dest: "Content/Css", // Destination
+						ext: ".css" // File extension 
+					}]
+			}
+		},
+
+		cssmin: {
+			options: {
+				shorthandCompacting: false,
+				roundingPrecision: -1,
+				sourceMap: true
+			},
+			target: {
+				files: {
+					"Content/css/faq.app.css": [
+					"Content/css/app/**/*.css",
+					"Scripts/AppExternal/bootstrap/css/bootstrap.css",
+					"Scripts/AppExternal/animate.css/animate.css",
+					"Scripts/AppExternal/font-awesome/font-awesome.css",
+					"Scripts/AppExternal/ngtoast/ngtoast.css",
+					"Content/css/external/jquery-ui-1.10.4.custom.min"
+					]
+				}
+			}
+		},
+
+		copy: {
+			main: {
+				files: [
+				  { expand: true, cwd: "Scripts/AppExternal/font-awesome", src: ["**", "!*.css"], dest: "Content/fonts" },
+				  { expand: true, cwd: "Scripts/AppExternal/bootstrap/fonts", src: ["**"], dest: "Content/fonts" }
+				]
+			}
 		}
 	});
 
-	grunt.registerTask("debug", ["bower:install", "uglify:debug"]);
-	grunt.registerTask("release", ["bower:install", "uglify:release"]);
+	grunt.registerTask("debug", ["bower:install", "uglify:debug", "sass", "concat_css", "copy"]);
+	grunt.registerTask("release", ["bower:install", "uglify:release", "sass", "concat_css", "copy"]);
 
 	// The following line loads the grunt plugins.
 	// This line needs to be at the end of this this file.
 	grunt.loadNpmTasks("grunt-bower-task");
 	grunt.loadNpmTasks("grunt-contrib-uglify");
+	grunt.loadNpmTasks("grunt-sass");
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 };

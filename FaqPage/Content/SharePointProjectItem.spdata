@@ -6,29 +6,24 @@
     <ProjectItemFile Source="img\minus.png" Target="Content\img\" Type="ElementFile" />
     <ProjectItemFile Source="img\plus.png" Target="Content\img\" Type="ElementFile" />
     <ProjectItemFile Source="img\ajax-loader.gif" Target="Content\img\" Type="ElementFile" />
-    <ProjectItemFile Source="css\external\bootstrap.min.css" Target="Content\css\external\" Type="ElementFile" />
-    <ProjectItemFile Source="css\external\fonts\glyphicons-halflings-regular.eot" Target="Content\css\external\fonts\" Type="ElementFile" />
-    <ProjectItemFile Source="css\external\fonts\glyphicons-halflings-regular.svg" Target="Content\css\external\fonts\" Type="ElementFile" />
-    <ProjectItemFile Source="css\external\fonts\glyphicons-halflings-regular.ttf" Target="Content\css\external\fonts\" Type="ElementFile" />
-    <ProjectItemFile Source="css\external\fonts\glyphicons-halflings-regular.woff" Target="Content\css\external\fonts\" Type="ElementFile" />
-    <ProjectItemFile Source="css\external\animate.css" Target="Content\css\external\" Type="ElementFile" />
-    <ProjectItemFile Source="css\css_bundle.css.bundle" Target="Content\css\" Type="ElementFile" />
-    <ProjectItemFile Source="css\css_bundle.css" Target="Content\css\" Type="ElementFile" />
-    <ProjectItemFile Source="css\css_bundle.min.css" Target="Content\css\" Type="ElementFile" />
     <ProjectItemFile Source="css\app\faqApp.scss" Target="Content\css\app\" Type="ElementFile" />
-    <ProjectItemFile Source="css\app\faqApp.css" Target="Content\css\app\" Type="ElementFile" />
-    <ProjectItemFile Source="css\app\faqApp.min.css" Target="Content\css\app\" Type="ElementFile" />
     <ProjectItemFile Source="css\app\_app.scss" Target="Content\css\app\" Type="ElementFile" />
     <ProjectItemFile Source="css\app\_partials\_animations.scss" Target="Content\css\app\_partials\" Type="ElementFile" />
     <ProjectItemFile Source="css\app\_partials\_fixes.scss" Target="Content\css\app\_partials\" Type="ElementFile" />
     <ProjectItemFile Source="css\app\_partials\_inputCustomization.scss" Target="Content\css\app\_partials\" Type="ElementFile" />
-    <ProjectItemFile Source="css\external\fonts\fontawesome-webfont.eot" Target="Content\css\external\fonts\" Type="ElementFile" />
-    <ProjectItemFile Source="css\external\fonts\fontawesome-webfont.svg" Target="Content\css\external\fonts\" Type="ElementFile" />
-    <ProjectItemFile Source="css\external\fonts\fontawesome-webfont.ttf" Target="Content\css\external\fonts\" Type="ElementFile" />
-    <ProjectItemFile Source="css\external\fonts\fontawesome-webfont.woff" Target="Content\css\external\fonts\" Type="ElementFile" />
-    <ProjectItemFile Source="css\external\fonts\FontAwesome.otf" Target="Content\css\external\fonts\" Type="ElementFile" />
-    <ProjectItemFile Source="css\external\font-awesome.min.css" Target="Content\css\external\" Type="ElementFile" />
-    <ProjectItemFile Source="css\external\ngToast.min.css" Target="Content\css\external\" Type="ElementFile" />
     <ProjectItemFile Source="rsa_public_key.txt" Target="Content\" Type="ElementFile" />
+    <ProjectItemFile Source="css\app\faqApp.css" Target="Content\css\app\" Type="ElementFile" />
+    <ProjectItemFile Source="css\faq.app.css" Target="Content\css\" Type="ElementFile" />
+    <ProjectItemFile Source="css\faq.app.css.map" Target="Content\css\" Type="ElementFile" />
+    <ProjectItemFile Source="fonts\fontawesome-webfont.eot" Target="Content\fonts\" Type="ElementFile" />
+    <ProjectItemFile Source="fonts\fontawesome-webfont.svg" Target="Content\fonts\" Type="ElementFile" />
+    <ProjectItemFile Source="fonts\fontawesome-webfont.ttf" Target="Content\fonts\" Type="ElementFile" />
+    <ProjectItemFile Source="fonts\fontawesome-webfont.woff" Target="Content\fonts\" Type="ElementFile" />
+    <ProjectItemFile Source="fonts\fontawesome-webfont.woff2" Target="Content\fonts\" Type="ElementFile" />
+    <ProjectItemFile Source="fonts\FontAwesome.otf" Target="Content\fonts\" Type="ElementFile" />
+    <ProjectItemFile Source="fonts\glyphicons-halflings-regular.eot" Target="Content\fonts\" Type="ElementFile" />
+    <ProjectItemFile Source="fonts\glyphicons-halflings-regular.svg" Target="Content\fonts\" Type="ElementFile" />
+    <ProjectItemFile Source="fonts\glyphicons-halflings-regular.ttf" Target="Content\fonts\" Type="ElementFile" />
+    <ProjectItemFile Source="fonts\glyphicons-halflings-regular.woff" Target="Content\fonts\" Type="ElementFile" />
   </Files>
 </ProjectItem>
