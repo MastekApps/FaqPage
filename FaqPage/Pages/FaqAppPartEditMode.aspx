@@ -9,11 +9,11 @@
 	<SharePoint:ScriptLink Name="sp.runtime.js" runat="server" OnDemand="false" LoadAfterUI="true" Localizable="false" />
 	<SharePoint:ScriptLink Name="SP.RequestExecutor.js" runat="server" OnDemand="false" LoadAfterUI="true" Localizable="false" />
 
-	<script type="text/javascript" src="Scripts/External/external_bundle.js"></script>
+	<script type="text/javascript" src="Scripts/External/faq.app.external.min.js"></script>
 	<script type="text/javascript" src="Scripts/build/build_config.js"></script>
 	<script type="text/javascript" src="Scripts/init.js?v=2"></script>
 
-	<link rel="Stylesheet" type="text/css" href="Content/css/css_bundle.css?v=2" />
+	<link rel="Stylesheet" type="text/css" href="Content/css/faq.app.css?v=2" />
 	
 	<style type="text/css">
 		#s4-ribbonrow {

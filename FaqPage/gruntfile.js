@@ -135,8 +135,8 @@ module.exports = function (grunt) {
 		}
 	});
 
-	grunt.registerTask("debug", ["bower:install", "uglify:debug", "sass", "concat_css", "copy"]);
-	grunt.registerTask("release", ["bower:install", "uglify:release", "sass", "concat_css", "copy"]);
+	grunt.registerTask("debug", ["bower:install", "uglify:debug", "sass", "cssmin", "copy"]);
+	grunt.registerTask("release", ["bower:install", "uglify:release", "sass", "cssmin", "copy"]);
 
 	// The following line loads the grunt plugins.
 	// This line needs to be at the end of this this file.
