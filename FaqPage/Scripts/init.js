@@ -79,7 +79,7 @@
 		}
 
 		var currentUICulture = GetUrlKeyValue("SPLanguage");
-		if (!currentUICulture || !$.inArray(currentUICulture.toLowerCase(), registeredResources)) {
+		if (!currentUICulture || $.inArray(currentUICulture.toLowerCase(), registeredResources) === -1) {
 			currentUICulture = "en-us";
 		}
 

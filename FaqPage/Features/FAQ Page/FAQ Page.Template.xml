@@ -4,6 +4,8 @@
 		<VersionRange EndVersion="9.9.9.9">
 			<ApplyElementManifests>
 				<ElementManifest Location="Pages\Elements.xml"/>
+				<ElementManifest Location="Scripts\Elements.xml"/>
+				<ElementManifest Location="Content\Elements.xml"/>
 			</ApplyElementManifests>
 		</VersionRange>
 	</UpgradeActions>
