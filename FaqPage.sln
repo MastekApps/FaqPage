@@ -5,9 +5,9 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaqPage", "FaqPage\FaqPage.csproj", "{9693B0FF-1B2E-44A6-8959-717B351FBA0F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{FABCCBB1-C9A9-47CF-AEE8-4C35128D850F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tasks", "tasks", "{D49DEDDD-D0A0-4C0B-8510-E2F42333067D}"
 	ProjectSection(SolutionItems) = preProject
-		build\init.ps1 = build\init.ps1
+		FaqPage\tasks\updateAppInfo.js = FaqPage\tasks\updateAppInfo.js
 	EndProjectSection
 EndProject
 Global

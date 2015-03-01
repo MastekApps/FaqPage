@@ -7,8 +7,6 @@
     <ProjectItemFile Source="init.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="External\camljs.js" Target="Scripts\External\" Type="ElementFile" />
     <ProjectItemFile Source="build\build_config.js" Target="Scripts\build\" Type="ElementFile" />
-    <ProjectItemFile Source="External\faq.app.external.min.js" Target="Scripts\External\" Type="ElementFile" />
-    <ProjectItemFile Source="External\faq.app.external.min.js.map" Target="Scripts\External\" Type="ElementFile" />
     <ProjectItemFile Source="AppExternal\angular-animate\angular-animate.js" Target="Scripts\AppExternal\angular-animate\" Type="ElementFile" />
     <ProjectItemFile Source="AppExternal\angular-bootstrap\ui-bootstrap-tpls.js" Target="Scripts\AppExternal\angular-bootstrap\" Type="ElementFile" />
     <ProjectItemFile Source="AppExternal\angular-sanitize\angular-sanitize.js" Target="Scripts\AppExternal\angular-sanitize\" Type="ElementFile" />
@@ -32,8 +30,6 @@
     <ProjectItemFile Source="Core\Constants.js" Target="Scripts\Core\" Type="ElementFile" />
     <ProjectItemFile Source="Core\ListService.js" Target="Scripts\Core\" Type="ElementFile" />
     <ProjectItemFile Source="Core\RequestError.js" Target="Scripts\Core\" Type="ElementFile" />
-    <ProjectItemFile Source="Core\faq.app.core.min.js" Target="Scripts\Core\" Type="ElementFile" />
-    <ProjectItemFile Source="Core\faq.app.core.min.js.map" Target="Scripts\Core\" Type="ElementFile" />
     <ProjectItemFile Source="App\Controllers\CommonFaqSetSettingsCtrl.js" Target="Scripts\App\Controllers\" Type="ElementFile" />
     <ProjectItemFile Source="App\Controllers\ConnectFaqSetCtrl.js" Target="Scripts\App\Controllers\" Type="ElementFile" />
     <ProjectItemFile Source="App\Controllers\ContactDeveloperCtrl.js" Target="Scripts\App\Controllers\" Type="ElementFile" />
@@ -60,8 +56,6 @@
     <ProjectItemFile Source="App\Services\licensing.js" Target="Scripts\App\Services\" Type="ElementFile" />
     <ProjectItemFile Source="App\Services\processing.js" Target="Scripts\App\Services\" Type="ElementFile" />
     <ProjectItemFile Source="App\app.js" Target="Scripts\App\" Type="ElementFile" />
-    <ProjectItemFile Source="App\faq.app.min.js" Target="Scripts\App\" Type="ElementFile" />
-    <ProjectItemFile Source="App\faq.app.min.js.map" Target="Scripts\App\" Type="ElementFile" />
     <ProjectItemFile Source="AppExternal\animate.css\animate.css" Target="Scripts\AppExternal\animate.css\" Type="ElementFile" />
     <ProjectItemFile Source="AppExternal\font-awesome\font-awesome.css" Target="Scripts\AppExternal\font-awesome\" Type="ElementFile" />
     <ProjectItemFile Source="AppExternal\font-awesome\fontawesome-webfont.eot" Target="Scripts\AppExternal\font-awesome\" Type="ElementFile" />
@@ -83,5 +77,11 @@
     <ProjectItemFile Source="AppExternal\bootstrap\js\bootstrap.min.js" Target="Scripts\AppExternal\bootstrap\js\" Type="ElementFile" />
     <ProjectItemFile Source="AppExternal\bootstrap\css\bootstrap-theme.css.map" Target="Scripts\AppExternal\bootstrap\css\" Type="ElementFile" />
     <ProjectItemFile Source="AppExternal\bootstrap\css\bootstrap.css.map" Target="Scripts\AppExternal\bootstrap\css\" Type="ElementFile" />
+    <ProjectItemFile Source="build\faq.app.core.min.js" Target="Scripts\build\" Type="ElementFile" />
+    <ProjectItemFile Source="build\faq.app.core.min.js.map" Target="Scripts\build\" Type="ElementFile" />
+    <ProjectItemFile Source="build\faq.app.external.min.js" Target="Scripts\build\" Type="ElementFile" />
+    <ProjectItemFile Source="build\faq.app.external.min.js.map" Target="Scripts\build\" Type="ElementFile" />
+    <ProjectItemFile Source="build\faq.app.min.js" Target="Scripts\build\" Type="ElementFile" />
+    <ProjectItemFile Source="build\faq.app.min.js.map" Target="Scripts\build\" Type="ElementFile" />
   </Files>
 </ProjectItem>

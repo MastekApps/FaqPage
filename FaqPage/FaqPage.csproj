@@ -131,9 +131,9 @@
     <None Include="Scripts\AppExternal\font-awesome\fontawesome-webfont.woff" />
     <None Include="Scripts\AppExternal\font-awesome\fontawesome-webfont.woff2" />
     <None Include="Scripts\AppExternal\font-awesome\FontAwesome.otf" />
-    <None Include="Scripts\App\faq.app.min.js.map" />
-    <None Include="Scripts\Core\faq.app.core.min.js.map" />
-    <None Include="Scripts\External\faq.app.external.min.js.map" />
+    <None Include="Scripts\build\faq.app.core.min.js.map" />
+    <None Include="Scripts\build\faq.app.external.min.js.map" />
+    <None Include="Scripts\build\faq.app.min.js.map" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\SharePointProjectItem.spdata">
@@ -190,7 +190,6 @@
     <Content Include="Scripts\App\Directives\faqShow.js" />
     <Content Include="Scripts\App\Directives\ngEnter.js" />
     <Content Include="Scripts\App\Directives\spEditable.js" />
-    <Content Include="Scripts\App\faq.app.min.js" />
     <Content Include="Scripts\App\Filters\highlight.js" />
     <Content Include="Scripts\App\Services\animationList.js" />
     <Content Include="Scripts\App\Services\context.js" />
@@ -200,9 +199,11 @@
     <Content Include="Scripts\App\Services\licensing.js" />
     <Content Include="Scripts\App\Services\processing.js" />
     <Content Include="Scripts\build\build_config.js" />
+    <Content Include="Scripts\build\faq.app.core.min.js" />
+    <Content Include="Scripts\build\faq.app.external.min.js" />
+    <Content Include="Scripts\build\faq.app.min.js" />
     <Content Include="Scripts\Core\Common\SPWebService.js" />
     <Content Include="Scripts\Core\Constants.js" />
-    <Content Include="Scripts\Core\faq.app.core.min.js" />
     <Content Include="Scripts\Core\ListService.js" />
     <Content Include="Scripts\Core\Repositories\AppPartsConfigRepository.js" />
     <Content Include="Scripts\Core\Repositories\Base\BaseListItem.js" />
@@ -215,7 +216,6 @@
     <Content Include="Scripts\Elements.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Scripts\External\faq.app.external.min.js" />
     <Content Include="Scripts\init.js" />
     <Content Include="Scripts\Resources\Resources.ru-ru.js" />
     <Content Include="Scripts\Resources\Resources.en-us.js" />
@@ -283,9 +283,9 @@
   <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup>
     <PreBuildEvent>if $(ConfigurationName) == Release (
-  Powershell -FIle $(SolutionDir)build\init.ps1 $(ProjectDir) 0
+  grunt release
 ) ELSE (
-   Powershell -FIle $(SolutionDir)build\init.ps1 $(ProjectDir) 1
+  grunt debug
 )
 </PreBuildEvent>
   </PropertyGroup>

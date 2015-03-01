@@ -44,6 +44,10 @@ module.exports = function (grunt) {
 		appPath + "/Services/*.js"
 	];
 
+	var appScriptsSource = "Scripts/build/faq.app.min.js";
+	var coreScriptsSource = "Scripts/build/faq.app.core.min.js";
+	var externalScriptsSource = "Scripts/build/faq.app.external.min.js";
+
 	grunt.initConfig({
 
 		bower: {
@@ -62,46 +66,47 @@ module.exports = function (grunt) {
 					sourceMap: true
 				},
 
-				files: {
-					"Scripts/External/faq.app.external.min.js": externalFiles,
-					"Scripts/Core/faq.app.core.min.js": coreFiles,
-					"Scripts/App/faq.app.min.js": appFiles
-				}
+				files: [
+					{ src: externalFiles, dest: externalScriptsSource },
+					{ src: coreFiles, dest: coreScriptsSource },
+					{ src: appFiles, dest: appScriptsSource }
+				]
 			},
 			release: {
 				options: {
 					sourceMap: false
 				},
 
-				files: {
-					"Scripts/External/faq.app.external.min.js": externalFiles,
-					"Scripts/Core/faq.app.core.min.js": coreFiles,
-					"Scripts/App/faq.app.min.js": appFiles
-				}
+				files: [
+					{ src: externalFiles, dest: externalScriptsSource },
+					{ src: coreFiles, dest: coreScriptsSource },
+					{ src: appFiles, dest: appScriptsSource }
+				]
 			},
 			appOnly: {
 				options: {
 					sourceMap: true
 				},
 
-				files: {
-					"Scripts/Core/faq.app.core.min.js": coreFiles,
-					"Scripts/App/faq.app.min.js": appFiles
-				}
+				files: [
+					{ src: appFiles, dest: appScriptsSource },
+					{ src: coreFiles, dest: coreScriptsSource }
+				]
 			}
 		},
 
 		sass: {
 			options: {
+
 			},
-			dist: {
+			main: {
 				files: [{
-						expand: true, // Recursive
-						cwd: "Content/Css", // The startup directory
-						src: ["**/*.scss"], // Source files
-						dest: "Content/Css", // Destination
-						ext: ".css" // File extension 
-					}]
+					expand: true, // Recursive
+					cwd: "Content/Css", // The startup directory
+					src: ["**/*.scss"], // Source files
+					dest: "Content/Css", // Destination
+					ext: ".css" // File extension 
+				}]
 			}
 		},
 
@@ -111,7 +116,7 @@ module.exports = function (grunt) {
 				roundingPrecision: -1,
 				sourceMap: true
 			},
-			target: {
+			main: {
 				files: {
 					"Content/css/faq.app.css": [
 					"Content/css/app/**/*.css",
@@ -132,17 +137,24 @@ module.exports = function (grunt) {
 				  { expand: true, cwd: "Scripts/AppExternal/bootstrap/fonts", src: ["**"], dest: "Content/fonts" }
 				]
 			}
+		},
+		updateAppInfo: {
+			debug: {},
+			release: {}
 		}
 	});
 
-	grunt.registerTask("debug", ["bower:install", "uglify:debug", "sass", "cssmin", "copy"]);
-	grunt.registerTask("release", ["bower:install", "uglify:release", "sass", "cssmin", "copy"]);
+	grunt.registerTask("debug", ["updateAppInfo:debug", "uglify:debug", "sass:main", "cssmin:main", "copy:main"]);
+	grunt.registerTask("release", ["updateAppInfo:release", "uglify:release", "sass:main", "cssmin:main", "copy:main"]);
 
 	// The following line loads the grunt plugins.
 	// This line needs to be at the end of this this file.
 	grunt.loadNpmTasks("grunt-bower-task");
 	grunt.loadNpmTasks("grunt-contrib-uglify");
 	grunt.loadNpmTasks("grunt-sass");
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks("grunt-contrib-cssmin");
+	grunt.loadNpmTasks("grunt-contrib-copy");
+
+	//custom tasks
+	grunt.loadTasks("tasks");
 };
