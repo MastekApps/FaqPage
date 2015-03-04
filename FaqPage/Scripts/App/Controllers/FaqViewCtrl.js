@@ -61,15 +61,29 @@
 					deferred.resolve();
 					$scope.$apply();
 				} else {
-					faqService.faqRepository.getItemById(config.configData.folderId).then(function (loadedFolder) {
-						folder = loadedFolder;
-						faqService.faqRepository.folder = folder.title;
-						$scope.playingAnimation = folder.faqSetSettings.animation;
+
+					config.configData = {
+						folderIds: [2, 11]
+					};
+
+					faqService.faqRepository.getItemsByIds(config.configData.folderIds).then(function (loadedFolders) {
+						$log.debug(loadedFolders);
+						//folder = loadedFolder;
+
+						//faqService.faqRepository.folder = folder.title;
+
+						/*$scope.playingAnimation = folder.faqSetSettings.animation;
 						$scope.showPlusSymbol = folder.faqSetSettings.showPlusSymbol;
 						$scope.forceExpand = folder.faqSetSettings.useAnimation === false;
-						$scope.showSearch = folder.faqSetSettings.searchEnabled;
+						$scope.showSearch = folder.faqSetSettings.searchEnabled;*/
 						
-						faqService.faqRepository.getItems().then(function (items) {
+
+						faqService.faqRepository.getItemsInsideFolders(loadedFolders.map(function(folder) {
+							return folder.title;
+						})).then(function (items) {
+
+							$log.debug(items);
+
 							Array.forEach(items, function (item) {
 								item.isShown = item.expanded;
 							});

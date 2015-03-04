@@ -49,6 +49,48 @@ ListRepository.prototype = {
 		return deferred.promise;
 	},
 
+	getItemsByIds: function(ids) {
+		var e = Function.validateParameters(arguments, [
+				{ name: "ids", type: Array, elementType: Number }
+		]);
+
+		if (e) throw e;
+
+		var camlBuilder = new CamlBuilder();
+		var caml = camlBuilder.Where().CounterField(FAQ.Fields.ID).In(ids).ToString();
+		var query = new SP.CamlQuery();
+		query.set_viewXml(String.format("<View>" +
+											"<Query>{0}</Query>" +
+										"</View>", caml));
+
+		return this._getItemsByQuery(query);
+	},
+
+	getItemsInsideFolders: function(folderNames) {
+		var e = Function.validateParameters(arguments, [
+				{ name: "folderNames", type: Array, elementType: String }
+		]);
+
+		if (e) throw e;
+
+		var self = this;
+		var camlBuilder = new CamlBuilder();
+		var caml = camlBuilder.Where().TextField(FAQ.Fields.FileDirRef).In(folderNames.map(function(folderName) {
+			var folderRelUrl = self._getFolderRelativeUrl(folderName);
+			if (folderRelUrl.startsWith("/")) {
+				folderRelUrl = folderRelUrl.substring(1);
+			}
+
+			return folderRelUrl;
+		})).ToString();
+		var query = new SP.CamlQuery();
+		query.set_viewXml(String.format("<View Scope=\"RecursiveAll\">" +
+											"<Query>{0}</Query>" +
+										"</View>", caml));
+
+		return this._getItemsByQuery(query);
+	},
+
 	getLastItem: function () {
 		var camlBuilder = new CamlBuilder();
 		var caml = camlBuilder.Where().CounterField(FAQ.Fields.ID).NotEqualTo(0).OrderByDesc(FAQ.Fields.ID).ToString();
@@ -237,12 +279,13 @@ ListRepository.prototype = {
 		}
 	},
 
-	_getFolderRelativeUrl: function () {
+	_getFolderRelativeUrl: function (folderName) {
+		var folder = folderName || this.folder;
 		var webRelativeUrl = _spPageContextInfo.webServerRelativeUrl.endsWith("/")
 			? _spPageContextInfo.webServerRelativeUrl
 			: _spPageContextInfo.webServerRelativeUrl + "/";
 
-		return String.format("{0}{1}/{2}", webRelativeUrl, this._listUrl, this.folder);
+		return String.format("{0}{1}/{2}", webRelativeUrl, this._listUrl, folder);
 	},
 
 	_getItemsByQuery: function (camlQuery) {

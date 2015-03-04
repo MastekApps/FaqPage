@@ -20,6 +20,7 @@ FAQ.Fields.ID = "ID";
 FAQ.Fields.FSObjType = "FSObjType";
 FAQ.Fields.Title = "Title";
 FAQ.Fields.FileLeafRef = "FileLeafRef";
+FAQ.Fields.FileDirRef = "FileDirRef";
 FAQ.Fields.ContentTypeId = "ContentTypeId";
 FAQ.Fields.FaqList.Question = "FAQQuestion";
 FAQ.Fields.FaqList.Answer = "FAQAnswer";

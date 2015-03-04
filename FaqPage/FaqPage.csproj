@@ -131,9 +131,9 @@
     <None Include="Scripts\AppExternal\font-awesome\fontawesome-webfont.woff" />
     <None Include="Scripts\AppExternal\font-awesome\fontawesome-webfont.woff2" />
     <None Include="Scripts\AppExternal\font-awesome\FontAwesome.otf" />
-    <None Include="Scripts\build\faq.app.core.min.js.map" />
-    <None Include="Scripts\build\faq.app.external.min.js.map" />
-    <None Include="Scripts\build\faq.app.min.js.map" />
+    <Content Include="Scripts\build\faq.app.core.min.js.map" />
+    <Content Include="Scripts\build\faq.app.external.min.js.map" />
+    <Content Include="Scripts\build\faq.app.min.js.map" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\SharePointProjectItem.spdata">

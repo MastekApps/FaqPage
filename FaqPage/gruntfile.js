@@ -1,4 +1,4 @@
-/// <vs />
+/// <vs SolutionOpened='watch' />
 // This file in the main entry point for defining grunt tasks and using grunt plugins.
 // Click here to learn more. http://go.microsoft.com/fwlink/?LinkID=513275&clcid=0x409
 
@@ -141,6 +141,23 @@ module.exports = function (grunt) {
 		updateAppInfo: {
 			debug: {},
 			release: {}
+		},
+
+		watch: {
+			scripts: {
+				files: ["Scripts/App/**/*.js", "Scripts/Core/**/*.js"],
+				tasks: ["uglify:appOnly"],
+				options: {
+					spawn: false
+				}
+			},
+			css: {
+				files: "Content/css/**/*.scss",
+				tasks: ["sass:main", "cssmin:main"],
+				options: {
+					
+				}
+			}
 		}
 	});
 
@@ -154,6 +171,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks("grunt-sass");
 	grunt.loadNpmTasks("grunt-contrib-cssmin");
 	grunt.loadNpmTasks("grunt-contrib-copy");
+	grunt.loadNpmTasks("grunt-contrib-watch");
 
 	//custom tasks
 	grunt.loadTasks("tasks");
