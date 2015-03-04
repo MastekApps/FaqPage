@@ -34,7 +34,16 @@
 
 		this.key = key;
 		this.src = src;
-		this.onLoadFunction = onLoadFunction;
+		var self = this;
+		this.onLoadFunction = function() {
+			if (typeof NotifyScriptLoadedAndExecuteWaitingJobs === "function") {
+				NotifyScriptLoadedAndExecuteWaitingJobs(self.key);
+			}
+
+			if (onLoadFunction && typeof onLoadFunction === "function") {
+				onLoadFunction();
+			}
+		};
 
 		RegisterSod(this.key, this.src);
 	}
@@ -90,24 +99,19 @@
 		var resourcesScript = new AsyncScript("faq.resources", resourcesScriptSrc);
 		var coreScript = new AsyncScript("faq.core", coreScriptSrc, function () { $("#head").replaceWith(FAQRS.PageTitle); });
 
-		var angularAppScript = new AsyncScript("faq.angular.app", angularAppSrc, function () {
-		    if (typeof NotifyScriptLoadedAndExecuteWaitingJobs == "function") {
-		        NotifyScriptLoadedAndExecuteWaitingJobs("faq.angular.app");
-		    }
-		});
+		var angularAppScript = new AsyncScript("faq.angular.app", angularAppSrc);
 
 		angularAppScript.registerDependency([coreScript]);
 		coreScript.registerDependency([resourcesScript]);
 		coreScript.registerDependencyByName(["sp.js", "sp.runtime.js", "sp.init.js"]);
 
-		coreScript.load();
 		angularAppScript.load();
 	}
 })(jQuery);
 
 // Set the style of the app part page to be consistent with the host web.
 // Get the URL of the host web and load the styling of it.
-(function() {
+(function () {
 	var hostUrl = "";
 	if (document.URL.indexOf("?") != -1) {
 		var params = document.URL.split("?")[1].split("&");

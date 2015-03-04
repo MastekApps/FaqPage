@@ -145,7 +145,7 @@ module.exports = function (grunt) {
 	});
 
 	grunt.registerTask("debug", ["updateAppInfo:debug", "uglify:appOnly", "sass:main", "cssmin:main", "copy:main"]);
-	grunt.registerTask("release", ["updateAppInfo:release", "uglify:appOnly", "sass:main", "cssmin:main", "copy:main"]);
+	grunt.registerTask("release", ["updateAppInfo:release", "uglify:release", "sass:main", "cssmin:main", "copy:main"]);
 
 	// The following line loads the grunt plugins.
 	// This line needs to be at the end of this this file.

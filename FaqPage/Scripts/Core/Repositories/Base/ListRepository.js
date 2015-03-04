@@ -1,6 +1,6 @@
 ﻿function ListRepository(listUrl, listItemConstructor) {
 	var e = Function.validateParameters(arguments, [
-		{ name: "_listTitle", type: String },
+		{ name: "listUrl", type: String },
 		{ name: "listItemConstractor", type: Function }
 	], true);
 
