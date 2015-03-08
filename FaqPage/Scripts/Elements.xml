@@ -81,5 +81,8 @@
 		<File Path="Scripts\build\faq.app.external.min.js.map" Url="Scripts/build/faq.app.external.min.js.map" ReplaceContent="TRUE" />
 		<File Path="Scripts\build\faq.app.min.js" Url="Scripts/build/faq.app.min.js" ReplaceContent="TRUE" />
 		<File Path="Scripts\build\faq.app.min.js.map" Url="Scripts/build/faq.app.min.js.map" ReplaceContent="TRUE" />
-	</Module>
+    <File Path="Scripts\AppExternal\angular-ui-select\select.css" Url="Scripts/AppExternal/angular-ui-select/select.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\AppExternal\angular-ui-select\select.js" Url="Scripts/AppExternal/angular-ui-select/select.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\Filters\propsFilter.js" Url="Scripts/App/Filters/propsFilter.js" ReplaceContent="TRUE" />
+  </Module>
 </Elements>

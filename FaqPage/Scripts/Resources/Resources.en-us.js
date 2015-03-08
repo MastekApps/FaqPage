@@ -95,7 +95,8 @@ FAQRS.ContactDeveloperText = "If you want to propose a new feature, found a bug 
 	"I will do my best to fix it asap and release an update.";
 FAQRS.ContactDevPopover = "Suggest a feature, report a bug";
 FAQRS.ContactDev = "Contact developer";
-FAQRS.Search = "Search";
+FAQRS.Search = "Search By Keyword...";
+FAQRS.FilterBy = "Filter By Category...";
 FAQRS.EnableSearchBox = "Search enabled";
 
 /*-----------------Animations-----------------------*/

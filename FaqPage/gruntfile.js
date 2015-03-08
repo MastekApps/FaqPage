@@ -19,6 +19,7 @@ module.exports = function (grunt) {
 		baseExternalPath + "/angular-animate/*.js",
 		baseExternalPath + "/angular-sanitize/*.js",
 		baseExternalPath + "/angular-ui-sortable/*.js",
+		baseExternalPath + "/angular-ui-select/*.js",
 		baseExternalPath + "/bootstrap/js/bootstrap.js",
 		baseExternalPath + "/angular-bootstrap/*.js",
 		baseExternalPath + "/ngtoast/*.js",
@@ -124,6 +125,7 @@ module.exports = function (grunt) {
 					"Scripts/AppExternal/animate.css/animate.css",
 					"Scripts/AppExternal/font-awesome/font-awesome.css",
 					"Scripts/AppExternal/ngtoast/ngtoast.css",
+					"Scripts/AppExternal/angular-ui-select/*.css",
 					"Content/css/external/jquery-ui-1.10.4.custom.min"
 					]
 				}

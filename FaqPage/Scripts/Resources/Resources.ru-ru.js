@@ -96,7 +96,8 @@ FAQRS.ContactDeveloperText = "Если вы хотите предложить у
 	"Я сделаю все возможное, чтобы выпустить исправление как можно быстрее.";
 FAQRS.ContactDevPopover = "Предложите улучшение, сообщите об ошибке";
 FAQRS.ContactDev = "Связаться с разработчиком";
-FAQRS.Search = "Поиск";
+FAQRS.Search = "Поиск по слову...";
+FAQRS.FilterBy = "Фильтр по категории...";
 FAQRS.EnableSearchBox = "Поиск включен";
 
 /*-----------------Animations-----------------------*/

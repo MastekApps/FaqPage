@@ -10,7 +10,6 @@
 				},
 				link: function ($scope, element) {
 					$scope.$watch("faqShow", function (show, oldShow) {
-						$log.debug(show + "_" + oldShow);
 						if (show !== oldShow) {
 							if (show) {
 								element.removeClass("ng-hide");
@@ -24,7 +23,6 @@
 								}, 1* 1000);
 							} else {
 								element.addClass("ng-hide");
-								$log.debug("hide");
 								//element.removeClass("animated");
 								//element.removeClass($scope.animatationName);
 								faqService.resizeParent();

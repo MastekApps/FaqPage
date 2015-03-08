@@ -131,6 +131,9 @@
     <None Include="Scripts\AppExternal\font-awesome\fontawesome-webfont.woff" />
     <None Include="Scripts\AppExternal\font-awesome\fontawesome-webfont.woff2" />
     <None Include="Scripts\AppExternal\font-awesome\FontAwesome.otf" />
+    <Content Include="Scripts\AppExternal\angular-ui-select\select.css" />
+    <Content Include="Scripts\AppExternal\angular-ui-select\select.js" />
+    <Content Include="Scripts\App\Filters\propsFilter.js" />
     <Content Include="Scripts\build\faq.app.core.min.js.map" />
     <Content Include="Scripts\build\faq.app.external.min.js.map" />
     <Content Include="Scripts\build\faq.app.min.js.map" />

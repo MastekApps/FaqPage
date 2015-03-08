@@ -1,29 +1,30 @@
 {
-	"name": "faq_page_app",
-	"private": true,
-	"dependencies": {
-		"bootstrap": "~3.2.0",
-		"jquery": "~2.1.1",
-		"angular": "1.2.18",
-		"angular-route": "1.2.18",
-		"angular-animate": "1.2.18",
-		"angular-sanitize": "1.2.18",
-		"angular-ui-sortable": "0.12.x",
-		"angular-bootstrap": "0.12.0",
-		"camljs": "./Scripts/External/camljs.js",
-		"jquery-ui": "~1.11.3",
-		"blockui": "2.70",
-		"ngtoast": "~1.4.0",
-		"moment": "2.9.0",
-		"jsencrypt": "2.1.0",
-		"font-awesome": "~4.3.0",
-		"animate.css": "~3.2.0"
-	},
-	"exportsOverride": {
-		"bootstrap": {
-			"js": "dist/js/*.*",
-			"css": "dist/css/*.{css,min.css,map}",
-			"fonts": "dist/fonts/*.*"
-		}
-	}
+  "name": "faq_page_app",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "jquery": "~2.1.1",
+    "angular": "1.2.18",
+    "angular-route": "1.2.18",
+    "angular-animate": "1.2.18",
+    "angular-sanitize": "1.2.18",
+	"angular-ui-sortable": "0.12.x",
+	"angular-ui-select": "0.10.0",
+    "angular-bootstrap": "0.12.0",
+    "camljs": "./Scripts/External/camljs.js",
+    "jquery-ui": "~1.11.3",
+    "blockui": "2.70",
+    "ngtoast": "~1.4.0",
+    "moment": "2.9.0",
+    "jsencrypt": "2.1.0",
+    "font-awesome": "~4.3.0",
+	"animate.css": "~3.2.0"
+  },
+  "exportsOverride": {
+    "bootstrap": {
+      "js": "dist/js/*.*",
+      "css": "dist/css/*.{css,min.css,map}",
+      "fonts": "dist/fonts/*.*"
+    }
+  }
 }

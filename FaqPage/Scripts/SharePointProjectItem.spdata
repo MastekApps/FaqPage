@@ -83,5 +83,8 @@
     <ProjectItemFile Source="build\faq.app.external.min.js.map" Target="Scripts\build\" Type="ElementFile" />
     <ProjectItemFile Source="build\faq.app.min.js" Target="Scripts\build\" Type="ElementFile" />
     <ProjectItemFile Source="build\faq.app.min.js.map" Target="Scripts\build\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\angular-ui-select\select.css" Target="Scripts\AppExternal\angular-ui-select\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\angular-ui-select\select.js" Target="Scripts\AppExternal\angular-ui-select\" Type="ElementFile" />
+    <ProjectItemFile Source="App\Filters\propsFilter.js" Target="Scripts\App\Filters\" Type="ElementFile" />
   </Files>
 </ProjectItem>

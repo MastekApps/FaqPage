@@ -2,11 +2,13 @@
 	"use strict";
 
 	angular.module("FaqApp.controllers").controller("FaqViewCtrl", [
-		"$scope", "$sce", "$q", "$timeout", "faqService", "processing", "context", "$log", "$window",
-		function ($scope, $sce, $q, $timeout, faqService, processing, context, $log, $window) {
+		"$scope", "$sce", "$q", "$timeout", "faqService", "processing", "context", "$log", "$window", "$jq",
+		function ($scope, $sce, $q, $timeout, faqService, processing, context, $log, $window, $jq) {
 			processing.initilize($scope);
-			var folder, resizeAttempts = 2, resizeTimeOut = 200;
+			var resizeAttempts = 2, resizeTimeOut = 200;
 
+			$scope.selectedFolders = {};
+			$scope.selectedFolders.folders = [];
 			$scope.faqItems = null;
 			$scope.appPartInitialized = true;
 
@@ -26,12 +28,12 @@
 				if ($scope.forceExpand) {
 					return;
 				}
-				repeatScope.playingAnimation = folder.faqSetSettings.animation;
+				repeatScope.playingAnimation = repeatScope.$parent.faqFolder.faqSetSettings.animation;
 				faqItem.isShown = !faqItem.isShown;
 				faqItem.expanded = !faqItem.expanded;
 			}
 
-			$scope.clearSearch = function() {
+			$scope.clearSearch = function () {
 				if (!$scope.searchText) {
 					return;
 				}
@@ -49,10 +51,28 @@
 				return faq.question.toLowerCase().indexOf(toSearch) !== -1 || faq.answer.toLowerCase().indexOf(toSearch) !== -1;
 			}
 
+			$scope.filterBySelectedFolders = function (folder) {
+				if ($scope.selectedFolders.folders.length === 0) {
+					return true;
+				}
+
+				var filteredFolder = $jq.grep($scope.selectedFolders.folders, function(searchFolder) {
+					return folder.id === searchFolder.id;
+				});
+
+				return filteredFolder.length === 1;
+			}
+
 			$scope.resize = function () {
 				$timeout(function () {
 					faqService.resizeParent();
 				}, 100);
+			}
+
+			$scope.initScope = function (faqFolder, $repeatScope) {
+				$repeatScope.playingAnimation = faqFolder.faqSetSettings.animation;
+				$repeatScope.showPlusSymbol = faqFolder.faqSetSettings.showPlusSymbol;
+				$repeatScope.forceExpand = faqFolder.faqSetSettings.useAnimation === false;
 			}
 
 			faqService.appPartConfigRepository.getByAppPartId(wpId).then(function (config) {
@@ -63,22 +83,23 @@
 				} else {
 
 					config.configData = {
-						folderIds: [2, 11]
+						faqSetInfo: [{
+							folderId: 2,
+							order: 1
+						}, {
+							folderId: 11,
+							order: 2
+						}],
+						searchEnabled: true
 					};
 
-					faqService.faqRepository.getItemsByIds(config.configData.folderIds).then(function (loadedFolders) {
+					faqService.faqRepository.getItemsByIds(config.configData.faqSetInfo.map(function (info) {
+						return info.folderId;
+					})).then(function (loadedFolders) {
+
 						$log.debug(loadedFolders);
-						//folder = loadedFolder;
 
-						//faqService.faqRepository.folder = folder.title;
-
-						/*$scope.playingAnimation = folder.faqSetSettings.animation;
-						$scope.showPlusSymbol = folder.faqSetSettings.showPlusSymbol;
-						$scope.forceExpand = folder.faqSetSettings.useAnimation === false;
-						$scope.showSearch = folder.faqSetSettings.searchEnabled;*/
-						
-
-						faqService.faqRepository.getItemsInsideFolders(loadedFolders.map(function(folder) {
+						faqService.faqRepository.getItemsInsideFolders(loadedFolders.map(function (folder) {
 							return folder.title;
 						})).then(function (items) {
 
@@ -87,6 +108,24 @@
 							Array.forEach(items, function (item) {
 								item.isShown = item.expanded;
 							});
+
+							Array.forEach(loadedFolders, function (currentFolder) {
+								var folderItems = $jq.grep(items, function (faqItem) {
+									if (faqItem.fileDirRef.indexOf(currentFolder.title) !== -1) {
+										return true;
+									}
+
+									return false;
+								});
+
+								currentFolder.faqItems = folderItems;
+								$log.debug(currentFolder.title);
+								$log.debug(currentFolder.faqItems);
+							});
+
+							$scope.showSearch = config.configData.searchEnabled;
+							$scope.loadedFolders = loadedFolders;
+
 							$scope.faqItems = items;
 							deferred.resolve();
 

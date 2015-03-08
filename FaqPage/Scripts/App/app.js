@@ -15,7 +15,8 @@
 		"ngSanitize",
 		"ngAnimate",
 		"ui.bootstrap",
-		"ui.sortable"
+		"ui.sortable",
+		"ui.select"
 	]).
 	config(['$routeProvider', function ($routeProvider) {
 		$routeProvider.
@@ -34,7 +35,8 @@
 		"ngAnimate",
 		"ui.bootstrap",
 		"ui.sortable",
-		"ngToast"
+		"ngToast",
+		"ui.select"
 	]).
 	config(["$routeProvider", function ($routeProvider) {
 		$routeProvider.
