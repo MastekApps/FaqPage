@@ -1,20 +1,18 @@
 ﻿<div data-block="viewDeferred">
-	<div class="faq-ui-select">
-		<ui-select data-ng-show="loadedFolders.length > 0" multiple ng-model="selectedFolders.folders"
-		           theme="bootstrap" data-on-select="resize()" data-on-remove="resize()">
-			<ui-select-match placeholder="{{Resources.FilterBy}}">{{$item.title}}</ui-select-match>
-			<ui-select-choices repeat="folder in loadedFolders | filter: {title: $select.search}">
-				<div ng-bind-html="folder.title | highlight: $select.search"></div>
-			</ui-select-choices>
-		</ui-select>
-	</div>
+	<ui-select data-ng-show="loadedFolders.length > 0 && showFilter" multiple ng-model="selectedFolders.folders"
+			   theme="bootstrap" data-on-select="resize()" data-on-remove="resize()">
+		<ui-select-match placeholder="{{Resources.FilterBy}}">{{$item.title}}</ui-select-match>
+		<ui-select-choices repeat="folder in loadedFolders | filter: {title: $select.search}">
+			<div ng-bind-html="folder.title | highlight: $select.search"></div>
+		</ui-select-choices>
+	</ui-select>
 	<div class="faq-search" data-ng-show="showSearch">
 		<span class="fa fa-search">&nbsp;</span>
 		<input class="form-control faq-srch-input" data-ng-keydown="resize()" type="text" placeholder="{{Resources.Search}}" ng-model="searchText">
 		<a data-ng-show="!!searchText" class="faq-clear-search" href data-ng-click="clearSearch()"><span class="fa fa-times">&nbsp;</span></a>
 	</div>
 
-	<div ng-repeat="faqFolder in loadedFolders | filter:filterBySelectedFolders" data-ng-init="initScope(faqFolder, this)">
+	<div ng-repeat="faqFolder in loadedFolders | filter:filterBySelectedFolders | orderBy:'order'" data-ng-init="initScope(faqFolder, this)">
 		<div ng-repeat="faqItem in faqFolder.faqItems | filter:filterByQuestionAnswer | orderBy:'order'">
 			<h2 ng-show="$first">{{faqFolder.title}}</h2>
 			<div class="faq-question" ng-class="{plus: !faqItem.isShown, minus: faqItem.isShown || $parent.forceExpand, 'no-plus-symbol': !showPlusSymbol, 'no-hover': $parent.forceExpand}" ng-click="changeVisibility(faqItem, this)" ng-bind-html="faqItem.question | faqhighlight:searchText"></div>

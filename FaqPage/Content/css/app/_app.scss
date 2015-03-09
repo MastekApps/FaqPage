@@ -190,9 +190,11 @@ div.faq-question.no-hover:hover {
 a.faq-clear-search, a.faq-clear-search:visited {
 	color: #CC0033;
 }
-a.faq-clear-search:hover{
-	cursor:pointer;
+
+a.faq-clear-search:hover {
+	cursor: pointer;
 }
+
 .faq-search .fa.fa-search {
 	position: absolute;
 	top: 8px;
@@ -205,4 +207,17 @@ a.faq-clear-search:hover{
 	right: 5px;
 	top: 6px;
 	font-size: larger;
+}
+
+.faq-multi-sortable .well {
+	margin-bottom: 5px;
+}
+
+.faq-multi-sortable .sortable-container {
+	width: 330px;
+	border: 1px solid #BBB3B3;
+	padding: 7px;
+	border-radius: 3px;
+	background-color: #f9f9d1;
+	margin: 5px;
 }

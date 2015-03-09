@@ -13,7 +13,7 @@
 			$scope.appPartInitialized = true;
 
 			if (context.editMode) {
-				var editPageUrl = String.format("{0}FaqAppPartEditMode.aspx{1}/#/ConnectFaqSet", context.spAppWebUrl, $window.location.search);
+				var editPageUrl = String.format("{0}FaqAppPartEditMode.aspx{1}#/ConnectFaqSet", context.spAppWebUrl, $window.location.search);
 				$log.debug(editPageUrl);
 				$window.location.href = editPageUrl;
 				return;
@@ -82,17 +82,6 @@
 					$scope.$apply();
 				} else {
 
-					config.configData = {
-						faqSetInfo: [{
-							folderId: 2,
-							order: 1
-						}, {
-							folderId: 11,
-							order: 2
-						}],
-						searchEnabled: true
-					};
-
 					faqService.faqRepository.getItemsByIds(config.configData.faqSetInfo.map(function (info) {
 						return info.folderId;
 					})).then(function (loadedFolders) {
@@ -118,12 +107,19 @@
 									return false;
 								});
 
+								var configFolder = $jq.grep(config.configData.faqSetInfo, function (info) {
+									if (info.folderId === currentFolder.id) {
+										return true;
+									}
+									return false;
+								})[0];
+
 								currentFolder.faqItems = folderItems;
-								$log.debug(currentFolder.title);
-								$log.debug(currentFolder.faqItems);
+								currentFolder.order = configFolder.order;
 							});
 
 							$scope.showSearch = config.configData.searchEnabled;
+							$scope.showFilter = config.configData.filterEnabled;
 							$scope.loadedFolders = loadedFolders;
 
 							$scope.faqItems = items;

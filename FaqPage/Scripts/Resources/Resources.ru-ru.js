@@ -96,9 +96,13 @@ FAQRS.ContactDeveloperText = "Если вы хотите предложить у
 	"Я сделаю все возможное, чтобы выпустить исправление как можно быстрее.";
 FAQRS.ContactDevPopover = "Предложите улучшение, сообщите об ошибке";
 FAQRS.ContactDev = "Связаться с разработчиком";
-FAQRS.Search = "Поиск по слову...";
-FAQRS.FilterBy = "Фильтр по категории...";
+FAQRS.Search = "Поиск по слову";
+FAQRS.FilterBy = "Фильтр по имени";
 FAQRS.EnableSearchBox = "Поиск включен";
+FAQRS.EnableFilterBox = "Фильтр включен";
+FAQRS.SourceFAQs = "Исходные группы ЧЗВ";
+FAQRS.AppPartFAQs = "Группы ЧЗВ для части приложения";
+FAQRS.DDFAQs = "Перетащите исходные группы ЧЗВ в группу части приложения";
 
 /*-----------------Animations-----------------------*/
 FAQRS.Bounce = "Bounce";

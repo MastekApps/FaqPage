@@ -86,5 +86,6 @@
     <ProjectItemFile Source="AppExternal\angular-ui-select\select.css" Target="Scripts\AppExternal\angular-ui-select\" Type="ElementFile" />
     <ProjectItemFile Source="AppExternal\angular-ui-select\select.js" Target="Scripts\AppExternal\angular-ui-select\" Type="ElementFile" />
     <ProjectItemFile Source="App\Filters\propsFilter.js" Target="Scripts\App\Filters\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\angular-sortable-view\angular-sortable-view.js" Target="Scripts\AppExternal\angular-sortable-view\" Type="ElementFile" />
   </Files>
 </ProjectItem>

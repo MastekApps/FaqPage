@@ -1,20 +1,55 @@
 ﻿<div class="form-horizontal col-lg-6" data-block="viewDeferred">
-    <div class="form-group" ng-show="folders.length > 0">
-        <label class="col-lg-4 control-label" for="folders">
-            {{Resources.SelectFaqToConnect}}
-        </label>
-        <div class="col-lg-6">
-            <select class="form-control" name="folders" ng-model="folder" ng-options="folder as folder.title for folder in folders"></select>
-        </div>
-    </div>
-    <div ng-show="folders.length == 0">
-        {{Resources.CreateNewFaqSet}}
-    </div>
-    <div class="form-group col-lg-10">
-        <div class="pull-right">
-            <button ng-class="{disabled: folders.length == 0}" type="button" class="btn btn-success" title="{{Resources.Done}}" ng-click="connectAppPart(folder)">
-                {{Resources.Done}}
-            </button>
-        </div>
-    </div>
+	<div class="form-group" ng-show="folders.length > 0 || selectedFolders.length > 0">
+
+		<!-- FAQs -->
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h4>{{Resources.DDFAQs}}</h4>
+				<div sv-root class="faq-multi-sortable" sv-on-stop="resize()">
+					<div class="sortable-container pull-left" sv-part="folders">
+						<h4>{{Resources.SourceFAQs}}</h4>
+						<div ng-repeat="folder in folders" sv-element class="well well-sm multi">
+							{{folder.title}}
+						</div>
+					</div>
+					<div class="sortable-container pull-left" sv-part="selectedFolders">
+						<h4>{{Resources.AppPartFAQs}}</h4>
+						<div ng-repeat="selectedFolder in selectedFolders" sv-element class="well well-sm multi">
+							{{selectedFolder.title}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Search -->
+		<div class="panel panel-default">
+			<div class="checkbox panel-body">
+				<label>
+					<input ng-model="searchEnabled" type="checkbox" name="faqSearchEnable" data-ng-value="false" title="{{Resources.EnableSearchBox}}" />
+					<span>{{Resources.EnableSearchBox}}</span>
+				</label>
+			</div>
+		</div>
+
+		<!-- Filter -->
+		<div class="panel panel-default">
+			<div class="checkbox panel-body">
+				<label>
+					<input ng-model="filterEnabled" type="checkbox" name="faqFilterEnable" data-ng-value="false" title="{{Resources.EnableFilterBox}}" />
+					<span>{{Resources.EnableFilterBox}}</span>
+				</label>
+			</div>
+		</div>
+	</div>
+	<div ng-show="folders.length === 0 && selectedFolders.length === 0">
+		{{Resources.CreateNewFaqSet}}
+	</div>
+	<div class="form-group col-lg-10">
+		<div class="pull-right">
+			<button ng-class="{disabled: selectedFolders.length === 0}" type="button" class="btn btn-success" title="{{Resources.Done}}" ng-click="connectAppPart()">
+				{{Resources.Done}}
+			</button>
+		</div>
+	</div>
 </div>

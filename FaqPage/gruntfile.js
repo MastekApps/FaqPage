@@ -20,6 +20,7 @@ module.exports = function (grunt) {
 		baseExternalPath + "/angular-sanitize/*.js",
 		baseExternalPath + "/angular-ui-sortable/*.js",
 		baseExternalPath + "/angular-ui-select/*.js",
+		baseExternalPath + "/angular-sortable-view/*.js",
 		baseExternalPath + "/bootstrap/js/bootstrap.js",
 		baseExternalPath + "/angular-bootstrap/*.js",
 		baseExternalPath + "/ngtoast/*.js",

@@ -95,9 +95,13 @@ FAQRS.ContactDeveloperText = "If you want to propose a new feature, found a bug 
 	"I will do my best to fix it asap and release an update.";
 FAQRS.ContactDevPopover = "Suggest a feature, report a bug";
 FAQRS.ContactDev = "Contact developer";
-FAQRS.Search = "Search By Keyword...";
-FAQRS.FilterBy = "Filter By Category...";
+FAQRS.Search = "Search By Keyword";
+FAQRS.FilterBy = "Filter By Name";
 FAQRS.EnableSearchBox = "Search enabled";
+FAQRS.EnableFilterBox = "Filter enabled";
+FAQRS.SourceFAQs = "Source FAQ Sets";
+FAQRS.AppPartFAQs = "Web Part's FAQ Sets";
+FAQRS.DDFAQs = "Drag & Drop source FAQs into the Web Part's FAQs";
 
 /*-----------------Animations-----------------------*/
 FAQRS.Bounce = "Bounce";

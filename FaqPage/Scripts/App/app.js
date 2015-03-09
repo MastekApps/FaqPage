@@ -16,7 +16,8 @@
 		"ngAnimate",
 		"ui.bootstrap",
 		"ui.sortable",
-		"ui.select"
+		"ui.select",
+		"angular-sortable-view"
 	]).
 	config(['$routeProvider', function ($routeProvider) {
 		$routeProvider.
@@ -36,7 +37,8 @@
 		"ui.bootstrap",
 		"ui.sortable",
 		"ngToast",
-		"ui.select"
+		"ui.select",
+		"angular-sortable-view"
 	]).
 	config(["$routeProvider", function ($routeProvider) {
 		$routeProvider.
@@ -52,5 +54,12 @@
 			otherwise({ redirectTo: "/" });
 	}]).config(["$logProvider", function ($logProvider) {
 		$logProvider.debugEnabled(window.faq_is_debug);
-	}]);
+	}]).config(["ngToastProvider", function (ngToastProvider) {
+		if (window.parent !== window && window.location.href.indexOf("FaqAppPartEditMode.aspx") !== -1) {
+			ngToastProvider.configure({
+				horizontalPosition: "center",
+				verticalPosition: "bottom"
+			});
+		}
+	}]);;
 })();

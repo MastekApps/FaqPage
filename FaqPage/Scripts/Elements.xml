@@ -84,5 +84,6 @@
     <File Path="Scripts\AppExternal\angular-ui-select\select.css" Url="Scripts/AppExternal/angular-ui-select/select.css" ReplaceContent="TRUE" />
     <File Path="Scripts\AppExternal\angular-ui-select\select.js" Url="Scripts/AppExternal/angular-ui-select/select.js" ReplaceContent="TRUE" />
     <File Path="Scripts\App\Filters\propsFilter.js" Url="Scripts/App/Filters/propsFilter.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\AppExternal\angular-sortable-view\angular-sortable-view.js" Url="Scripts/AppExternal/angular-sortable-view/angular-sortable-view.js" ReplaceContent="TRUE" />
   </Module>
 </Elements>

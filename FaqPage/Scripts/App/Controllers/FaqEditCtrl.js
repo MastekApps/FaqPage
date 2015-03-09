@@ -17,8 +17,7 @@
 				$scope.createFolderDeferred = faqService.faqRepository.createFaqFolder(faqSetModel.faqSetName, {
 					useAnimation: false,
 					showPlusSymbol: true,
-					animation: "cshow",
-					searchEnabled: false
+					animation: "cshow"
 				});
 
 				$scope.createFolderDeferred.then(function () {
