@@ -81,7 +81,15 @@
 					deferred.resolve();
 					$scope.$apply();
 				} else {
-
+					//fix for 1.0.1.2 version
+					if (config.configData.folderId) {
+						config.configData.faqSetInfo = [];
+						config.configData.faqSetInfo.push({
+							order: 1,
+							folderId: config.configData.folderId
+						});
+					}
+					//end fix
 					faqService.faqRepository.getItemsByIds(config.configData.faqSetInfo.map(function (info) {
 						return info.folderId;
 					})).then(function (loadedFolders) {

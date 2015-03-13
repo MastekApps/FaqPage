@@ -5,7 +5,6 @@
 		"$scope", "faqService", "$location", "$q", "processing", "licenseStatus", "licensing",
 		function ($scope, faqService, $location, $q, processing, licenseStatus, licensing) {
 			processing.initilize($scope);
-
 			$scope.lockDeferred = licensing.getLicenseStatus();
 
 			$scope.showIfLicenseValid = function() {

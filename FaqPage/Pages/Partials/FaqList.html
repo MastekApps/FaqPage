@@ -14,7 +14,7 @@
 
 	<div ng-repeat="faqFolder in loadedFolders | filter:filterBySelectedFolders | orderBy:'order'" data-ng-init="initScope(faqFolder, this)">
 		<div ng-repeat="faqItem in faqFolder.faqItems | filter:filterByQuestionAnswer | orderBy:'order'">
-			<h2 ng-show="$first">{{faqFolder.title}}</h2>
+			<h3 ng-show="$first">{{faqFolder.title}}</h3>
 			<div class="faq-question" ng-class="{plus: !faqItem.isShown, minus: faqItem.isShown || $parent.forceExpand, 'no-plus-symbol': !showPlusSymbol, 'no-hover': $parent.forceExpand}" ng-click="changeVisibility(faqItem, this)" ng-bind-html="faqItem.question | faqhighlight:searchText"></div>
 			<div class="faq-answer" faq-show="faqItem.isShown" animatation-name="playingAnimation" ng-show="faqItem.expanded || $parent.forceExpand" ng-bind-html="faqItem.answer | faqhighlight:searchText"></div>
 		</div>

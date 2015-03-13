@@ -65,7 +65,9 @@ module.exports = function (grunt) {
 		uglify: {
 			debug: {
 				options: {
-					sourceMap: true
+					sourceMap: true,
+					mangle: false,
+					preserveComments: "all"
 				},
 
 				files: [
@@ -87,7 +89,9 @@ module.exports = function (grunt) {
 			},
 			appOnly: {
 				options: {
-					sourceMap: true
+					sourceMap: true,
+					mangle: false,
+					preserveComments: "all"
 				},
 
 				files: [

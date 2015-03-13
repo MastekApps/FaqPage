@@ -24,6 +24,16 @@
 					$scope.searchEnabled = config.configData.searchEnabled;
 					$scope.filterEnabled = config.configData.filterEnabled;
 
+					//fix for 1.0.1.2 version
+					if (config.configData.folderId) {
+						config.configData.faqSetInfo = [];
+						config.configData.faqSetInfo.push({
+							order: 1,
+							folderId: config.configData.folderId
+						});
+					}
+					//end fix
+
 					Array.forEach(config.configData.faqSetInfo, function(info) {
 						var sourceIndex = folders.map(function(folder) {
 							return folder.id;
@@ -61,6 +71,12 @@
 							folderId: selectedFolder.id
 						}
 					});
+
+					//fix for 1.0.1.2 version
+					if (config.configData.folderId) {
+						delete config.configData.folderId;
+					}
+					//end fix
 
 					config.configData.faqSetInfo = faqSetInfo;
 					config.configData.searchEnabled = $scope.searchEnabled;

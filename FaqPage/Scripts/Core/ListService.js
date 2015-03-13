@@ -9,7 +9,6 @@
 	context.executeQueryAsync(function () {
 		loadListDeffered.resolve();
 	}, function (sender, error) {
-		debugger;
 		loadListDeffered.reject(new RequestError(error));
 		alert(String.fromat(FAQRS.ErrorLoadingList));
 	});
