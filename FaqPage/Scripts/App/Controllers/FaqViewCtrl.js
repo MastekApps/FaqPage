@@ -25,7 +25,7 @@
 			$scope.viewDeferred = deferred.promise;
 
 			$scope.changeVisibility = function (faqItem, repeatScope) {
-				if ($scope.forceExpand) {
+				if (repeatScope.forceExpand) {
 					return;
 				}
 				repeatScope.playingAnimation = repeatScope.$parent.faqFolder.faqSetSettings.animation;
@@ -90,6 +90,11 @@
 						});
 					}
 					//end fix
+
+					$scope.customCssEnabled = config.configData.customCssEnabled;
+					$scope.customCssLink = config.configData.customCssLink;
+					$scope.$apply();
+
 					faqService.faqRepository.getItemsByIds(config.configData.faqSetInfo.map(function (info) {
 						return info.folderId;
 					})).then(function (loadedFolders) {
@@ -128,6 +133,7 @@
 
 							$scope.showSearch = config.configData.searchEnabled;
 							$scope.showFilter = config.configData.filterEnabled;
+
 							$scope.loadedFolders = loadedFolders;
 
 							$scope.faqItems = items;

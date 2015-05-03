@@ -5,7 +5,6 @@
 		<File Path="Content\img\plus.png" Url="Content/img/plus.png" ReplaceContent="TRUE" />
 		<File Path="Content\img\ajax-loader.gif" Url="Content/img/ajax-loader.gif" ReplaceContent="TRUE" />
 		<File Path="Content\rsa_public_key.txt" Url="Content/rsa_public_key.txt" ReplaceContent="TRUE" />
-		<File Path="Content\css\app\faqApp.css" Url="Content/css/app/faqApp.css" ReplaceContent="TRUE" />
 		<File Path="Content\css\faq.app.css" Url="Content/css/faq.app.css" ReplaceContent="TRUE" />
 		<File Path="Content\css\faq.app.css.map" Url="Content/css/faq.app.css.map" ReplaceContent="TRUE" />
 		<File Path="Content\fonts\fontawesome-webfont.eot" Url="Content/fonts/fontawesome-webfont.eot" ReplaceContent="TRUE" />
@@ -18,5 +17,10 @@
 		<File Path="Content\fonts\glyphicons-halflings-regular.svg" Url="Content/fonts/glyphicons-halflings-regular.svg" ReplaceContent="TRUE" />
 		<File Path="Content\fonts\glyphicons-halflings-regular.ttf" Url="Content/fonts/glyphicons-halflings-regular.ttf" ReplaceContent="TRUE" />
 		<File Path="Content\fonts\glyphicons-halflings-regular.woff" Url="Content/fonts/glyphicons-halflings-regular.woff" ReplaceContent="TRUE" />
+	</Module>
+	<Module Name="CustomCss" Path="Content" Url="Lists/Documents">
+		<File Path="css\FaqCustomStyles.css" Url="FaqCustomStyles.css" Type="GhostableInLibrary" ReplaceContent="TRUE"></File>
+		<File Path="img\bottom.png" Url="bottom.png" Type="GhostableInLibrary" ReplaceContent="TRUE" />
+		<File Path="img\right.png" Url="right.png" Type="GhostableInLibrary" ReplaceContent="TRUE" />
 	</Module>
 </Elements>

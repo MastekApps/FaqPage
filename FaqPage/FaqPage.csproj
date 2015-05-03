@@ -51,11 +51,14 @@
     <Content Include="Content\css\app\faqApp.css" />
     <Content Include="Content\css\external\jquery-ui-1.10.4.custom.min.css" />
     <Content Include="Content\css\faq.app.css" />
+    <Content Include="Content\css\FaqCustomStyles.css" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\img\ajax-loader.gif" />
+    <Content Include="Content\img\bottom.png" />
     <Content Include="Content\img\minus.png" />
     <Content Include="Content\img\plus.png" />
+    <Content Include="Content\img\right.png" />
     <Content Include="Content\rsa_public_key.txt" />
     <Content Include="gruntfile.js" />
     <Content Include="Images\AppIcon.png">

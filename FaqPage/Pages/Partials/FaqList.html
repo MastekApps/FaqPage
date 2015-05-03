@@ -1,6 +1,9 @@
-﻿<div data-block="viewDeferred">
-	<ui-select data-ng-show="loadedFolders.length > 0 && showFilter" multiple ng-model="selectedFolders.folders"
-			   theme="bootstrap" data-on-select="resize()" data-on-remove="resize()">
+﻿<div class="faq-view-container" data-block="viewDeferred">
+	<div data-ng-if="customCssEnabled">
+		<link rel="stylesheet" type="text/css" data-ng-href="{{customCssLink}}">
+	</div>
+	<ui-select class="faq-view-filter" data-ng-show="loadedFolders.length > 0 && showFilter" multiple ng-model="selectedFolders.folders"
+	           theme="bootstrap" data-on-select="resize()" data-on-remove="resize()">
 		<ui-select-match placeholder="{{Resources.FilterBy}}">{{$item.title}}</ui-select-match>
 		<ui-select-choices repeat="folder in loadedFolders | filter: {title: $select.search}">
 			<div ng-bind-html="folder.title | highlight: $select.search"></div>
@@ -12,11 +15,11 @@
 		<a data-ng-show="!!searchText" class="faq-clear-search" href data-ng-click="clearSearch()"><span class="fa fa-times">&nbsp;</span></a>
 	</div>
 
-	<div ng-repeat="faqFolder in loadedFolders | filter:filterBySelectedFolders | orderBy:'order'" data-ng-init="initScope(faqFolder, this)">
-		<div ng-repeat="faqItem in faqFolder.faqItems | filter:filterByQuestionAnswer | orderBy:'order'">
-			<h3 ng-show="$first">{{faqFolder.title}}</h3>
-			<div class="faq-question" ng-class="{plus: !faqItem.isShown, minus: faqItem.isShown || $parent.forceExpand, 'no-plus-symbol': !showPlusSymbol, 'no-hover': $parent.forceExpand}" ng-click="changeVisibility(faqItem, this)" ng-bind-html="faqItem.question | faqhighlight:searchText"></div>
-			<div class="faq-answer" faq-show="faqItem.isShown" animatation-name="playingAnimation" ng-show="faqItem.expanded || $parent.forceExpand" ng-bind-html="faqItem.answer | faqhighlight:searchText"></div>
+	<div class="faq-set-container faq-set-container-{{$index}}" ng-repeat="faqFolder in loadedFolders | filter:filterBySelectedFolders | orderBy:'order'" data-ng-init="initScope(faqFolder, this)">
+		<div class="faq-qa faq-qa-{{$index}}" ng-repeat="faqItem in faqFolder.faqItems | filter:filterByQuestionAnswer | orderBy:'order'">
+			<h3 class="faq-set-header faq-set-header-{{$parent.$index}}" ng-show="$first">{{faqFolder.title}}</h3>
+			<div class="faq-question faq-question-{{$index}}" ng-class="{plus: !faqItem.isShown, minus: faqItem.isShown || $parent.forceExpand, 'no-plus-symbol': !showPlusSymbol, 'no-hover': $parent.forceExpand}" ng-click="changeVisibility(faqItem, this)" ng-bind-html="faqItem.question | faqhighlight:searchText"></div>
+			<div class="faq-answer faq-answer-{{$index}}" faq-show="faqItem.isShown" animatation-name="playingAnimation" ng-show="faqItem.expanded || $parent.forceExpand" ng-bind-html="faqItem.answer | faqhighlight:searchText"></div>
 		</div>
 	</div>
 </div>

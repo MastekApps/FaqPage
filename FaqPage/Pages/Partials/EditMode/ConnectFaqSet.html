@@ -41,6 +41,21 @@
 				</label>
 			</div>
 		</div>
+
+		<!-- Custom css -->
+		<div class="panel panel-default">
+			<div class="checkbox panel-body" popover-placement="top" popover="{{Resources.CustomCssPopoverText}}" popover-trigger="mouseenter">
+				<div>
+					<label>
+						<input data-ng-model="customCssEnabled" type="checkbox" name="customCssEnabled" data-ng-value="false" title="{{Resources.EnableCustomCss}}" />
+						<span>{{Resources.EnableCustomCss}}</span>
+					</label>
+				</div>
+				<div>
+					<input data-ng-disabled="!customCssEnabled" data-ng-required="true" class="form-control" type="text" name="customCssLink" data-ng-model="customCssLink" />
+				</div>
+			</div>
+		</div>
 	</div>
 	<div ng-show="folders.length === 0 && selectedFolders.length === 0">
 		{{Resources.CreateNewFaqSet}}

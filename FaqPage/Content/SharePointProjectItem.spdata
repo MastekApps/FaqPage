@@ -12,7 +12,6 @@
     <ProjectItemFile Source="css\app\_partials\_fixes.scss" Target="Content\css\app\_partials\" Type="ElementFile" />
     <ProjectItemFile Source="css\app\_partials\_inputCustomization.scss" Target="Content\css\app\_partials\" Type="ElementFile" />
     <ProjectItemFile Source="rsa_public_key.txt" Target="Content\" Type="ElementFile" />
-    <ProjectItemFile Source="css\app\faqApp.css" Target="Content\css\app\" Type="ElementFile" />
     <ProjectItemFile Source="css\faq.app.css" Target="Content\css\" Type="ElementFile" />
     <ProjectItemFile Source="css\faq.app.css.map" Target="Content\css\" Type="ElementFile" />
     <ProjectItemFile Source="fonts\fontawesome-webfont.eot" Target="Content\fonts\" Type="ElementFile" />
@@ -25,5 +24,9 @@
     <ProjectItemFile Source="fonts\glyphicons-halflings-regular.svg" Target="Content\fonts\" Type="ElementFile" />
     <ProjectItemFile Source="fonts\glyphicons-halflings-regular.ttf" Target="Content\fonts\" Type="ElementFile" />
     <ProjectItemFile Source="fonts\glyphicons-halflings-regular.woff" Target="Content\fonts\" Type="ElementFile" />
+    <ProjectItemFile Source="css\app\faqApp.css" Target="Content\css\app\" Type="ElementFile" />
+    <ProjectItemFile Source="css\FaqCustomStyles.css" Target="Content\css\" Type="ElementFile" />
+    <ProjectItemFile Source="img\bottom.png" Target="Content\img\" Type="ElementFile" />
+    <ProjectItemFile Source="img\right.png" Target="Content\img\" Type="ElementFile" />
   </Files>
 </ProjectItem>

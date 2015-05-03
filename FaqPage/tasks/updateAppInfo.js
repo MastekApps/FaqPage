@@ -8,7 +8,6 @@ var buildTemplate = "" +
 	"window.faq_version = '%s';" +
 "})();";
 
-var childProcess = require("child_process");
 module.exports = function (grunt) {
 	grunt.registerTask("updateAppInfo", function () {
 		console.log("Updating build_config.js file...");

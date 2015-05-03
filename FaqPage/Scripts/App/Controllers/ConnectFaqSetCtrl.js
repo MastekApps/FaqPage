@@ -23,7 +23,8 @@
 				if (config) {
 					$scope.searchEnabled = config.configData.searchEnabled;
 					$scope.filterEnabled = config.configData.filterEnabled;
-
+					$scope.customCssEnabled = config.configData.customCssEnabled;
+					$scope.customCssLink = config.configData.customCssLink;
 					//fix for 1.0.1.2 version
 					if (config.configData.folderId) {
 						config.configData.faqSetInfo = [];
@@ -45,6 +46,8 @@
 							$scope.selectedFolders.push(splicedFolder);
 						}
 					});
+				} else {
+					$scope.customCssLink = context.spAppWebUrl + "Lists/Documents/FaqCustomStyles.css";
 				}
 
 				$scope.selectedFolders.sort(function(a, b) {
@@ -81,6 +84,8 @@
 					config.configData.faqSetInfo = faqSetInfo;
 					config.configData.searchEnabled = $scope.searchEnabled;
 					config.configData.filterEnabled = $scope.filterEnabled;
+					config.configData.customCssEnabled = $scope.customCssEnabled;
+					config.configData.customCssLink = $scope.customCssLink;
 
 					faqService.appPartConfigRepository.saveItem(config).then(function () {
 						ngToast.create({

@@ -103,6 +103,8 @@ FAQRS.EnableFilterBox = "Фильтр включен";
 FAQRS.SourceFAQs = "Исходные группы ЧЗВ";
 FAQRS.AppPartFAQs = "Группы ЧЗВ для части приложения";
 FAQRS.DDFAQs = "Перетащите исходные группы ЧЗВ в группу части приложения";
+FAQRS.EnableCustomCss = "Использовать пользовательские css стили";
+FAQRS.CustomCssPopoverText = "Вставьте ссылку на действительный css файл или измените существующий";
 
 /*-----------------Animations-----------------------*/
 FAQRS.Bounce = "Bounce";
