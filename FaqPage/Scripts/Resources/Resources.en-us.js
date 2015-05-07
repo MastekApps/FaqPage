@@ -103,7 +103,7 @@ FAQRS.SourceFAQs = "Source FAQ Sets";
 FAQRS.AppPartFAQs = "Web Part's FAQ Sets";
 FAQRS.DDFAQs = "Drag & Drop source FAQs into the Web Part's FAQs";
 FAQRS.EnableCustomCss = "Use custom css file";
-FAQRS.CustomCssPopoverText = "Paste valid link to the css file in the input below or modify existing file. You can use files from the host web.";
+FAQRS.CustomCssPopoverText = "Paste valid link to the css file in the input below or modify existing file. You can also use files from the host web.";
 
 /*-----------------Animations-----------------------*/
 FAQRS.Bounce = "Bounce";

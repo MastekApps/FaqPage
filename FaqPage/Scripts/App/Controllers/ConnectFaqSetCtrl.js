@@ -24,6 +24,9 @@
 					$scope.searchEnabled = config.configData.searchEnabled;
 					$scope.filterEnabled = config.configData.filterEnabled;
 					$scope.customCssEnabled = config.configData.customCssEnabled;
+					if (!config.configData.customCssLink) {
+						config.configData.customCssLink = context.spAppWebUrl + "Lists/Documents/FaqCustomStyles.css";
+					}
 					$scope.customCssLink = config.configData.customCssLink;
 					//fix for 1.0.1.2 version
 					if (config.configData.folderId) {
