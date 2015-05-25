@@ -72,13 +72,11 @@ FAQRS.TrialExpired = "Trial expired";
 FAQRS.LicenseNotValid = "Your license is not valid";
 FAQRS.YourHostWebIdIs = "Your actual host web Id is";
 FAQRS.YourAppIsLicensed = "Your app is licensed. Your license key is";
-FAQRS.RegisterInstructions = "In order to activate the app you need to send activation request to developer - <a href=\"mailto:sergeev.srg@gmail.com\">sergeev.srg@gmail.com</a>" +
+FAQRS.RegisterInstructions = "In order to obtain the license you need to send activation request to the developer - <a href=\"mailto:sergeev.srg@gmail.com\">sergeev.srg@gmail.com</a>" +
 	"<br>" +
 	"Please provide your host web's ID in the email body." +
 	"<br>" +
-	"Email sample: \"Hello! We would like to activate the app. The host web Id is [host web identifier].\"" +
-	"<br>" +
-	"Activation is completly free, the only purpose is to collect information which of you want to use the app on regular basis.";
+	"Email sample: \"Hello! We would like to obtain the license for FAQ Page. The host web Id is [host web identifier].\"";
 FAQRS.AfterCodeRecieving = "Once you received the activation code paste it into the input below and press \"Apply\" button";
 FAQRS.GoToLicense = "go to the 'FAQ Page' web and activate the app";
 FAQRS.ContactDeveloperText = "If you want to propose a new feature, found a bug or simply want to say \"Wow! Cool app!\" :), " +
