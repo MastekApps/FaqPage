@@ -138,11 +138,12 @@
     <Content Include="Scripts\AppExternal\angular-ui-select\select.css" />
     <Content Include="Scripts\AppExternal\angular-ui-select\select.js" />
     <Content Include="Scripts\App\Filters\propsFilter.js" />
-    <Content Include="Scripts\build\faq.app.core.min.js.map" />
+    <Content Include="Scripts\build\faq.app.core.tmp.min.js" />
     <Content Include="Scripts\build\faq.app.external.min.js.map" />
-    <Content Include="Scripts\build\faq.app.min.js.map" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Scripts\build\faq.app.core.tmp.min.js.map" />
+    <None Include="Scripts\build\faq.app.tmp.min.js.map" />
     <None Include="Scripts\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{39c0ec3f-6ba9-4fb1-a4b2-952e23eaa32c}</SharePointProjectItemId>
     </None>
@@ -209,6 +210,7 @@
     <Content Include="Scripts\build\faq.app.core.min.js" />
     <Content Include="Scripts\build\faq.app.external.min.js" />
     <Content Include="Scripts\build\faq.app.min.js" />
+    <Content Include="Scripts\build\faq.app.tmp.min.js" />
     <Content Include="Scripts\Core\Common\SPWebService.js" />
     <Content Include="Scripts\Core\Constants.js" />
     <Content Include="Scripts\Core\ListService.js" />
@@ -219,10 +221,14 @@
     <Content Include="Scripts\Core\Repositories\Entities\FaqListItem.js" />
     <Content Include="Scripts\Core\Repositories\FaqRepository.js" />
     <Content Include="Scripts\Core\RequestError.js" />
-    <Content Include="Scripts\External\camljs.js" />
-    <Content Include="Scripts\Elements.xml">
+    <Content Include="Scripts\Elements.release.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Scripts\Elements.debug.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\Elements.xml" />
+    <Content Include="Scripts\External\camljs.js" />
     <Content Include="Scripts\init.js" />
     <Content Include="Scripts\Resources\Resources.ru-ru.js" />
     <Content Include="Scripts\Resources\Resources.en-us.js" />

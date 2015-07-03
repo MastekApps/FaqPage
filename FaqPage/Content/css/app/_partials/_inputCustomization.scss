@@ -1,27 +1,27 @@
-﻿input[type="radio"],
-input[type="checkbox"] {
+﻿#ng-app-FaqApp input[type="radio"],
+#ng-app-FaqApp input[type="checkbox"] {
   display:none;
 }
 
-input[type="radio"] + span:before,
-input[type="checkbox"] + span:before {
+#ng-app-FaqApp input[type="radio"] + span:before,
+#ng-app-FaqApp input[type="checkbox"] + span:before {
   font-family: 'FontAwesome';
   padding-right: 3px;
   font-size: 20px;
 }
 
-input[type="radio"] + span:before {
+#ng-app-FaqApp input[type="radio"] + span:before {
   content: "\f10c"; /* circle-blank */
 }
 
-input[type="radio"]:checked + span:before {
+#ng-app-FaqApp input[type="radio"]:checked + span:before {
   content: "\f192"; /* circle */
 }
 
-input[type="checkbox"] + span:before {
+#ng-app-FaqApp input[type="checkbox"] + span:before {
   content: "\f096"; /* check-empty */
 }
 
-input[type="checkbox"]:checked + span:before {
+#ng-app-FaqApp input[type="checkbox"]:checked + span:before {
   content: "\f046"; /* check */
 }

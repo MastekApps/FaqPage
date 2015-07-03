@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
   <Files>
-    <ProjectItemFile Source="Elements.xml" Target="Scripts\" Type="ElementManifest" />
     <ProjectItemFile Source="Resources\Resources.en-us.js" Target="Scripts\Resources\" Type="ElementFile" />
     <ProjectItemFile Source="Resources\Resources.ru-ru.js" Target="Scripts\Resources\" Type="ElementFile" />
     <ProjectItemFile Source="init.js" Target="Scripts\" Type="ElementFile" />
@@ -78,14 +77,19 @@
     <ProjectItemFile Source="AppExternal\bootstrap\css\bootstrap-theme.css.map" Target="Scripts\AppExternal\bootstrap\css\" Type="ElementFile" />
     <ProjectItemFile Source="AppExternal\bootstrap\css\bootstrap.css.map" Target="Scripts\AppExternal\bootstrap\css\" Type="ElementFile" />
     <ProjectItemFile Source="build\faq.app.core.min.js" Target="Scripts\build\" Type="ElementFile" />
-    <ProjectItemFile Source="build\faq.app.core.min.js.map" Target="Scripts\build\" Type="ElementFile" />
     <ProjectItemFile Source="build\faq.app.external.min.js" Target="Scripts\build\" Type="ElementFile" />
     <ProjectItemFile Source="build\faq.app.external.min.js.map" Target="Scripts\build\" Type="ElementFile" />
     <ProjectItemFile Source="build\faq.app.min.js" Target="Scripts\build\" Type="ElementFile" />
-    <ProjectItemFile Source="build\faq.app.min.js.map" Target="Scripts\build\" Type="ElementFile" />
     <ProjectItemFile Source="AppExternal\angular-ui-select\select.css" Target="Scripts\AppExternal\angular-ui-select\" Type="ElementFile" />
     <ProjectItemFile Source="AppExternal\angular-ui-select\select.js" Target="Scripts\AppExternal\angular-ui-select\" Type="ElementFile" />
     <ProjectItemFile Source="App\Filters\propsFilter.js" Target="Scripts\App\Filters\" Type="ElementFile" />
     <ProjectItemFile Source="AppExternal\angular-sortable-view\angular-sortable-view.js" Target="Scripts\AppExternal\angular-sortable-view\" Type="ElementFile" />
+    <ProjectItemFile Source="build\faq.app.core.tmp.min.js" Target="Scripts\build\" Type="ElementFile" />
+    <ProjectItemFile Source="build\faq.app.core.tmp.min.js.map" Target="Scripts\build\" Type="ElementFile" />
+    <ProjectItemFile Source="build\faq.app.tmp.min.js" Target="Scripts\build\" Type="ElementFile" />
+    <ProjectItemFile Source="build\faq.app.tmp.min.js.map" Target="Scripts\build\" Type="ElementFile" />
+    <ProjectItemFile Source="Elements.debug.xml" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="Elements.release.xml" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="Elements.xml" Target="Scripts\" Type="ElementManifest" />
   </Files>
 </ProjectItem>

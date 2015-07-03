@@ -3,7 +3,7 @@
 <App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest"
      Name="FAQPage"
      ProductID="{863b4392-e4a4-460e-ae8d-14c29b14f149}"
-     Version="1.0.3.1"
+     Version="1.0.3.2"
      SharePointMinVersion="15.0.0.0"
 >
   <Properties>

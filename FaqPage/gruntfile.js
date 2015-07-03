@@ -46,8 +46,8 @@ module.exports = function (grunt) {
 		appPath + "/Services/*.js"
 	];
 
-	var appScriptsSource = "Scripts/build/faq.app.min.js";
-	var coreScriptsSource = "Scripts/build/faq.app.core.min.js";
+	var appScriptsSource = "Scripts/build/faq.app.tmp.min.js";
+	var coreScriptsSource = "Scripts/build/faq.app.core.tmp.min.js";
 	var externalScriptsSource = "Scripts/build/faq.app.external.min.js";
 
 	grunt.initConfig({
@@ -143,6 +143,16 @@ module.exports = function (grunt) {
 				  { expand: true, cwd: "Scripts/AppExternal/font-awesome", src: ["**", "!*.css"], dest: "Content/fonts" },
 				  { expand: true, cwd: "Scripts/AppExternal/bootstrap/fonts", src: ["**"], dest: "Content/fonts" }
 				]
+			},
+			elementsDebug: {
+				files: {
+					"Scripts/Elements.xml": ["Scripts/Elements.debug.xml"]
+				}
+			},
+			elementsRelease: {
+				files: {
+					"Scripts/Elements.xml": ["Scripts/Elements.release.xml"]
+				}
 			}
 		},
 		updateAppInfo: {
@@ -165,11 +175,29 @@ module.exports = function (grunt) {
 					
 				}
 			}
+		},
+		jsObfuscate: {
+			release: {
+				files: {
+					"Scripts/build/faq.app.core.min.js": ["Scripts/build/faq.app.core.tmp.min.js"],
+					"Scripts/build/faq.app.min.js": ["Scripts/build/faq.app.tmp.min.js"]
+				},
+				options: {
+					concurrency: 2,
+					keepLinefeeds: false,
+					keepIndentations: false,
+					encodeStrings: true,
+					encodeNumbers: true,
+					moveStrings: true,
+					replaceNames: true,
+					variableExclusions: ["^_get_", "^_set_", "^_mtd_"]
+				}
+			}
 		}
 	});
 
-	grunt.registerTask("debug", ["updateAppInfo:debug", "uglify:appOnly", "sass:main", "cssmin:main", "copy:main"]);
-	grunt.registerTask("release", ["updateAppInfo:release", "uglify:release", "sass:main", "cssmin:main", "copy:main"]);
+	grunt.registerTask("debug", ["updateAppInfo:debug", "uglify:appOnly", "sass:main", "cssmin:main", "copy:main", "copy:elementsDebug"]);
+	grunt.registerTask("release", ["updateAppInfo:release", "uglify:release", "jsObfuscate:release", "sass:main", "cssmin:main", "copy:main", "copy:elementsRelease"]);
 
 	// The following line loads the grunt plugins.
 	// This line needs to be at the end of this this file.
@@ -179,6 +207,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks("grunt-contrib-cssmin");
 	grunt.loadNpmTasks("grunt-contrib-copy");
 	grunt.loadNpmTasks("grunt-contrib-watch");
+	grunt.loadNpmTasks("js-obfuscator");
 
 	//custom tasks
 	grunt.loadTasks("tasks");
