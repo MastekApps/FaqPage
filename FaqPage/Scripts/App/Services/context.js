@@ -26,7 +26,9 @@
 				spHostUrl: getWebUrl("SPHostUrl"),
 				spAppWebUrl: getWebUrl("SPAppWebUrl"),
 				wpId: getParameterByName("wpId"),
-				senderId: getParameterByName("SenderId")
+				senderId: getParameterByName("SenderId"),
+				isDebug: window.faq_is_debug,
+				productId: window.faq_product_id
 			};
 		}]);
 })();

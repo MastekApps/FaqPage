@@ -8,91 +8,87 @@
 		LicenseNotValid: 4
 	});
 
-	angular.module("FaqApp.services").factory("licensing", ["context", "faqService", "$q", "licenseStatus",
-			function (context, faqService, $q, licenseStatus) {
+	angular.module("FaqApp.services").factory("licensing", ["context", "faqService", "$q", "licenseStatus", "storage", "$jq",
+	function (context, faqService, $q, licenseStatus, storage, $jq) {
+		var tokenKey = "faq_token";
+		var deferred = $q.defer();
+		var tokenExpirationInMin = 60 * 24;
+		var verificationServiceEndpoint = "https://verificationservice.officeapps.live.com/ova/verificationagent.svc/rest/verify?token=";
 
-				var licenseKey = "_faq_license_";
-				var dateInstalledKey = "_faq_date_installed";
-				var trialPeriodInDays = 30;
-				var rsaKeyUrl = "Content/rsa_public_key.txt";
-				var deferred = $q.defer();
+		function validateToken(xmlToken) {
+			var token = $jq.xml2json(xmlToken);
+			console.log(token);
 
-				var checkTrialPeriod = function (dateInstalled) {
-					var dateNow = moment();
+			deferred.resolve({
+				status: licenseStatus.Licensed
+			});
+		}
 
-					var dayDIff = dateNow.diff(dateInstalled, "days");
+		function retriveToken() {
+			var ctx = SP.ClientContext.get_current();
+			var licenseCollection = SP.Utilities.Utility.getAppLicenseInformation(ctx, context.productId);
+			var tokenDeferred = $q.defer();
 
-					if (dayDIff > trialPeriodInDays) {
-						deferred.resolve({
-							status: licenseStatus.TrialExpired
-						});
-					} else {
-						deferred.resolve({
-							status: licenseStatus.UnderTrial,
-							daysLeft: trialPeriodInDays - dayDIff
-						});
-					}
+			ctx.executeQueryAsync(function () {
+				var topLicense;
+				var encodedTopLicense;
+				if (licenseCollection.get_count() > 0) {
+					topLicense = licenseCollection.get_item(0).get_rawXMLLicenseToken();
+					encodedTopLicense = encodeURIComponent(topLicense);
+
+					var request = new SP.WebRequestInfo();
+					request.set_url(verificationServiceEndpoint + encodedTopLicense);
+					request.set_method("GET");
+					var response = SP.WebProxy.invoke(ctx, request);
+					ctx.executeQueryAsync(function () {
+						var xmlToken = response.get_body();
+
+						tokenDeferred.resolve({ token: xmlToken });
+
+					}, function (sender, error) {
+						tokenDeferred.reject(new RequestError(error));
+					});
+				} else {
+					tokenDeferred.resolve(null);
 				}
 
-				return {
-					getLicenseStatus: function () {
-						var licenseDefererd = faqService.webService.webProperties.get(licenseKey);
-						var hostWebIdDeferred = faqService.webService.getHostWebId();
+			}, function (sender, error) {
+				tokenDeferred.reject(new RequestError(error));
+			});
 
-						$q.all([licenseDefererd, hostWebIdDeferred]).then(function (results) {
-							var license = results[0];
-							var hostWebId = results[1];
+			return tokenDeferred.promise;
+		}
 
-							//if lecense provided
-							if (license) {
-								$jq.ajax({
-									url: rsaKeyUrl,
-									success: function (data) {
-										var decrypt = new JSEncrypt();
-										decrypt.setPublicKey(data);
-										var uncryptedHostWebId = decrypt.decrypt(license);
-
-										if (hostWebId === uncryptedHostWebId) {
-											deferred.resolve({
-												status: licenseStatus.Licensed,
-												licenseKey: license
-											});
-										} else {
-											deferred.resolve({
-												status: licenseStatus.LicenseNotValid,
-												licenseKey: license
-											});
-										}
-									},
-									dataType: "text"
+		return {
+			getLicenseStatus: function () {
+				SP.SOD.executeOrDelayUntilScriptLoaded(function () {
+					var licenseToken = storage.load(tokenKey);
+					if (!licenseToken) {
+						retriveToken().then(function (data) {
+							if (!data) {
+								deferred.resolve({
+									status: licenseStatus.LicenseNotValid
 								});
-							}//check for trial period
-							else {
-								faqService.webService.webProperties.get(dateInstalledKey).then(function (date) {
-									if (!date) {
-										var currentDate = new Date();
-										faqService.webService.webProperties.set(dateInstalledKey, currentDate).then(function () {
-											checkTrialPeriod(moment(currentDate));
-										});
-									} else {
-										checkTrialPeriod(moment(date));
-									}
+							} else {
+								storage.save(tokenKey, data.token, tokenExpirationInMin);
 
-								}, function (error) {
-									deferred.reject(error);
-								});
+								validateToken(data.token);
 							}
-
 						}, function (error) {
 							deferred.reject(error);
 						});
 
-						return deferred.promise;
-					},
-					setLicense: function (license) {
-						return faqService.webService.webProperties.set(licenseKey, license);
+					} else {
+						validateToken(licenseToken);
 					}
-				};
+				}, "sp.js");
+
+				return deferred.promise;
+			},
+			setLicense: function (license) {
+
 			}
+		};
+	}
 	]);
 })();

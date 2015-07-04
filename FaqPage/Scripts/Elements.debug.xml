@@ -52,7 +52,8 @@
 		<File Path="Scripts\App\Services\faqSetModel.js" Url="Scripts/App/Services/faqSetModel.js" ReplaceContent="TRUE" />
 		<File Path="Scripts\App\Services\jq.js" Url="Scripts/App/Services/jq.js" ReplaceContent="TRUE" />
 		<File Path="Scripts\App\Services\licensing.js" Url="Scripts/App/Services/licensing.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Services\processing.js" Url="Scripts/App/Services/processing.js" ReplaceContent="TRUE" />
+		<File Path="Scripts\App\Services\processing.js" Url="Scripts/App/Services/storage.js" ReplaceContent="TRUE" />
+		<File Path="Scripts\App\Services\storage.js" Url="Scripts/App/Services/storage.js" ReplaceContent="TRUE" />
 		<File Path="Scripts\App\app.js" Url="Scripts/App/app.js" ReplaceContent="TRUE" />
 		<File Path="Scripts\AppExternal\animate.css\animate.css" Url="Scripts/AppExternal/animate.css/animate.css" ReplaceContent="TRUE" />
 		<File Path="Scripts\AppExternal\font-awesome\font-awesome.css" Url="Scripts/AppExternal/font-awesome/font-awesome.css" ReplaceContent="TRUE" />
@@ -87,5 +88,5 @@
     <File Path="Scripts\build\faq.app.core.tmp.min.js.map" Url="Scripts/build/faq.app.core.tmp.min.js.map" ReplaceContent="TRUE" />
     <File Path="Scripts\build\faq.app.tmp.min.js" Url="Scripts/build/faq.app.tmp.min.js" ReplaceContent="TRUE" />
     <File Path="Scripts\build\faq.app.tmp.min.js.map" Url="Scripts/build/faq.app.tmp.min.js.map" ReplaceContent="TRUE" />
-  </Module>
+	</Module>
 </Elements>

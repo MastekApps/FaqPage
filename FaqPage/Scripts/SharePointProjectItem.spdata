@@ -91,5 +91,7 @@
     <ProjectItemFile Source="Elements.debug.xml" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="Elements.release.xml" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="Elements.xml" Target="Scripts\" Type="ElementManifest" />
+    <ProjectItemFile Source="App\Services\storage.js" Target="Scripts\App\Services\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\jquery-xml2json\xml2json.js" Target="Scripts\AppExternal\jquery-xml2json\" Type="ElementFile" />
   </Files>
 </ProjectItem>

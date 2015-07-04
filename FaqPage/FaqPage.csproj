@@ -137,7 +137,9 @@
     <Content Include="Scripts\AppExternal\angular-sortable-view\angular-sortable-view.js" />
     <Content Include="Scripts\AppExternal\angular-ui-select\select.css" />
     <Content Include="Scripts\AppExternal\angular-ui-select\select.js" />
+    <Content Include="Scripts\AppExternal\jquery-xml2json\xml2json.js" />
     <Content Include="Scripts\App\Filters\propsFilter.js" />
+    <Content Include="Scripts\App\Services\storage.js" />
     <Content Include="Scripts\build\faq.app.core.tmp.min.js" />
     <Content Include="Scripts\build\faq.app.external.min.js.map" />
   </ItemGroup>

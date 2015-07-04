@@ -12,6 +12,7 @@ module.exports = function (grunt) {
 	var externalFiles = [
 		baseExternalPath + "/jquery/*.js",
 		baseExternalPath + "/jquery-ui/*.js",
+		baseExternalPath + "/jquery-xml2json/*.js",
 		baseExternalPath + "/blockui/*.js",
 		baseExternalPath + "/camljs/*.js",
 		baseExternalPath + "/angular/*.js",
@@ -153,6 +154,12 @@ module.exports = function (grunt) {
 				files: {
 					"Scripts/Elements.xml": ["Scripts/Elements.release.xml"]
 				}
+			},
+			debug: {
+				files: {
+					"Scripts/build/faq.app.core.min.js": ["Scripts/build/faq.app.core.tmp.min.js"],
+					"Scripts/build/faq.app.min.js": ["Scripts/build/faq.app.tmp.min.js"]
+				}
 			}
 		},
 		updateAppInfo: {
@@ -163,7 +170,7 @@ module.exports = function (grunt) {
 		watch: {
 			scripts: {
 				files: ["Scripts/App/**/*.js", "Scripts/Core/**/*.js"],
-				tasks: ["uglify:appOnly"],
+				tasks: ["uglify:appOnly", "copy:debug"],
 				options: {
 					spawn: false
 				}
@@ -171,9 +178,7 @@ module.exports = function (grunt) {
 			css: {
 				files: "Content/css/**/*.scss",
 				tasks: ["sass:main", "cssmin:main"],
-				options: {
-					
-				}
+				options: {}
 			}
 		},
 		jsObfuscate: {
@@ -196,7 +201,7 @@ module.exports = function (grunt) {
 		}
 	});
 
-	grunt.registerTask("debug", ["updateAppInfo:debug", "uglify:appOnly", "sass:main", "cssmin:main", "copy:main", "copy:elementsDebug"]);
+	grunt.registerTask("debug", ["updateAppInfo:debug", "uglify:appOnly", "sass:main", "cssmin:main", "copy:main", "copy:elementsDebug", "copy:debug"]);
 	grunt.registerTask("release", ["updateAppInfo:release", "uglify:release", "jsObfuscate:release", "sass:main", "cssmin:main", "copy:main", "copy:elementsRelease"]);
 
 	// The following line loads the grunt plugins.
