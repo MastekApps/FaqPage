@@ -8,20 +8,75 @@
 		LicenseNotValid: 4
 	});
 
-	angular.module("FaqApp.services").factory("licensing", ["context", "faqService", "$q", "licenseStatus", "storage", "$jq",
-	function (context, faqService, $q, licenseStatus, storage, $jq) {
+	angular.module("FaqApp.services").value("entitlementType", {
+		Free: "free",
+		Paid: "paid",
+		Trial: "trial"
+	});
+
+	angular.module("FaqApp.services").factory("licensing", ["context", "$q", "licenseStatus", "storage", "$jq", "entitlementType",
+	function (context, $q, licenseStatus, storage, $jq, entitlementType) {
 		var tokenKey = "faq_token";
 		var deferred = $q.defer();
-		var tokenExpirationInMin = 60 * 24;
+		var tokenExpirationInMin = 60; // 1 hour
 		var verificationServiceEndpoint = "https://verificationservice.officeapps.live.com/ova/verificationagent.svc/rest/verify?token=";
 
 		function validateToken(xmlToken) {
-			var token = $jq.xml2json(xmlToken);
-			console.log(token);
+			var token = $jq.xml2json(xmlToken).VerifyEntitlementTokenResponse;
+			token.IsValid = (token.IsValid.toLowerCase() === "true");
+			token.IsEntitlementExpired = (token.IsEntitlementExpired.toLowerCase() === "true");
+			token.IsExpired = (token.IsExpired.toLowerCase() === "true");
 
-			deferred.resolve({
-				status: licenseStatus.Licensed
-			});
+			if (console) console.log(token);
+
+			var entitlementTypeReceived = token.EntitlementType.toLowerCase();
+
+			//TODO: Uncomment for release!
+			//if (!token.IsValid || token.IsExpired) {
+			//	deferred.resolve({
+			//		status: licenseStatus.LicenseNotValid
+			//	});
+
+			//	return;
+			//}
+
+			switch (entitlementTypeReceived) {
+				case entitlementType.Paid:
+					{
+						deferred.resolve({
+							status: licenseStatus.Licensed,
+							assetId: token.AssetId
+						});
+						break;
+					}
+				case entitlementType.Free:
+					{
+						deferred.resolve({
+							status: licenseStatus.Licensed,
+							assetId: token.AssetId
+						});
+						break;
+					}
+				case entitlementType.Trial:
+				{
+					if (token.IsEntitlementExpired) {
+						deferred.resolve({
+							status: licenseStatus.TrialExpired,
+							assetId: token.AssetId
+						});
+						break;
+					}
+
+					var dateNow = moment();
+					var dateExpiration = moment(token.EntitlementExpiryDate);
+
+					deferred.resolve({
+						status: licenseStatus.UnderTrial,
+						daysLeft: dateExpiration.diff(dateNow, "days"),
+						assetId: token.AssetId
+					});
+				}
+			}
 		}
 
 		function retriveToken() {
@@ -43,7 +98,7 @@
 					ctx.executeQueryAsync(function () {
 						var xmlToken = response.get_body();
 
-						tokenDeferred.resolve({ token: xmlToken });
+						tokenDeferred.resolve(xmlToken);
 
 					}, function (sender, error) {
 						tokenDeferred.reject(new RequestError(error));
@@ -64,15 +119,15 @@
 				SP.SOD.executeOrDelayUntilScriptLoaded(function () {
 					var licenseToken = storage.load(tokenKey);
 					if (!licenseToken) {
-						retriveToken().then(function (data) {
-							if (!data) {
+						retriveToken().then(function (token) {
+							if (!token) {
 								deferred.resolve({
 									status: licenseStatus.LicenseNotValid
 								});
 							} else {
-								storage.save(tokenKey, data.token, tokenExpirationInMin);
+								storage.save(tokenKey, token, tokenExpirationInMin);
 
-								validateToken(data.token);
+								validateToken(token);
 							}
 						}, function (error) {
 							deferred.reject(error);

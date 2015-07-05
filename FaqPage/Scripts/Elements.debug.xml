@@ -37,7 +37,6 @@
 		<File Path="Scripts\App\Controllers\LicensingCtrl.js" Url="Scripts/App/Controllers/LicensingCtrl.js" ReplaceContent="TRUE" />
 		<File Path="Scripts\App\Controllers\ManageFaqSetCtrl.js" Url="Scripts/App/Controllers/ManageFaqSetCtrl.js" ReplaceContent="TRUE" />
 		<File Path="Scripts\App\Controllers\ModalInstanceCtrl.js" Url="Scripts/App/Controllers/ModalInstanceCtrl.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Controllers\RegisterAppCtrl.js" Url="Scripts/App/Controllers/RegisterAppCtrl.js" ReplaceContent="TRUE" />
 		<File Path="Scripts\App\Controllers\SelectFaqForEditCtrl.js" Url="Scripts/App/Controllers/SelectFaqForEditCtrl.js" ReplaceContent="TRUE" />
 		<File Path="Scripts\App\Directives\block.js" Url="Scripts/App/Directives/block.js" ReplaceContent="TRUE" />
 		<File Path="Scripts\App\Directives\contenteditable.js" Url="Scripts/App/Directives/contenteditable.js" ReplaceContent="TRUE" />
@@ -88,5 +87,6 @@
     <File Path="Scripts\build\faq.app.core.tmp.min.js.map" Url="Scripts/build/faq.app.core.tmp.min.js.map" ReplaceContent="TRUE" />
     <File Path="Scripts\build\faq.app.tmp.min.js" Url="Scripts/build/faq.app.tmp.min.js" ReplaceContent="TRUE" />
     <File Path="Scripts\build\faq.app.tmp.min.js.map" Url="Scripts/build/faq.app.tmp.min.js.map" ReplaceContent="TRUE" />
+		<File Path="Scripts\AppExternal\lz-string\lz-string.min.js" Url="Scripts/AppExternal/lz-string/lz-string.min.js" ReplaceContent="TRUE" />
 	</Module>
 </Elements>

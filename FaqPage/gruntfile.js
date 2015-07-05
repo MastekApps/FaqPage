@@ -13,6 +13,7 @@ module.exports = function (grunt) {
 		baseExternalPath + "/jquery/*.js",
 		baseExternalPath + "/jquery-ui/*.js",
 		baseExternalPath + "/jquery-xml2json/*.js",
+		baseExternalPath + "/lz-string/*.js",
 		baseExternalPath + "/blockui/*.js",
 		baseExternalPath + "/camljs/*.js",
 		baseExternalPath + "/angular/*.js",

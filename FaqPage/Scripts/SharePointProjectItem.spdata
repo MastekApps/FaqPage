@@ -38,7 +38,6 @@
     <ProjectItemFile Source="App\Controllers\LicensingCtrl.js" Target="Scripts\App\Controllers\" Type="ElementFile" />
     <ProjectItemFile Source="App\Controllers\ManageFaqSetCtrl.js" Target="Scripts\App\Controllers\" Type="ElementFile" />
     <ProjectItemFile Source="App\Controllers\ModalInstanceCtrl.js" Target="Scripts\App\Controllers\" Type="ElementFile" />
-    <ProjectItemFile Source="App\Controllers\RegisterAppCtrl.js" Target="Scripts\App\Controllers\" Type="ElementFile" />
     <ProjectItemFile Source="App\Controllers\SelectFaqForEditCtrl.js" Target="Scripts\App\Controllers\" Type="ElementFile" />
     <ProjectItemFile Source="App\Directives\block.js" Target="Scripts\App\Directives\" Type="ElementFile" />
     <ProjectItemFile Source="App\Directives\contenteditable.js" Target="Scripts\App\Directives\" Type="ElementFile" />
@@ -93,5 +92,6 @@
     <ProjectItemFile Source="Elements.xml" Target="Scripts\" Type="ElementManifest" />
     <ProjectItemFile Source="App\Services\storage.js" Target="Scripts\App\Services\" Type="ElementFile" />
     <ProjectItemFile Source="AppExternal\jquery-xml2json\xml2json.js" Target="Scripts\AppExternal\jquery-xml2json\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\lz-string\lz-string.min.js" Target="Scripts\AppExternal\lz-string\" Type="ElementFile" />
   </Files>
 </ProjectItem>

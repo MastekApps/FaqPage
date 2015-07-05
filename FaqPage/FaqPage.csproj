@@ -138,6 +138,7 @@
     <Content Include="Scripts\AppExternal\angular-ui-select\select.css" />
     <Content Include="Scripts\AppExternal\angular-ui-select\select.js" />
     <Content Include="Scripts\AppExternal\jquery-xml2json\xml2json.js" />
+    <Content Include="Scripts\AppExternal\lz-string\lz-string.min.js" />
     <Content Include="Scripts\App\Filters\propsFilter.js" />
     <Content Include="Scripts\App\Services\storage.js" />
     <Content Include="Scripts\build\faq.app.core.tmp.min.js" />
@@ -145,7 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\build\faq.app.core.tmp.min.js.map" />
-    <None Include="Scripts\build\faq.app.tmp.min.js.map" />
+    <Content Include="Scripts\build\faq.app.tmp.min.js.map" />
     <None Include="Scripts\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{39c0ec3f-6ba9-4fb1-a4b2-952e23eaa32c}</SharePointProjectItemId>
     </None>
@@ -157,7 +158,6 @@
     <Content Include="Pages\Partials\EditMode\CreateEditFaq.html" />
     <Content Include="Pages\Partials\EditMode\ManageFaqSet.html" />
     <Content Include="Pages\Partials\EditMode\NewFaqSet.html" />
-    <Content Include="Pages\Partials\EditMode\LicenseRequest.html" />
     <Content Include="Scripts\AppExternal\angular-animate\angular-animate.js" />
     <Content Include="Scripts\AppExternal\angular-bootstrap\ui-bootstrap-tpls.js" />
     <Content Include="Scripts\AppExternal\angular-route\angular-route.js" />
@@ -192,7 +192,6 @@
     <Content Include="Scripts\App\Controllers\LicensingCtrl.js" />
     <Content Include="Scripts\App\Controllers\ManageFaqSetCtrl.js" />
     <Content Include="Scripts\App\Controllers\ModalInstanceCtrl.js" />
-    <Content Include="Scripts\App\Controllers\RegisterAppCtrl.js" />
     <Content Include="Scripts\App\Controllers\SelectFaqForEditCtrl.js" />
     <Content Include="Scripts\App\Directives\block.js" />
     <Content Include="Scripts\App\Directives\contenteditable.js" />

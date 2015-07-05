@@ -64,7 +64,7 @@ FAQRS.TestZone = "Test zone";
 FAQRS.DataSaved = "<div><div class='fa fa-check animated flipInY save-success'></div> Your data successfully saved</div>";
 FAQRS.QuestionSaved = "<div><div class='fa fa-check animated flipInY save-success'></div> Question saved</div>";
 FAQRS.LicenseApplied = "<div><div class='fa fa-check animated flipInY save-success'></div> License applied</div>";
-FAQRS.Days = "days.";
+FAQRS.Days = "day(s).";
 FAQRS.TrialExpiringIn = "Trial period is expiring in";
 FAQRS.Please = "Please";
 FAQRS.ActivateApp = "Activate the app";
@@ -102,6 +102,8 @@ FAQRS.AppPartFAQs = "Web Part's FAQ Sets";
 FAQRS.DDFAQs = "Drag & Drop source FAQs into the Web Part's FAQs";
 FAQRS.EnableCustomCss = "Use custom css file";
 FAQRS.CustomCssPopoverText = "Paste valid link to the css file in the input below or modify existing file. You can also use files from the host web.";
+FAQRS.BuyFullVersion = "Buy the full version";
+FAQRS.DaysLeftOnTrial = "days left on this trial";
 
 /*-----------------Animations-----------------------*/
 FAQRS.Bounce = "Bounce";
