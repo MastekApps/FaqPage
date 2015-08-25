@@ -4,7 +4,7 @@
 	window.$jq = jQuery.noConflict();
 
 	//FIX - script error in FireFox when using angular and Rich Text Editor
-	if (browseris.firefox || browseris.chrome) {
+	if (window.browseris && (window.browseris.firefox || window.browseris.chrome)) {
 		ExecuteOrDelayUntilScriptLoaded(function () {
 
 			var oldAddStyleSheetRule = RTE.RteUtility.addStyleSheetRule;
@@ -18,76 +18,52 @@
 		}, "sp.ui.rte.js");
 	}
 
-	if (!_spBodyOnLoadCalled) {
-		_spBodyOnLoadFunctions.push(load);
-	} else {
+	$(function() {
 		load();
+	});
+
+	function getParameterByName(name) {
+		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+		var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+			results = regex.exec(location.search);
+		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 	}
 
-	function AsyncScript(key, src, onLoadFunction) {
-		var e = Function.validateParameters(arguments, [
-			{ name: "key", type: String },
-			{ name: "src", type: String }
-		], false);
+	var JSLoader = function (pathToScript, successCallback) {
+		var script = document.createElement("script");
+		script.async = true;
+		script.type = "text/javascript";
+		script.src = pathToScript;
+		var loaded = false;
+		var succcessFunction = successCallback;
+		this.load = function () {
+			script.onload = script.onreadystatechange = function () {
+				if ((script.readyState && script.readyState !== "complete" && script.readyState !== "loaded") || loaded) {
+					return;
+				}
+				loaded = true;
+				script.onload = script.onreadystatechange = null;
 
-		if (e) throw e;
-
-		this.key = key;
-		this.src = src;
-		var self = this;
-		this.onLoadFunction = function() {
-			if (typeof NotifyScriptLoadedAndExecuteWaitingJobs === "function") {
-				NotifyScriptLoadedAndExecuteWaitingJobs(self.key);
-			}
-
-			if (onLoadFunction && typeof onLoadFunction === "function") {
-				onLoadFunction();
-			}
+				if (succcessFunction && typeof succcessFunction === "function") {
+					succcessFunction();
+				}
+			};
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(script, s);
 		};
-
-		RegisterSod(this.key, this.src);
-	}
-
-	AsyncScript.prototype = {
-		constructor: AsyncScript,
-		registerDependency: function (asyncScripts) {
-			var e = Function.validateParameters(arguments, [
-				{ name: "asyncScripts", type: Array, elementType: AsyncScript }
-			]);
-
-			if (e) throw e;
-
-			Array.forEach(asyncScripts, function (asyncScript) {
-				RegisterSodDep(this.key, asyncScript.key);
-			}, this);
-		},
-		registerDependencyByName: function (kies) {
-			var e = Function.validateParameters(arguments, [
-				{ name: "kies", type: Array, elementType: String }
-			]);
-
-			if (e) throw e;
-
-			Array.forEach(kies, function (key) {
-				RegisterSodDep(this.key, key);
-			}, this);
-		},
-		load: function () {
-			LoadSodByKey(this.key, this.onLoadFunction);
-		}
 	};
 
 	var registeredResources = ["en-us", "ru-ru"];
 
 	function load() {
 		var hash = window.faq_version;
-		var webRelUrl = _spPageContextInfo.webServerRelativeUrl;
+		var webRelUrl = getParameterByName("SPAppWebUrl");
 
 		if (!webRelUrl.endsWith("/")) {
 			webRelUrl = webRelUrl + "/";
 		}
 
-		var currentUICulture = GetUrlKeyValue("SPLanguage");
+		var currentUICulture = getParameterByName("SPLanguage");
 		if (!currentUICulture || $.inArray(currentUICulture.toLowerCase(), registeredResources) === -1) {
 			currentUICulture = "en-us";
 		}
@@ -96,16 +72,17 @@
 		var resourcesScriptSrc = String.format("{0}Scripts/Resources/Resources.{1}.js?v={2}", webRelUrl, currentUICulture.toLowerCase(), hash);
 		var angularAppSrc = String.format("{0}Scripts/build/faq.app.min.js?v={1}", webRelUrl, hash);
 
-		var resourcesScript = new AsyncScript("faq.resources", resourcesScriptSrc);
-		var coreScript = new AsyncScript("faq.core", coreScriptSrc, function () { $("#head").replaceWith(FAQRS.PageTitle); });
-
-		var angularAppScript = new AsyncScript("faq.angular.app", angularAppSrc);
-
-		angularAppScript.registerDependency([coreScript]);
-		coreScript.registerDependency([resourcesScript]);
-		coreScript.registerDependencyByName(["sp.js", "sp.runtime.js", "sp.init.js"]);
-
-		angularAppScript.load();
+		var resourcesLoader = new JSLoader(resourcesScriptSrc, function () {
+			var coreLoader = new JSLoader(coreScriptSrc, function () {
+				$("#head").replaceWith(FAQRS.PageTitle);
+				var appLoader = new JSLoader(angularAppSrc, function() {
+					jQuery(document).trigger("onAppLoaded");
+				});
+				appLoader.load();
+			});
+			coreLoader.load();
+		});
+		resourcesLoader.load();
 	}
 })(jQuery);
 

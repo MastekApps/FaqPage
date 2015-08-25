@@ -5,7 +5,7 @@
 	var loadListDeffered = $jq.Deferred();
 	var context = SP.ClientContext.get_current();
 	var lists = context.get_web().get_lists();
-	context.load(lists, "Include(DefaultViewUrl)");
+	context.load(lists, "Include(DefaultViewUrl,RootFolder)");
 	context.executeQueryAsync(function () {
 		loadListDeffered.resolve();
 	}, function (sender, error) {
