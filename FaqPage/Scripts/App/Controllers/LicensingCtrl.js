@@ -9,6 +9,10 @@
 
 			$scope.isAppPart = window.parent !== window;
 
+			$scope.showIfLicenseValid = function () {
+				return $scope.licensed || $scope.underTrial || $location.path() === "/Licensing";
+			};
+
 			$scope.lockDeferred.then(function (license) {
 				$scope.underTrial = license.status === licenseStatus.UnderTrial;
 				$scope.licensed = license.status === licenseStatus.Licensed;

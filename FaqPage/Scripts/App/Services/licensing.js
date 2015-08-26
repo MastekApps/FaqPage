@@ -58,24 +58,24 @@
 						break;
 					}
 				case entitlementType.Trial:
-				{
-					if (token.IsEntitlementExpired) {
+					{
+						if (token.IsEntitlementExpired) {
+							deferred.resolve({
+								status: licenseStatus.TrialExpired,
+								assetId: token.AssetId
+							});
+							break;
+						}
+
+						var dateNow = moment();
+						var dateExpiration = moment(token.EntitlementExpiryDate);
+
 						deferred.resolve({
-							status: licenseStatus.TrialExpired,
+							status: licenseStatus.UnderTrial,
+							daysLeft: dateExpiration.diff(dateNow, "days"),
 							assetId: token.AssetId
 						});
-						break;
 					}
-
-					var dateNow = moment();
-					var dateExpiration = moment(token.EntitlementExpiryDate);
-
-					deferred.resolve({
-						status: licenseStatus.UnderTrial,
-						daysLeft: dateExpiration.diff(dateNow, "days"),
-						assetId: token.AssetId
-					});
-				}
 			}
 		}
 
@@ -116,27 +116,25 @@
 
 		return {
 			getLicenseStatus: function () {
-				SP.SOD.executeOrDelayUntilScriptLoaded(function () {
-					var licenseToken = storage.load(tokenKey);
-					if (!licenseToken) {
-						retriveToken().then(function (token) {
-							if (!token) {
-								deferred.resolve({
-									status: licenseStatus.LicenseNotValid
-								});
-							} else {
-								storage.save(tokenKey, token, tokenExpirationInMin);
+				var licenseToken = storage.load(tokenKey);
+				if (!licenseToken) {
+					retriveToken().then(function (token) {
+						if (!token) {
+							deferred.resolve({
+								status: licenseStatus.LicenseNotValid
+							});
+						} else {
+							storage.save(tokenKey, token, tokenExpirationInMin);
 
-								validateToken(token);
-							}
-						}, function (error) {
-							deferred.reject(error);
-						});
+							validateToken(token);
+						}
+					}, function (error) {
+						deferred.reject(error);
+					});
 
-					} else {
-						validateToken(licenseToken);
-					}
-				}, "sp.js");
+				} else {
+					validateToken(licenseToken);
+				}
 
 				return deferred.promise;
 			},
