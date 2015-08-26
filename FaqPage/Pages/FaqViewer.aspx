@@ -3,6 +3,7 @@
 
 <WebPartPages:AllowFraming ID="AllowFraming" runat="server" />
 
+<!DOCTYPE html>
 <html>
 <head>
 	<script type="text/javascript" src="/_layouts/15/MicrosoftAjax.js"></script>
@@ -12,7 +13,7 @@
 
 	<script type="text/javascript" src="Scripts/build/faq.app.external.min.js"></script>
 	<script type="text/javascript" src="Scripts/build/build_config.js"></script>
-	<script type="text/javascript" src="Scripts/init.js?v=2"></script>
+	<script type="text/javascript" src="Scripts/init.js?v=3"></script>
 
 	<link rel="Stylesheet" type="text/css" href="Content/css/faq.app.css?v=2" />
 
