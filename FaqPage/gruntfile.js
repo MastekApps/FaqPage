@@ -202,7 +202,7 @@ module.exports = function (grunt) {
 		}
 	});
 
-	grunt.registerTask("debug", ["updateAppInfo:debug", "uglify:appOnly", "sass:main", "cssmin:main", "copy:main", "copy:elementsDebug", "copy:debug"]);
+	grunt.registerTask("debug", ["updateAppInfo:debug", "uglify:appOnly", "copy:debug", "sass:main", "cssmin:main", "copy:main", "copy:elementsDebug"]);
 	grunt.registerTask("release", ["updateAppInfo:release", "uglify:release", "jsObfuscate:release", "sass:main", "cssmin:main", "copy:main", "copy:elementsRelease"]);
 
 	// The following line loads the grunt plugins.

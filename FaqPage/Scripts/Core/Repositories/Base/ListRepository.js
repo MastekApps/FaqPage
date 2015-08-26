@@ -281,11 +281,13 @@ ListRepository.prototype = {
 
 	_getFolderRelativeUrl: function (folderName) {
 		var folder = folderName || this.folder;
-		var webRelativeUrl = _spPageContextInfo.webServerRelativeUrl.endsWith("/")
-			? _spPageContextInfo.webServerRelativeUrl
-			: _spPageContextInfo.webServerRelativeUrl + "/";
 
-		return String.format("{0}{1}/{2}", webRelativeUrl, this._listUrl, folder);
+		var listRootUrl = this._list.get_rootFolder().get_serverRelativeUrl();
+		if (!listRootUrl.endsWith("/")) {
+			listRootUrl = listRootUrl + "/";
+		}
+
+		return String.format("{0}{1}", listRootUrl, folder);
 	},
 
 	_getItemsByQuery: function (camlQuery) {

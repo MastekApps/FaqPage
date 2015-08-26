@@ -9,9 +9,9 @@
 					webService: FAQ.SPWebService,
 					resizeParent: function (width, height) {
 						if (window.parent !== window) {
-							var $app = $jq("#s4-workspace");
+							var $app = $jq("#ng-app-FaqApp");
 							var message = "<Message senderId=" + context.senderId + " >"
-								+ "resize(" + $app.width() + "," + ($app.height() + 40) + ")</Message>";
+								+ "resize(" + ($app.outerWidth() + 30) + "," + ($app.outerHeight() + 30) + ")</Message>";
 							window.parent.postMessage(message, context.spHostUrl);
 						}
 					}
