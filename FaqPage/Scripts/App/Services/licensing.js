@@ -14,8 +14,8 @@
 		Trial: "trial"
 	});
 
-	angular.module("FaqApp.services").factory("licensing", ["context", "$q", "licenseStatus", "storage", "$jq", "entitlementType",
-	function (context, $q, licenseStatus, storage, $jq, entitlementType) {
+	angular.module("FaqApp.services").factory("licensing", ["context", "$q", "licenseStatus", "storage", "$jq", "entitlementType", "$log",
+	function (context, $q, licenseStatus, storage, $jq, entitlementType, $log) {
 		var tokenKey = "faq_token";
 		var deferred = $q.defer();
 		var tokenExpirationInMin = 60; // 1 hour
@@ -27,7 +27,7 @@
 			token.IsEntitlementExpired = (token.IsEntitlementExpired.toLowerCase() === "true");
 			token.IsExpired = (token.IsExpired.toLowerCase() === "true");
 
-			if (console) console.log(token);
+			$log.debug(token);
 
 			var entitlementTypeReceived = token.EntitlementType.toLowerCase();
 
@@ -104,7 +104,7 @@
 						tokenDeferred.reject(new RequestError(error));
 					});
 				} else {
-					tokenDeferred.resolve(null);
+					tokenDeferred.reject(new RequestError("licenseCollection is empty"));
 				}
 
 			}, function (sender, error) {
@@ -137,9 +137,6 @@
 				}
 
 				return deferred.promise;
-			},
-			setLicense: function (license) {
-
 			}
 		};
 	}

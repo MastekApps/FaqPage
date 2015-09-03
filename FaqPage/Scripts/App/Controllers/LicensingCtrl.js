@@ -10,7 +10,7 @@
 			$scope.isAppPart = window.parent !== window;
 
 			$scope.showIfLicenseValid = function () {
-				return $scope.licensed || $scope.underTrial || $location.path() === "/Licensing";
+				return $scope.licensed || $scope.underTrial;
 			};
 
 			$scope.lockDeferred.then(function (license) {
@@ -20,14 +20,20 @@
 				$scope.licenseNotValid = license.status === licenseStatus.LicenseNotValid;
 				$scope.daysLeft = license.daysLeft;
 				$scope.assetId = license.assetId;
-			}, function(error) {
-				alert(error);
+			}, function (error) {
+				$scope.licenseNotValid = true;
+				alert(error.message);
 			});
 
 			$scope.navigateToBuy = function () {
-				//SP.Utilities.HttpUtility.urlKeyValueEncode
-				$window.location.href = String.format("{0}_layouts/15/storefront.aspx?source={1}#vw=AppDetailsView,app={2},clg=0,bm=US,cm=en-US", 
-					context.spHostUrl, SP.Utilities.HttpUtility.urlKeyValueEncode($window.location.href), $scope.assetId);
+				var url = String.format("{0}_layouts/15/storefront.aspx?source={1}#vw=AppDetailsView,app={2},clg=0,bm=US,cm=en-US",
+					context.spHostUrl, encodeURIComponent($window.location.href), $scope.assetId);
+
+				if ($scope.isAppPart) {
+					$window.open(url,"_blank");
+				} else {
+					$window.location.href = url;
+				}
 			}
 		}
 	]);

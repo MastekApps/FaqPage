@@ -5,55 +5,7 @@
 		<File Path="Scripts\Resources\Resources.ru-RU.js" Url="Scripts/Resources/Resources.ru-RU.js" ReplaceContent="TRUE" />
 		<File Path="Scripts\init.js" Url="Scripts/init.js" ReplaceContent="TRUE" />
 		<File Path="Scripts\build\build_config.js" Url="Scripts/build/build_config.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\AppExternal\angular-animate\angular-animate.js" Url="Scripts/AppExternal/angular-animate/angular-animate.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\AppExternal\angular-bootstrap\ui-bootstrap-tpls.js" Url="Scripts/AppExternal/angular-bootstrap/ui-bootstrap-tpls.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\AppExternal\angular-sanitize\angular-sanitize.js" Url="Scripts/AppExternal/angular-sanitize/angular-sanitize.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\AppExternal\angular-ui-sortable\sortable.js" Url="Scripts/AppExternal/angular-ui-sortable/sortable.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\AppExternal\blockui\jquery.blockUI.js" Url="Scripts/AppExternal/blockui/jquery.blockUI.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\AppExternal\camljs\index.js" Url="Scripts/AppExternal/camljs/index.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\AppExternal\jquery\jquery.js" Url="Scripts/AppExternal/jquery/jquery.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\AppExternal\jquery-ui\jquery-ui.js" Url="Scripts/AppExternal/jquery-ui/jquery-ui.js" ReplaceContent="TRUE" />
 		<File Path="Scripts\AppExternal\ngtoast\ngToast.css" Url="Scripts/AppExternal/ngtoast/ngToast.css" ReplaceContent="TRUE" />
-		<File Path="Scripts\AppExternal\ngtoast\ngToast.js" Url="Scripts/AppExternal/ngtoast/ngToast.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\AppExternal\angular-route\angular-route.js" Url="Scripts/AppExternal/angular-route/angular-route.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\AppExternal\jsencrypt\jsencrypt.min.js" Url="Scripts/AppExternal/jsencrypt/jsencrypt.min.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\AppExternal\moment\moment.js" Url="Scripts/AppExternal/moment/moment.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\Core\Common\SPWebService.js" Url="Scripts/Core/Common/SPWebService.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\Core\Repositories\AppPartsConfigRepository.js" Url="Scripts/Core/Repositories/AppPartsConfigRepository.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\Core\Repositories\FaqRepository.js" Url="Scripts/Core/Repositories/FaqRepository.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\Core\Repositories\Base\BaseListItem.js" Url="Scripts/Core/Repositories/Base/BaseListItem.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\Core\Repositories\Base\ListRepository.js" Url="Scripts/Core/Repositories/Base/ListRepository.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\Core\Repositories\Entities\AppPartConfigListItem.js" Url="Scripts/Core/Repositories/Entities/AppPartConfigListItem.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\Core\Repositories\Entities\FaqListItem.js" Url="Scripts/Core/Repositories/Entities/FaqListItem.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\Core\Constants.js" Url="Scripts/Core/Constants.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\Core\ListService.js" Url="Scripts/Core/ListService.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\Core\RequestError.js" Url="Scripts/Core/RequestError.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Controllers\CommonFaqSetSettingsCtrl.js" Url="Scripts/App/Controllers/CommonFaqSetSettingsCtrl.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Controllers\ConnectFaqSetCtrl.js" Url="Scripts/App/Controllers/ConnectFaqSetCtrl.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Controllers\ContactDeveloperCtrl.js" Url="Scripts/App/Controllers/ContactDeveloperCtrl.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Controllers\CreateEditFaqCtrl.js" Url="Scripts/App/Controllers/CreateEditFaqCtrl.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Controllers\FaqEditCtrl.js" Url="Scripts/App/Controllers/FaqEditCtrl.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Controllers\FaqViewCtrl.js" Url="Scripts/App/Controllers/FaqViewCtrl.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Controllers\LicensingCtrl.js" Url="Scripts/App/Controllers/LicensingCtrl.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Controllers\ManageFaqSetCtrl.js" Url="Scripts/App/Controllers/ManageFaqSetCtrl.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Controllers\ModalInstanceCtrl.js" Url="Scripts/App/Controllers/ModalInstanceCtrl.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Controllers\SelectFaqForEditCtrl.js" Url="Scripts/App/Controllers/SelectFaqForEditCtrl.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Directives\block.js" Url="Scripts/App/Directives/block.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Directives\contenteditable.js" Url="Scripts/App/Directives/contenteditable.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Directives\faqAnimate.js" Url="Scripts/App/Directives/faqAnimate.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Directives\faqShow.js" Url="Scripts/App/Directives/faqShow.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Directives\ngEnter.js" Url="Scripts/App/Directives/ngEnter.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Directives\spEditable.js" Url="Scripts/App/Directives/spEditable.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Filters\highlight.js" Url="Scripts/App/Filters/highlight.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Services\animationList.js" Url="Scripts/App/Services/animationList.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Services\context.js" Url="Scripts/App/Services/context.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Services\faqService.js" Url="Scripts/App/Services/faqService.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Services\faqSetModel.js" Url="Scripts/App/Services/faqSetModel.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Services\jq.js" Url="Scripts/App/Services/jq.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Services\licensing.js" Url="Scripts/App/Services/licensing.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Services\processing.js" Url="Scripts/App/Services/storage.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\Services\storage.js" Url="Scripts/App/Services/storage.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\App\app.js" Url="Scripts/App/app.js" ReplaceContent="TRUE" />
 		<File Path="Scripts\AppExternal\animate.css\animate.css" Url="Scripts/AppExternal/animate.css/animate.css" ReplaceContent="TRUE" />
 		<File Path="Scripts\AppExternal\font-awesome\font-awesome.css" Url="Scripts/AppExternal/font-awesome/font-awesome.css" ReplaceContent="TRUE" />
 		<File Path="Scripts\AppExternal\font-awesome\fontawesome-webfont.eot" Url="Scripts/AppExternal/font-awesome/fontawesome-webfont.eot" ReplaceContent="TRUE" />
@@ -62,7 +14,6 @@
 		<File Path="Scripts\AppExternal\font-awesome\fontawesome-webfont.woff" Url="Scripts/AppExternal/font-awesome/fontawesome-webfont.woff" ReplaceContent="TRUE" />
 		<File Path="Scripts\AppExternal\font-awesome\fontawesome-webfont.woff2" Url="Scripts/AppExternal/font-awesome/fontawesome-webfont.woff2" ReplaceContent="TRUE" />
 		<File Path="Scripts\AppExternal\font-awesome\FontAwesome.otf" Url="Scripts/AppExternal/font-awesome/FontAwesome.otf" ReplaceContent="TRUE" />
-		<File Path="Scripts\AppExternal\angular\angular.js" Url="Scripts/AppExternal/angular/angular.js" ReplaceContent="TRUE" />
 		<File Path="Scripts\AppExternal\bootstrap\css\bootstrap-theme.css" Url="Scripts/AppExternal/bootstrap/css/bootstrap-theme.css" ReplaceContent="TRUE" />
 		<File Path="Scripts\AppExternal\bootstrap\css\bootstrap-theme.min.css" Url="Scripts/AppExternal/bootstrap/css/bootstrap-theme.min.css" ReplaceContent="TRUE" />
 		<File Path="Scripts\AppExternal\bootstrap\css\bootstrap.css" Url="Scripts/AppExternal/bootstrap/css/bootstrap.css" ReplaceContent="TRUE" />
@@ -71,22 +22,9 @@
 		<File Path="Scripts\AppExternal\bootstrap\fonts\glyphicons-halflings-regular.svg" Url="Scripts/AppExternal/bootstrap/fonts/glyphicons-halflings-regular.svg" ReplaceContent="TRUE" />
 		<File Path="Scripts\AppExternal\bootstrap\fonts\glyphicons-halflings-regular.ttf" Url="Scripts/AppExternal/bootstrap/fonts/glyphicons-halflings-regular.ttf" ReplaceContent="TRUE" />
 		<File Path="Scripts\AppExternal\bootstrap\fonts\glyphicons-halflings-regular.woff" Url="Scripts/AppExternal/bootstrap/fonts/glyphicons-halflings-regular.woff" ReplaceContent="TRUE" />
-		<File Path="Scripts\AppExternal\bootstrap\js\bootstrap.js" Url="Scripts/AppExternal/bootstrap/js/bootstrap.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\AppExternal\bootstrap\js\bootstrap.min.js" Url="Scripts/AppExternal/bootstrap/js/bootstrap.min.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\AppExternal\bootstrap\css\bootstrap-theme.css.map" Url="Scripts/AppExternal/bootstrap/css/bootstrap-theme.css.map" ReplaceContent="TRUE" />
-		<File Path="Scripts\AppExternal\bootstrap\css\bootstrap.css.map" Url="Scripts/AppExternal/bootstrap/css/bootstrap.css.map" ReplaceContent="TRUE" />
 		<File Path="Scripts\build\faq.app.core.min.js" Url="Scripts/build/faq.app.core.min.js" ReplaceContent="TRUE" />
 		<File Path="Scripts\build\faq.app.external.min.js" Url="Scripts/build/faq.app.external.min.js" ReplaceContent="TRUE" />
-		<File Path="Scripts\build\faq.app.external.min.js.map" Url="Scripts/build/faq.app.external.min.js.map" ReplaceContent="TRUE" />
 		<File Path="Scripts\build\faq.app.min.js" Url="Scripts/build/faq.app.min.js" ReplaceContent="TRUE" />
     <File Path="Scripts\AppExternal\angular-ui-select\select.css" Url="Scripts/AppExternal/angular-ui-select/select.css" ReplaceContent="TRUE" />
-    <File Path="Scripts\AppExternal\angular-ui-select\select.js" Url="Scripts/AppExternal/angular-ui-select/select.js" ReplaceContent="TRUE" />
-    <File Path="Scripts\App\Filters\propsFilter.js" Url="Scripts/App/Filters/propsFilter.js" ReplaceContent="TRUE" />
-    <File Path="Scripts\AppExternal\angular-sortable-view\angular-sortable-view.js" Url="Scripts/AppExternal/angular-sortable-view/angular-sortable-view.js" ReplaceContent="TRUE" />
-    <File Path="Scripts\build\faq.app.core.tmp.min.js" Url="Scripts/build/faq.app.core.tmp.min.js" ReplaceContent="TRUE" />
-    <File Path="Scripts\build\faq.app.core.tmp.min.js.map" Url="Scripts/build/faq.app.core.tmp.min.js.map" ReplaceContent="TRUE" />
-    <File Path="Scripts\build\faq.app.tmp.min.js" Url="Scripts/build/faq.app.tmp.min.js" ReplaceContent="TRUE" />
-    <File Path="Scripts\build\faq.app.tmp.min.js.map" Url="Scripts/build/faq.app.tmp.min.js.map" ReplaceContent="TRUE" />
-		<File Path="Scripts\AppExternal\lz-string\lz-string.min.js" Url="Scripts/AppExternal/lz-string/lz-string.min.js" ReplaceContent="TRUE" />
-	</Module>
+  </Module>
 </Elements>

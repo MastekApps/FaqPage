@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" Inherits="Microsoft.SharePoint.WebPartPages.WebPartPage, Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+
 <%@ Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 
 <WebPartPages:AllowFraming ID="AllowFraming" runat="server" />
@@ -29,9 +30,7 @@
 			<div class="ng-hide license-line" data-ng-show="trialExpired">{{Resources.TrialExpired}}</div>
 			<div class="ng-hide license-line" data-ng-show="licenseNotValid">{{Resources.LicenseNotValid}}</div>
 			<div class="license-line">
-				{{Resources.Please}}
-				<button type="button" data-ng-show="!isAppPart" data-ng-click="go('/Licensing')" class="btn btn-info">{{Resources.ActivateApp}}</button>
-				<span data-ng-show="isAppPart">{{Resources.GoToLicense}}</span>
+				<button type="button" data-ng-click="navigateToBuy()" class="btn btn-info">{{Resources.BuyFullVersion}}</button>
 			</div>
 		</div>
 		<div data-ng-if="underTrial || licensed">

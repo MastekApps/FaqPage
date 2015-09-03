@@ -31,14 +31,14 @@
 	<WebPartPages:AllowFraming ID="AllowFraming" runat="server" />
 
 	<div id="ng-app-FaqApp" data-ng-controller="LicensingCtrl" data-block="lockDeferred">
-		
 		<div class="ng-hide bg-danger license-info text-danger" data-ng-show="trialExpired || underTrial || licenseNotValid">
 			<div class="ng-hide license-line" data-ng-show="underTrial">{{daysLeft}} {{Resources.DaysLeftOnTrial}}</div>
 			<div class="ng-hide license-line" data-ng-show="trialExpired">{{Resources.TrialExpired}}</div>
 			<div class="ng-hide license-line" data-ng-show="licenseNotValid">{{Resources.LicenseNotValid}}</div>
-			<div class="license-line"><button type="button" data-ng-click="navigateToBuy()" class="btn btn-info">{{Resources.BuyFullVersion}}</button> </div>
+			<div class="license-line">
+				<button type="button" data-ng-click="navigateToBuy()" class="btn btn-info">{{Resources.BuyFullVersion}}</button>
+			</div>
 		</div>
-
 		<div data-ng-if="licensed || underTrial">
 			<toast></toast>
 			<ng-form name="faqForm">
