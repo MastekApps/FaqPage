@@ -32,13 +32,14 @@
 			var entitlementTypeReceived = token.EntitlementType.toLowerCase();
 
 			//TODO: Uncomment for release!
-			//if (!token.IsValid || token.IsExpired) {
-			//	deferred.resolve({
-			//		status: licenseStatus.LicenseNotValid
-			//	});
+			if (!token.IsValid || token.IsExpired) {
+				deferred.resolve({
+					status: licenseStatus.LicenseNotValid,
+					assetId: token.AssetId
+				});
 
-			//	return;
-			//}
+				return;
+			}
 
 			switch (entitlementTypeReceived) {
 				case entitlementType.Paid:

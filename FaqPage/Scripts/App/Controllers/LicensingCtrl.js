@@ -35,6 +35,16 @@
 					$window.location.href = url;
 				}
 			}
+
+			$scope.navigateToReview = function () {
+				var url = String.format("https://store.office.com/writereview.aspx?assetid={0}", $scope.assetId);
+
+				if ($scope.isAppPart) {
+					$window.open(url, "_blank");
+				} else {
+					$window.location.href = url;
+				}
+			}
 		}
 	]);
 })();

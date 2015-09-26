@@ -369,3 +369,24 @@ a.faq-clear-search:hover {
   border-radius: 3px;
   background-color: #f9f9d1;
   margin: 5px; }
+
+.faq-start-title h1 {
+  width: 405px; }
+
+#faq-contact-dev {
+  width: 415px;
+  margin-top: 100px; }
+
+#faq-review {
+  width: 250px; }
+
+.faq-footer a {
+  text-decoration: underline;
+  color: #428bca; }
+
+.faq-footer a:hover {
+  cursor: pointer; }
+
+.faq-footer {
+  color: gray;
+  font-size: 12px; }
