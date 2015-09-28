@@ -14,9 +14,10 @@
 		Trial: "trial"
 	});
 
-	angular.module("FaqApp.services").factory("licensing", ["context", "$q", "licenseStatus", "storage", "$jq", "entitlementType", "$log",
-	function (context, $q, licenseStatus, storage, $jq, entitlementType, $log) {
+	angular.module("FaqApp.services").factory("licensing", ["context", "faqService", "$q", "licenseStatus", "storage", "$jq", "entitlementType", "$log",
+	function (context, faqService, $q, licenseStatus, storage, $jq, entitlementType, $log) {
 		var tokenKey = "faq_token";
+		var licenseKey = "_faq_license_";
 		var deferred = $q.defer();
 		var tokenExpirationInMin = 60; // 1 hour
 		var verificationServiceEndpoint = "https://verificationservice.officeapps.live.com/ova/verificationagent.svc/rest/verify?token=";
@@ -117,29 +118,40 @@
 
 		return {
 			getLicenseStatus: function () {
-				var licenseToken = storage.load(tokenKey);
-				if (!licenseToken) {
-					retriveToken().then(function (token) {
-						if (!token) {
+				//fix for previous installations
+				faqService.webService.webProperties.get(licenseKey)
+					.then(function (license) {
+						if (license) {  //previous install, skip license verification
 							deferred.resolve({
-								status: licenseStatus.LicenseNotValid
+								status: licenseStatus.Licensed,
+								assetId: "WA104379252"
 							});
-						} else {
-							storage.save(tokenKey, token, tokenExpirationInMin);
+						} else {//normal paid install
+							var licenseToken = storage.load(tokenKey);
+							if (!licenseToken) {
+								retriveToken().then(function (token) {
+									if (!token) {
+										deferred.resolve({
+											status: licenseStatus.LicenseNotValid
+										});
+									} else {
+										storage.save(tokenKey, token, tokenExpirationInMin);
 
-							validateToken(token);
+										validateToken(token);
+									}
+								}, function (error) {
+									deferred.reject(error);
+								});
+
+							} else {
+								validateToken(licenseToken);
+							}
 						}
-					}, function (error) {
+					}, function(error) {
 						deferred.reject(error);
 					});
-
-				} else {
-					validateToken(licenseToken);
-				}
-
 				return deferred.promise;
 			}
 		};
-	}
-	]);
+	}]);
 })();
