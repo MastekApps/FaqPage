@@ -17,7 +17,6 @@ html * {
     opacity: 0;
     -webkit-transform: translate3d(-10px, 0, 0);
     transform: translate3d(-10px, 0, 0); }
-
   100% {
     opacity: 1;
     -webkit-transform: none;
@@ -28,7 +27,6 @@ html * {
     opacity: 0;
     -webkit-transform: translate3d(-10px, 0, 0);
     transform: translate3d(-10px, 0, 0); }
-
   100% {
     opacity: 1;
     -webkit-transform: none;
@@ -170,10 +168,12 @@ html * {
   -webkit-animation: zoomIn 1s;
   opacity: 1 !important; }
 
-#ng-app-FaqApp input[type="radio"], #ng-app-FaqApp input[type="checkbox"] {
+#ng-app-FaqApp input[type="radio"],
+#ng-app-FaqApp input[type="checkbox"] {
   display: none; }
 
-#ng-app-FaqApp input[type="radio"] + span:before, #ng-app-FaqApp input[type="checkbox"] + span:before {
+#ng-app-FaqApp input[type="radio"] + span:before,
+#ng-app-FaqApp input[type="checkbox"] + span:before {
   font-family: 'FontAwesome';
   padding-right: 3px;
   font-size: 20px; }

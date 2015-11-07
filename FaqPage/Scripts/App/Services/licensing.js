@@ -106,7 +106,7 @@
 						tokenDeferred.reject(new RequestError(error));
 					});
 				} else {
-					tokenDeferred.reject(new RequestError("licenseCollection is empty"));
+				    tokenDeferred.resolve(null);
 				}
 
 			}, function (sender, error) {
@@ -132,8 +132,9 @@
 								retriveToken().then(function (token) {
 									if (!token) {
 										deferred.resolve({
-											status: licenseStatus.LicenseNotValid
-										});
+										    status: licenseStatus.LicenseNotValid,
+										    assetId: "WA104379252"
+                                    });
 									} else {
 										storage.save(tokenKey, token, tokenExpirationInMin);
 

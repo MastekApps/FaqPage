@@ -69,7 +69,7 @@ FAQRS.TrialExpiringIn = "Trial period is expiring in";
 FAQRS.Please = "Please";
 FAQRS.ActivateApp = "Activate the app";
 FAQRS.TrialExpired = "Trial expired";
-FAQRS.LicenseNotValid = "Your license is not valid";
+FAQRS.LicenseNotValid = "Your license is not valid or you don't have any licenses assigned to you. Buy more licenses or contact your license manager(s).";
 FAQRS.YourHostWebIdIs = "Your actual host web Id is";
 FAQRS.YourAppIsLicensed = "Your app is licensed. Your license key is";
 FAQRS.RegisterInstructions = "In order to obtain the license you need to send activation request to the developer - <a href=\"mailto:sergeev.srg@gmail.com\">sergeev.srg@gmail.com</a>" +
@@ -109,7 +109,7 @@ FAQRS.EnableCustomCss = "Use custom css file";
 FAQRS.CustomCssPopoverText = "Paste valid link to the css file in the input below or modify existing file. You can also use files from the host web.";
 FAQRS.BuyFullVersion = "Buy the full version";
 FAQRS.DaysLeftOnTrial = "days left on this trial";
-FAQRS.NeedDev = "Need solid SharePoint development? Please";
+FAQRS.NeedDev = "Need solid SharePoint\\Office365 development? Please";
 FAQRS.Contact = "contact";
 FAQRS.MeDirectly = "me directly";
 FAQRS.AppUseful = "Found the app helpful? Please ";

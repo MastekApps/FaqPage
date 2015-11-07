@@ -27,7 +27,7 @@
 
 			$scope.navigateToBuy = function () {
 				var url = String.format("{0}_layouts/15/storefront.aspx?source={1}#vw=AppDetailsView,app={2},clg=0,bm=US,cm=en-US",
-					context.spHostUrl, encodeURIComponent($window.location.href), $scope.assetId);
+					context.spHostUrl, encodeURIComponent(context.spHostUrl), $scope.assetId);
 
 				if ($scope.isAppPart) {
 					$window.open(url,"_blank");
