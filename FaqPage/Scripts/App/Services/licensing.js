@@ -36,7 +36,7 @@
 			if (!token.IsValid || token.IsExpired) {
 				deferred.resolve({
 					status: licenseStatus.LicenseNotValid,
-					assetId: token.AssetId
+					assetId: context.assetId
 				});
 
 				return;
@@ -47,7 +47,7 @@
 					{
 						deferred.resolve({
 							status: licenseStatus.Licensed,
-							assetId: token.AssetId
+							assetId: context.assetId
 						});
 						break;
 					}
@@ -55,7 +55,7 @@
 					{
 						deferred.resolve({
 							status: licenseStatus.Licensed,
-							assetId: token.AssetId
+							assetId: context.assetId
 						});
 						break;
 					}
@@ -64,7 +64,7 @@
 						if (token.IsEntitlementExpired) {
 							deferred.resolve({
 								status: licenseStatus.TrialExpired,
-								assetId: token.AssetId
+								assetId: context.assetId
 							});
 							break;
 						}
@@ -75,7 +75,7 @@
 						deferred.resolve({
 							status: licenseStatus.UnderTrial,
 							daysLeft: dateExpiration.diff(dateNow, "days"),
-							assetId: token.AssetId
+							assetId: context.assetId
 						});
 					}
 			}
@@ -124,7 +124,7 @@
 						if (license) {  //previous install, skip license verification
 							deferred.resolve({
 								status: licenseStatus.Licensed,
-								assetId: "WA104379252"
+								assetId: context.assetId
 							});
 						} else {//normal paid install
 							var licenseToken = storage.load(tokenKey);
@@ -133,7 +133,7 @@
 									if (!token) {
 										deferred.resolve({
 										    status: licenseStatus.LicenseNotValid,
-										    assetId: "WA104379252"
+										    assetId: context.assetId
                                     });
 									} else {
 										storage.save(tokenKey, token, tokenExpirationInMin);

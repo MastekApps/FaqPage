@@ -28,7 +28,8 @@
 				wpId: getParameterByName("wpId"),
 				senderId: getParameterByName("SenderId"),
 				isDebug: window.faq_is_debug,
-				productId: window.faq_product_id
+				productId: window.faq_product_id,
+				assetId: "WA104379252"
 			};
 		}]);
 })();
