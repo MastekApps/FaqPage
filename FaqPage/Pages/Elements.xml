@@ -10,7 +10,6 @@
 		<File Path="Pages\Partials\EditMode\CreateEditFaq.html" Url="Partials/EditMode/CreateEditFaq.html" ReplaceContent="TRUE" />
 		<File Path="Pages\Partials\EditMode\SelectFaqSetForEdit.html" Url="Partials/EditMode/SelectFaqSetForEdit.html" ReplaceContent="TRUE" />
 		<File Path="Pages\Partials\EditMode\ConnectFaqSet.html" Url="Partials/EditMode/ConnectFaqSet.html" ReplaceContent="TRUE" />
-    <File Path="Pages\Partials\EditMode\LicenseRequest.html" Url="Partials/EditMode/LicenseRequest.html" ReplaceContent="TRUE" />
     <File Path="Pages\Partials\EditMode\ContactDeveloper.html" Url="Partials/EditMode/ContactDeveloper.html" ReplaceContent="TRUE" />
     <File Path="Pages\FaqAppPartEditMode.aspx" Url="FaqAppPartEditMode.aspx" ReplaceContent="TRUE" />
   </Module>

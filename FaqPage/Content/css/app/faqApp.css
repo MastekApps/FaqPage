@@ -17,7 +17,6 @@ html * {
     opacity: 0;
     -webkit-transform: translate3d(-10px, 0, 0);
     transform: translate3d(-10px, 0, 0); }
-
   100% {
     opacity: 1;
     -webkit-transform: none;
@@ -28,7 +27,6 @@ html * {
     opacity: 0;
     -webkit-transform: translate3d(-10px, 0, 0);
     transform: translate3d(-10px, 0, 0); }
-
   100% {
     opacity: 1;
     -webkit-transform: none;
@@ -170,10 +168,12 @@ html * {
   -webkit-animation: zoomIn 1s;
   opacity: 1 !important; }
 
-#ng-app-FaqApp input[type="radio"], #ng-app-FaqApp input[type="checkbox"] {
+#ng-app-FaqApp input[type="radio"],
+#ng-app-FaqApp input[type="checkbox"] {
   display: none; }
 
-#ng-app-FaqApp input[type="radio"] + span:before, #ng-app-FaqApp input[type="checkbox"] + span:before {
+#ng-app-FaqApp input[type="radio"] + span:before,
+#ng-app-FaqApp input[type="checkbox"] + span:before {
   font-family: 'FontAwesome';
   padding-right: 3px;
   font-size: 20px; }
@@ -369,3 +369,24 @@ a.faq-clear-search:hover {
   border-radius: 3px;
   background-color: #f9f9d1;
   margin: 5px; }
+
+.faq-start-title h1 {
+  width: 405px; }
+
+#faq-contact-dev {
+  width: 475px;
+  margin-top: 100px; }
+
+#faq-review {
+  width: 260px; }
+
+.faq-footer a {
+  text-decoration: underline;
+  color: #428bca; }
+
+.faq-footer a:hover {
+  cursor: pointer; }
+
+.faq-footer {
+  color: gray;
+  font-size: 14px; }

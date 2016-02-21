@@ -23,8 +23,8 @@
 	</script>
 </head>
 <body>
-	<div id="ng-app-FaqApp" data-ng-controller="LicensingCtrl" data-block="lockDeferred">
-		<div data-ng-if="showIfLicenseValid()">
+	<div id="ng-app-FaqApp">
+		<div>
 			<toast></toast>
 			<ng-form name="faqForm">
 				<ng-view></ng-view>

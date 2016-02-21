@@ -6,6 +6,7 @@ var buildTemplate = "" +
 	"\"use strict\";" +
 	"window.faq_is_debug = %s; " +
 	"window.faq_version = '%s';" +
+	"window.faq_product_id = '%s';" +
 "})();";
 
 module.exports = function (grunt) {
@@ -25,7 +26,8 @@ module.exports = function (grunt) {
 				}
 
 				var isDebug = self.flags.debug ? 1 : 0;
-				var str = require("util").format(buildTemplate, isDebug, result.App.$.Version);
+				console.log(result.App.$);
+				var str = require("util").format(buildTemplate, isDebug, result.App.$.Version, result.App.$.ProductID);
 
 				fs.writeFile(__dirname + "\\..\\Scripts\\build\\build_config.js", str, function (err) {
 					if (err) {

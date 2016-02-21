@@ -1,10 +1,11 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~masterurl/default.master" Inherits="Microsoft.SharePoint.WebPartPages.WebPartPage, Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+
 <%@ Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 <%@ Register TagPrefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 
 <asp:Content ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="server">
 	<meta name="WebPartPageExpansion" content="full" />
-	
+
 	<SharePoint:ScriptLink Name="SP.UI.Dialog.js" runat="server" OnDemand="false" LoadAfterUI="true" Localizable="false" />
 
 	<script type="text/javascript" src="/_layouts/15/MicrosoftAjax.js"></script>
@@ -30,20 +31,16 @@
 <asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server">
 	<WebPartPages:AllowFraming ID="AllowFraming" runat="server" />
 
-	<div id="ng-app-FaqApp" data-ng-controller="LicensingCtrl" data-block="lockDeferred">
-		
-		<div class="ng-hide bg-danger license-info text-danger" data-ng-show="trialExpired || underTrial || licenseNotValid">
-			<div class="ng-hide license-line" data-ng-show="underTrial">{{Resources.TrialExpiringIn}} {{daysLeft}} {{Resources.Days}}</div>
-			<div class="ng-hide license-line" data-ng-show="trialExpired">{{Resources.TrialExpired}}</div>
-			<div class="ng-hide license-line" data-ng-show="licenseNotValid">{{Resources.LicenseNotValid}}</div>
-			<div class="license-line">{{Resources.Please}} <button type="button" data-ng-click="go('/Licensing')" class="btn btn-info">{{Resources.ActivateApp}}</button> </div>
-		</div>
-
-		<div data-ng-if="showIfLicenseValid()">
+	<div ng-cloak id="ng-app-FaqApp" ng-controller="RootCtrl">
+		<div class="clearfix">
 			<toast></toast>
 			<ng-form name="faqForm">
 				<ng-view></ng-view>
 			</ng-form>
+		</div>
+		<div class="footer">
+			<div id="faq-contact-dev" class="faq-footer center-block">{{Resources.NeedDev}} <a href ng-click="go('/ContactDev')">{{Resources.Contact}}</a> {{Resources.MeDirectly}}</div>
+			<div id="faq-review" class="faq-footer center-block">{{Resources.AppUseful}} <a href data-ng-click="navigateToReview()">{{Resources.Review}}</a> {{Resources.It}}</div>
 		</div>
 	</div>
 

@@ -1,7 +1,7 @@
 ﻿(function () {
-    "use strict";
+	"use strict";
 
-    angular.module("FaqApp.services").factory("$jq", function() {
-        return window.jQuery;
-    });
+	angular.module("FaqApp.services").factory("$jq", function () {
+		return window.jQuery;
+	});
 })();
