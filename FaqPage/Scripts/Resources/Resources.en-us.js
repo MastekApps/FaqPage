@@ -85,16 +85,18 @@ FAQRS.ContactDeveloperText = "Please, contact me in case: " +
 	"<br>" +
 	"&nbsp;&nbsp;&nbsp;- if you want to propose a new feature for the app, found a bug or simply want to say \"Wow! Cool app!\" :)" +
 	"<br><br>" +
-	"contact me at <a href=\"mailto:sergeev.srg@gmail.com\">sergeev.srg@gmail.com</a> or Skype sergei-s-a or <a target=\"_blank\" href=\"https://www.linkedin.com/in/sergeisergeev\">LinkedIn</a>" +
+    "Have a GitHub account? Post an issue or a feature directly to GitHub - <a href='https://github.com/MastekApps/FaqPage/issues' target='_blank'>FaqPage Issues</a>" +
+    "<br><br>" +
+	"or feel free to contact me at <a href=\"mailto:sergeev.srg@gmail.com\">sergeev.srg@gmail.com</a> or Skype \"sergei-s-a\" or <a target=\"_blank\" href=\"https://www.linkedin.com/in/sergeisergeev\">LinkedIn</a>" +
 	"<br><br>" +
 	"In case of bug, please provide following information: " +
 	"<br>" +
 	"&nbsp;&nbsp;&nbsp;1. Your browser and browser version." +
 	"<br>" +
-	"&nbsp;&nbsp;&nbsp;2. Detailed description how I can reproduce the error." +
+	"&nbsp;&nbsp;&nbsp;2. Detailed description how can I reproduce the error." +
 	"<br>" +
-	"&nbsp;&nbsp;&nbsp;3. Data that you used to reproduce the error." +
-	"<br>" +
+	"&nbsp;&nbsp;&nbsp;3. [optional] Data that you used to reproduce the error." +
+	"<br><br>" +
 	"I will do my best to fix it asap and release an update.";
 FAQRS.ContactDevPopover = "Suggest a feature, report a bug";
 FAQRS.ContactDev = "Contact developer";
@@ -109,7 +111,7 @@ FAQRS.EnableCustomCss = "Use custom css file";
 FAQRS.CustomCssPopoverText = "Paste valid link to the css file in the input below or modify existing file. You can also use files from the host web.";
 FAQRS.BuyFullVersion = "Buy the full version";
 FAQRS.DaysLeftOnTrial = "days left on this trial";
-FAQRS.NeedDev = "Need solid SharePoint\\Office365 development? Please";
+FAQRS.NeedDev = "Need solid SharePoint or Office365 development? Please";
 FAQRS.Contact = "contact";
 FAQRS.MeDirectly = "me directly";
 FAQRS.AppUseful = "Found the app helpful? Please ";

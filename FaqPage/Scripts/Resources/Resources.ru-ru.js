@@ -83,6 +83,8 @@ FAQRS.GoToLicense = "перейдите на сайт ЧЗВ и активиру
 FAQRS.ContactDeveloperText = "Если вы хотите предложить улучшение, нашли ошибку (баг), или просто хотите сказать \"Вау! Крутой апп!\" :), " +
 	"пожалуйста, напишите мне на почту - <a href=\"mailto:sergeev.srg@gmail.com\">sergeev.srg@gmail.com</a>" +
 	"<br>" +
+    "Нашли ошибку и у вас есть GitHub аккаунт? Разместите ошибку прямо на GitHub - <a href='https://github.com/MastekApps/FaqPage/issues' target='_blank'>FaqPage Issues</a>" +
+    "<br><br>" +
 	"Если вы нашли ошибку (баг), пожалуйста, сообщите следующую информацию:" +
 	"<br>" +
 	"1. Ваш браузер и версия браузера." +
@@ -105,6 +107,13 @@ FAQRS.EnableCustomCss = "Использовать пользовательски
 FAQRS.CustomCssPopoverText = "Вставьте ссылку на действительный css файл или измените существующий";
 FAQRS.BuyFullVersion = "Купить полную версию";
 FAQRS.DaysLeftOnTrial = "дней осталось до окончания пробного периода";
+FAQRS.NeedDev = "Нужна SharePoint или Office365 разработка? Пожалуйста";
+FAQRS.Contact = "напишите";
+FAQRS.MeDirectly = "мне напрямую";
+FAQRS.AppUseful = "Находите приложение полезным? Пожалуйста, ";
+FAQRS.Review = "оцените";
+FAQRS.It = "его";
+
 
 /*-----------------Animations-----------------------*/
 FAQRS.Bounce = "Bounce";
