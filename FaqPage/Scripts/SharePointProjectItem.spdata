@@ -35,7 +35,7 @@
     <ProjectItemFile Source="App\Controllers\CreateEditFaqCtrl.js" Target="Scripts\App\Controllers\" Type="ElementFile" />
     <ProjectItemFile Source="App\Controllers\FaqEditCtrl.js" Target="Scripts\App\Controllers\" Type="ElementFile" />
     <ProjectItemFile Source="App\Controllers\FaqViewCtrl.js" Target="Scripts\App\Controllers\" Type="ElementFile" />
-    <ProjectItemFile Source="App\Controllers\LicensingCtrl.js" Target="Scripts\App\Controllers\" Type="ElementFile" />
+    <ProjectItemFile Source="App\Controllers\RootCtrl.js" Target="Scripts\App\Controllers\" Type="ElementFile" />
     <ProjectItemFile Source="App\Controllers\ManageFaqSetCtrl.js" Target="Scripts\App\Controllers\" Type="ElementFile" />
     <ProjectItemFile Source="App\Controllers\ModalInstanceCtrl.js" Target="Scripts\App\Controllers\" Type="ElementFile" />
     <ProjectItemFile Source="App\Controllers\SelectFaqForEditCtrl.js" Target="Scripts\App\Controllers\" Type="ElementFile" />

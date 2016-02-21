@@ -181,29 +181,11 @@ module.exports = function (grunt) {
 				tasks: ["sass:main", "cssmin:main"],
 				options: {}
 			}
-		},
-		jsObfuscate: {
-			release: {
-				files: {
-					"Scripts/build/faq.app.core.min.js": ["Scripts/build/faq.app.core.tmp.min.js"],
-					"Scripts/build/faq.app.min.js": ["Scripts/build/faq.app.tmp.min.js"]
-				},
-				options: {
-					concurrency: 2,
-					keepLinefeeds: false,
-					keepIndentations: false,
-					encodeStrings: true,
-					encodeNumbers: true,
-					moveStrings: true,
-					replaceNames: true,
-					variableExclusions: ["^_get_", "^_set_", "^_mtd_"]
-				}
-			}
 		}
 	});
 
 	grunt.registerTask("debug", ["updateAppInfo:debug", "uglify:appOnly", "copy:debug", "sass:main", "cssmin:main", "copy:main", "copy:elementsDebug"]);
-	grunt.registerTask("release", ["updateAppInfo:release", "uglify:release", "jsObfuscate:release", "sass:main", "cssmin:main", "copy:main", "copy:elementsRelease"]);
+	grunt.registerTask("release", ["updateAppInfo:release", "uglify:release","sass:main", "cssmin:main", "copy:main", "copy:debug", "copy:elementsRelease"]);
 
 	// The following line loads the grunt plugins.
 	// This line needs to be at the end of this this file.
@@ -213,7 +195,6 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks("grunt-contrib-cssmin");
 	grunt.loadNpmTasks("grunt-contrib-copy");
 	grunt.loadNpmTasks("grunt-contrib-watch");
-	grunt.loadNpmTasks("js-obfuscator");
 
 	//custom tasks
 	grunt.loadTasks("tasks");

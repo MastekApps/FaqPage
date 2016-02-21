@@ -189,7 +189,7 @@
     <Content Include="Scripts\App\Controllers\CreateEditFaqCtrl.js" />
     <Content Include="Scripts\App\Controllers\FaqEditCtrl.js" />
     <Content Include="Scripts\App\Controllers\FaqViewCtrl.js" />
-    <Content Include="Scripts\App\Controllers\LicensingCtrl.js" />
+    <Content Include="Scripts\App\Controllers\RootCtrl.js" />
     <Content Include="Scripts\App\Controllers\ManageFaqSetCtrl.js" />
     <Content Include="Scripts\App\Controllers\ModalInstanceCtrl.js" />
     <Content Include="Scripts\App\Controllers\SelectFaqForEditCtrl.js" />

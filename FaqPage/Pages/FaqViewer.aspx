@@ -25,15 +25,8 @@
 	</script>
 </head>
 <body>
-	<div id="ng-app-FaqApp" data-ng-controller="LicensingCtrl" data-block="lockDeferred">
-		<div class="ng-hide bg-danger license-info text-danger" data-ng-show="trialExpired || licenseNotValid">
-			<div class="ng-hide license-line" data-ng-show="trialExpired">{{Resources.TrialExpired}}</div>
-			<div class="ng-hide license-line" data-ng-show="licenseNotValid">{{Resources.LicenseNotValid}}</div>
-			<div class="license-line">
-				<button type="button" data-ng-click="navigateToBuy()" class="btn btn-info">{{Resources.BuyFullVersion}}</button>
-			</div>
-		</div>
-		<div data-ng-if="underTrial || licensed">
+	<div id="ng-app-FaqApp">
+		<div>
 			<ng-view></ng-view>
 		</div>
 	</div>
