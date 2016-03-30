@@ -112,8 +112,13 @@
 							});
 
 							Array.forEach(loadedFolders, function (currentFolder) {
-								var folderItems = $jq.grep(items, function (faqItem) {
-									if (faqItem.fileDirRef.indexOf(currentFolder.title) !== -1) {
+							    var folderItems = $jq.grep(items, function (faqItem) {
+							        if (!faqItem.fileDirRef || !currentFolder.title) return false;
+
+							        var lastIndex = faqItem.fileDirRef.lastIndexOf("/");
+							        var faqItemFolderName = faqItem.fileDirRef.substring(lastIndex + 1, faqItem.fileDirRef.length).toLowerCase();
+
+							        if (faqItemFolderName === currentFolder.title.toLowerCase()) {
 										return true;
 									}
 
