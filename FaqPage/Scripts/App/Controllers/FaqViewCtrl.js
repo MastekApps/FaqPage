@@ -6,7 +6,6 @@
 		function ($scope, $sce, $q, $timeout, faqService, processing, context, $log, $window, $jq) {
 			processing.initilize($scope);
 			var resizeAttempts = 2, resizeTimeOut = 200;
-
 			$scope.selectedFolders = {};
 			$scope.selectedFolders.folders = [];
 			$scope.faqItems = null;
