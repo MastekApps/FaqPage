@@ -11,6 +11,7 @@ module.exports = function (grunt) {
 
 	var externalFiles = [
 		baseExternalPath + "/jquery/*.js",
+		baseExternalPath + "/mark.js/dist/jquery.mark.min.js",
 		baseExternalPath + "/jquery-ui/*.js",
 		baseExternalPath + "/jquery-xml2json/*.js",
 		baseExternalPath + "/lz-string/*.js",
@@ -184,7 +185,7 @@ module.exports = function (grunt) {
 		}
 	});
 
-	grunt.registerTask("debug", ["updateAppInfo:debug", "uglify:appOnly", "copy:debug", "sass:main", "cssmin:main", "copy:main", "copy:elementsDebug"]);
+	grunt.registerTask("debug", ["updateAppInfo:debug", "uglify:debug", "uglify:appOnly", "copy:debug", "sass:main", "cssmin:main", "copy:main", "copy:elementsDebug"]);
 	grunt.registerTask("release", ["updateAppInfo:release", "uglify:release","sass:main", "cssmin:main", "copy:main", "copy:debug", "copy:elementsRelease"]);
 
 	// The following line loads the grunt plugins.

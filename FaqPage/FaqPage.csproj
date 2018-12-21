@@ -60,7 +60,9 @@
     <Content Include="Content\img\plus.png" />
     <Content Include="Content\img\right.png" />
     <Content Include="Content\rsa_public_key.txt" />
+    <Content Include="Elements.xml" />
     <Content Include="gruntfile.js" />
+    <Content Include="gulpfile.js" />
     <Content Include="Images\AppIcon.png">
       <OpcRelationship>manifest-icon</OpcRelationship>
     </Content>
@@ -139,10 +141,21 @@
     <Content Include="Scripts\AppExternal\angular-ui-select\select.js" />
     <Content Include="Scripts\AppExternal\jquery-xml2json\xml2json.js" />
     <Content Include="Scripts\AppExternal\lz-string\lz-string.min.js" />
+    <Content Include="Scripts\AppExternal\mark.js\dist\jquery.mark.es6.js" />
+    <Content Include="Scripts\AppExternal\mark.js\dist\jquery.mark.es6.min.js" />
+    <Content Include="Scripts\AppExternal\mark.js\dist\jquery.mark.js" />
+    <Content Include="Scripts\AppExternal\mark.js\dist\jquery.mark.min.js" />
+    <Content Include="Scripts\AppExternal\mark.js\dist\mark.es6.js" />
+    <Content Include="Scripts\AppExternal\mark.js\dist\mark.es6.min.js" />
+    <Content Include="Scripts\AppExternal\mark.js\dist\mark.js" />
+    <Content Include="Scripts\AppExternal\mark.js\dist\mark.min.js" />
     <Content Include="Scripts\App\Filters\propsFilter.js" />
     <Content Include="Scripts\App\Services\storage.js" />
     <Content Include="Scripts\build\faq.app.core.tmp.min.js" />
     <Content Include="Scripts\build\faq.app.external.min.js.map" />
+    <None Include="SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{aec8a5c6-c317-4dad-9d8d-7a7b73649781}</SharePointProjectItemId>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\build\faq.app.core.tmp.min.js.map" />

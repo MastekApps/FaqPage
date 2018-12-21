@@ -93,5 +93,13 @@
     <ProjectItemFile Source="App\Services\storage.js" Target="Scripts\App\Services\" Type="ElementFile" />
     <ProjectItemFile Source="AppExternal\jquery-xml2json\xml2json.js" Target="Scripts\AppExternal\jquery-xml2json\" Type="ElementFile" />
     <ProjectItemFile Source="AppExternal\lz-string\lz-string.min.js" Target="Scripts\AppExternal\lz-string\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\mark.js\dist\jquery.mark.es6.js" Target="Scripts\AppExternal\mark.js\dist\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\mark.js\dist\jquery.mark.es6.min.js" Target="Scripts\AppExternal\mark.js\dist\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\mark.js\dist\jquery.mark.js" Target="Scripts\AppExternal\mark.js\dist\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\mark.js\dist\jquery.mark.min.js" Target="Scripts\AppExternal\mark.js\dist\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\mark.js\dist\mark.es6.js" Target="Scripts\AppExternal\mark.js\dist\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\mark.js\dist\mark.es6.min.js" Target="Scripts\AppExternal\mark.js\dist\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\mark.js\dist\mark.js" Target="Scripts\AppExternal\mark.js\dist\" Type="ElementFile" />
+    <ProjectItemFile Source="AppExternal\mark.js\dist\mark.min.js" Target="Scripts\AppExternal\mark.js\dist\" Type="ElementFile" />
   </Files>
 </ProjectItem>
